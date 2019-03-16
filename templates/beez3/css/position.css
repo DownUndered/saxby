@@ -141,6 +141,10 @@ body {
     background-size: cover;
 }
 
+#menuwrapper {
+    position: fixed;
+}
+
 #header ul {
     position: fixed;
     left: 0;
@@ -281,11 +285,9 @@ body {
 }
 
 #logo {
-    margin-top: 0;
-    margin-left: 10px;
-    display: block;
-    padding: 1em 20px 20px 10px;
-    width: 425px;
+    margin: 0;
+    padding: 0;
+    display: block;    
     font-weight: normal;
     line-height: 1em;
 
@@ -293,6 +295,7 @@ body {
 
 #logo img {
     display: block;
+    width: 60%;
 }
 
 #logo span {

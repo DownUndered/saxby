@@ -740,7 +740,7 @@ ul.actions  li {
 
 /* +++++++++++++++  menus ++++++++++++++++++++++++ */
 #header ul.menu {
-	padding: 0;
+	padding: 1rem 0px;
 	width: auto;
 	text-align: right;
 	display: block;	
