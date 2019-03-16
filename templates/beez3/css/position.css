@@ -96,6 +96,15 @@ section {
     display: block;
 }
 
+#nav, #right, #breadcrumbs, #close {
+    display: none;
+}
+
+#contentarea2 {
+    display: flex;
+    justify-content: center;
+}
+
 html {
     background: #ffffff;
     font-size: 100.01%;
@@ -125,8 +134,11 @@ body {
 #header {
     display: block !important;
     position: relative;
-    padding: 8em 0 0 0;
     overflow: hidden;
+    height: 100vh;
+    background-image: url('../images/personal/saxby_realestate_background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #header ul {
@@ -308,6 +320,7 @@ body {
 }
 
 #line {
+    display: none;
     padding: 5px 0 2px 2px;
     position: absolute;
     right: 10px;

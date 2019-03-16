@@ -29,8 +29,7 @@ a:hover,a:active,a:focus {
 }
 
 .logoheader {
-	background: url(../images/personal/personal2.png) no-repeat right
-		bottom #0C1A3E;
+
 	color: #FFFFFF;
 	min-height: 250px;
 }
@@ -401,7 +400,6 @@ margin-right:5px;
 		float: none;
 		width: 100%
 	}
-	#header {padding-top:3em}
 	#header form  {margin:0}
 	.logoheader {background:#0C1D43; min-height:100px; margin:0}
 	.box {
@@ -409,6 +407,7 @@ margin-right:5px;
 		border-bottom: solid 1px #ddd;
 	}
 	#line {
+		display: none;
 		text-align: center;
 		top: 0;
 		right: auto;

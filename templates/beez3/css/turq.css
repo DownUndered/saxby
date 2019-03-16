@@ -375,7 +375,6 @@ ul.tabs li a.linkopen:focus {
 		right: 20px;
 		margin: 0;
 		width: 90%;
-		border-radius: 4px;
 	}
 
 	#header ul.menu li a:link,
