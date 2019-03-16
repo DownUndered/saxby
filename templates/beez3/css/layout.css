@@ -291,6 +291,7 @@ input[type="radio"],input[type="checkbox"] {
 
 input,textarea {
 	-moz-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+	transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
 }
 
@@ -499,6 +500,7 @@ textarea,.contact-form input[type="text"],.contact-form input[type="email"],.con
 	{
 	width: 80%;
 	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	border: 1px solid #DDDDDD;
 	color: #333333;
 	overflow: auto;

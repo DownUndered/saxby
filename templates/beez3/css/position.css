@@ -209,11 +209,9 @@ body {
 .hidelabeltxt,
 #line label {
     display: inline;
-    height: 0;
     left: -3000px;
     position: absolute;
     top: -2000px;
-    width: 0;
 }
 
 /* ++++++++++++++  nav after content  ++++++++++++++ */
@@ -244,18 +242,15 @@ body {
 .skiplinks,
 .skiplinks li {
     display: inline;
-    height: 0;
     line-height: 0;
     padding: 0 !important;
 }
 
 .skiplinks li a.u2 {
     display: inline;
-    height: 0;
     left: -3000px;
     position: absolute;
     top: -2000px;
-    width: 0;
 
 }
 
