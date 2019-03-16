@@ -48,6 +48,10 @@ a:focus {
 	text-transform: uppercase;
 }
 
+#header ul.menu a:link {
+	transition: all .3s linear;
+}
+
 #header ul.menu a:link,
 #header ul.menu a:visited {
 	color: #fff;
