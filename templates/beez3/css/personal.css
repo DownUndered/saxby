@@ -34,10 +34,8 @@ a:focus {
 }
 
 .logoheader {
-
 	color: #FFF;
 	z-index: 1;
-    position: fixed;
 }
 
 #all {
@@ -47,9 +45,7 @@ a:focus {
 
 
 #header ul.menu {
-	background-color: #7f7f7f;
 	-webkit-font-smoothing: antialiased;
-	color: #095197;
 	text-transform: uppercase;
 }
 
@@ -446,7 +442,6 @@ ul.tabs li a.linkopen:focus {
 	}
 
 	.logoheader {
-		background: #0C1D43;
 		min-height: 100px;
 		margin: 0
 	}

@@ -101,21 +101,7 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 	<body id="shadow">
 		<div id="all">
 			<div id="back">
-				<header id="header">
-					<div class="logoheader">
-						<h1 id="logo">
-						<?php if ($logo) : ?>
-							<img src="<?php echo $this->baseurl; ?>/<?php echo htmlspecialchars($logo); ?>"  alt="<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>" />
-						<?php endif;?>
-						<?php if (!$logo AND $this->params->get('sitetitle')) : ?>
-							<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>
-						<?php elseif (!$logo AND $config->get('sitename')) : ?>
-							<?php echo htmlspecialchars($config->get('sitename')); ?>
-						<?php endif; ?>
-						<span class="header1">
-						<?php echo htmlspecialchars($this->params->get('sitedescription')); ?>
-						</span></h1>
-					</div><!-- end logoheader -->
+				<header id="header">					
 					<ul class="skiplinks">
 						<li><a href="#main" class="u2"><?php echo JText::_('TPL_BEEZ3_SKIP_TO_CONTENT'); ?></a></li>
 						<li><a href="#nav" class="u2"><?php echo JText::_('TPL_BEEZ3_JUMP_TO_NAV'); ?></a></li>
@@ -125,7 +111,23 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 					</ul>
 					<h2 class="unseen"><?php echo JText::_('TPL_BEEZ3_NAV_VIEW_SEARCH'); ?></h2>
 					<h3 class="unseen"><?php echo JText::_('TPL_BEEZ3_NAVIGATION'); ?></h3>
-					<jdoc:include type="modules" name="position-1" />
+					<div id="menuNav">
+						<div class="logoheader">
+							<h1 id="logo">
+							<?php if ($logo) : ?>
+								<img src="<?php echo $this->baseurl; ?>/<?php echo htmlspecialchars($logo); ?>"  alt="<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>" />
+							<?php endif;?>
+							<?php if (!$logo AND $this->params->get('sitetitle')) : ?>
+								<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>
+							<?php elseif (!$logo AND $config->get('sitename')) : ?>
+								<?php echo htmlspecialchars($config->get('sitename')); ?>
+							<?php endif; ?>
+							<span class="header1">
+							<?php echo htmlspecialchars($this->params->get('sitedescription')); ?>
+							</span></h1>
+						</div><!-- end logoheader -->
+						<jdoc:include type="modules" name="position-1" />
+					</div>
 					<div id="line">
 						<div id="fontsize"></div>
 						<h3 class="unseen"><?php echo JText::_('TPL_BEEZ3_SEARCH'); ?></h3>
