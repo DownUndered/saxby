@@ -868,8 +868,20 @@ ul.latestnews li {
 }
 
 /* ++++++++++++++++++++++  Footer +++++++++++++++++++++++++ */
-#footer-outer
-{font-size:0.8em}
+#footer ul {
+	margin: 0;
+	display: inline-flex;
+}
+
+#footer ul.menu a {
+	border: none;
+	padding: 0 .5rem;
+}
+
+#footer-outer { 
+	font-size:0.8em; 
+	background-color: #7f7f7f;
+}
 .box {
 	text-align: left
 }

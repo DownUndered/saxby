@@ -112,21 +112,24 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 					<h2 class="unseen"><?php echo JText::_('TPL_BEEZ3_NAV_VIEW_SEARCH'); ?></h2>
 					<h3 class="unseen"><?php echo JText::_('TPL_BEEZ3_NAVIGATION'); ?></h3>
 					<div id="menuNav">
-						<div class="logoheader">
-							<h1 id="logo">
-							<?php if ($logo) : ?>
-								<img src="<?php echo $this->baseurl; ?>/<?php echo htmlspecialchars($logo); ?>"  alt="<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>" />
-							<?php endif;?>
-							<?php if (!$logo AND $this->params->get('sitetitle')) : ?>
-								<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>
-							<?php elseif (!$logo AND $config->get('sitename')) : ?>
-								<?php echo htmlspecialchars($config->get('sitename')); ?>
-							<?php endif; ?>
-							<span class="header1">
-							<?php echo htmlspecialchars($this->params->get('sitedescription')); ?>
-							</span></h1>
-						</div><!-- end logoheader -->
+						<div id="menu-wrapper">
+							<div class="logoheader">
+								<h1 id="logo">
+								<?php if ($logo) : ?>
+									<img src="<?php echo $this->baseurl; ?>/<?php echo htmlspecialchars($logo); ?>"  alt="<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>" />
+								<?php endif;?>
+								<?php if (!$logo AND $this->params->get('sitetitle')) : ?>
+									<?php echo htmlspecialchars($this->params->get('sitetitle')); ?>
+								<?php elseif (!$logo AND $config->get('sitename')) : ?>
+									<?php echo htmlspecialchars($config->get('sitename')); ?>
+								<?php endif; ?>
+								<span class="header1">
+								<?php echo htmlspecialchars($this->params->get('sitedescription')); ?>
+								</span></h1>
+							</div><!-- end logoheader -->			
+
 						<jdoc:include type="modules" name="position-1" />
+						</div>
 					</div>
 					<div id="line">
 						<div id="fontsize"></div>
@@ -210,6 +213,10 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 			<div id="footer-sub">
 				<footer id="footer">
 					<jdoc:include type="modules" name="position-14" />
+					
+					<jdoc:include type="modules" name="position-1" />
+					<div>Copyright @ 2018 | SAXBY Real Estate. All Rights Reserved.</div>
+					
 				</footer><!-- end footer -->
 			</div>
 		</div>

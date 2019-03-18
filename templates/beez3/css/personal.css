@@ -48,7 +48,7 @@ a:focus {
 	text-transform: uppercase;
 }
 
-#header ul.menu a:link {
+#header ul.menu a:link, #footer ul.menu a:link {
 	transition: all .3s linear;
 }
 
@@ -139,6 +139,9 @@ p.readmore a:hover,
 #header ul.menu a:hover,
 #header ul.menu a:active,
 #header ul.menu a:focus,
+#footer ul.menu a:hover,
+#footer ul.menu a:active,
+#footer ul.menu a:focus,
 .pagenav a:hover,
 .pagenav a:active,
 .pagenav a:focus,
@@ -304,18 +307,14 @@ ul.tabs li a.linkopen:focus {
 	color: #fff
 }
 
-#footer-inner,
-#footer {
-	background: #f5f5f5;
-	box-shadow: 0px 20px 10px #555
-}
 
 #footer {
-	background: #555;
-	max-width: 1025px;
+	background: #7f7f7f;
 	margin: 0 auto;
-	box-shadow: 0px 0px 10px #555555;
-	color: #fff
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
 }
 
 #footer a {
