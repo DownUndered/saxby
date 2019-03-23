@@ -16,7 +16,6 @@ includes/*
 language/*
 libraries/*
 media/*
-modules/*
 plugins/*
 tmp/*
 
