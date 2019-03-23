@@ -207,6 +207,10 @@ fieldset {
 	border-radius: 5px
 }
 
+fieldset.formContainer {
+	border: none;
+}
+
 fieldset p {
 	margin: 0;
 	padding: 0;
