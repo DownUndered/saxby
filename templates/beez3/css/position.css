@@ -222,6 +222,11 @@ body {
 
 }
 
+.section-style {
+    padding: 2rem;
+    text-align: center;
+}
+
 #right {
     float: left;
     width: 20%;

@@ -43,9 +43,7 @@
 	width: 100%;
 	z-index: 1;
 }
-.camera_wrap {
-	/*width: 100%;*/
-}
+
 .camera_src {
 	display: none;
 }
@@ -247,7 +245,7 @@
 	cursor: pointer;
 	display: inline-block;
         float: none !important;
-        float:left;/*overflow:hidden;*/
+        float: left;/*overflow:hidden;*/
 	height: 16px;
 	margin: 20px 5px;
 	position: relative;
