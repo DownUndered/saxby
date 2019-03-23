@@ -1,0 +1,16 @@
+South East:Oxford,Reading,Brington;
+London:London;
+North West:Manchester,Blackpool,Liverpool;
+East of England:Norwich,Peterborough,Cambridge;
+West Midlands:Birmingham,Wolverhampton,Coventry;
+South West:Swindon,Bristol,Exeter;
+Yorkshire and the Humber:York,Bradford,Wakefield;
+East Midlands:Derby,Leicester,Lincoln;
+North East:Gateshead,Hartlepool,Sunderland;
+
+country_2_region_1:country_2_region_1_city_1,country_2_region_1_city_2,country_2_region_1_city_3;
+country_2_region_2:country_2_region_2_city_1,country_2_region_2_city_2,country_2_region_2_city_3;
+country_2_region_3:country_2_region_3_city_1,country_2_region_3_city_2,country_2_region_3_city_3;
+country_3_region_1:country_3_region_1_city_1,country_3_region_1_city_2,country_3_region_1_city_3;
+country_3_region_2:country_3_region_2_city_1,country_3_region_2_city_2,country_3_region_2_city_3;
+country_3_region_3:country_3_region_3_city_1,country_3_region_3_city_2,country_3_region_3_city_3;

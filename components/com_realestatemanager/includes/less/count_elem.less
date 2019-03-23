@@ -1,0 +1,149 @@
+/* real estate */
+
+#gallery_rem{
+    .flexbox;
+    .flex-wrap;
+
+
+/* cont-5 */
+
+.media_max(@global_resolution_1_min{
+
+    &[data-collumn-lg='4']>.okno_R{
+    .item_count_and_width(4, 24);
+    }
+
+    &[data-collumn-lg='3']>.okno_R{
+    .item_count_and_width(3, 32);
+    }
+
+    &[data-collumn-lg='2']>.okno_R{
+    .item_count_and_width(2, 49);
+    }
+
+    &[data-collumn-lg='1']>.okno_R{
+    .item_count_and_width(1, 100);
+    }
+
+  
+});
+
+
+    /*====================================
+    =            Redolution_2            =
+    ====================================*/
+
+
+    .media_max_min(@global_resolution_2, @global_resolution_2_min,{
+
+        &[data-collumn-md='4']>.okno_R{
+        .item_count_and_width(4, 24);
+        } 
+
+        &[data-collumn-md='3']>.okno_R{
+        .item_count_and_width(3, 32);
+        }
+
+        &[data-collumn-md='2']>.okno_R{
+        .item_count_and_width(2, 49);
+        } 
+
+        &[data-collumn-md='1']>.okno_R{
+        .item_count_and_width(1, 100);
+        }
+
+    });
+    
+    /*=====  End of Redolution_2  ======*/
+
+
+    /*====================================
+    =            Resolution_3            =
+    ====================================*/
+
+    .media_max_min(@global_resolution_3,@global_resolution_3_min,{
+
+     
+        &[data-collumn-sm='3']>.okno_R{
+        .item_count_and_width(3, 32);
+        }
+
+        &[data-collumn-sm='2']>.okno_R{
+        .item_count_and_width(2, 49);
+        } 
+
+        &[data-collumn-sm='1']>.okno_R{
+        .item_count_and_width(1, 100);
+        }
+      
+    });
+    
+  
+    /*=====  End of Resolution_3  ======*/
+
+
+    /*====================================
+    =            Resolution_4            =
+    ====================================*/
+
+    .media_max_min(@global_resolution_4,@global_resolution_4_min,{
+
+        &[data-collumn-xs='2']>.okno_R{
+            .item_count_and_width(2, 49);
+        } 
+
+        &[data-collumn-xs='1']>.okno_R{
+            .item_count_and_width(1, 100);
+        }
+
+    });
+    
+    
+    /*=====  End of Resolution_4  ======*/
+
+
+    /*==================================
+    =            Resolution_5            =
+    ==================================*/
+
+
+    .media_min(@global_resolution_5,{
+
+        
+      .okno_R{
+            .item_count_and_width(1, 100);
+
+      }
+        
+    });
+
+    .okno_R{
+        .flexbox;
+        .flex-direction(column);
+        .justify-content(space-between);
+    }
+    
+
+        #divamage{
+        width: 100%;
+        height: auto  ;
+
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        a{
+        display: block;
+        }
+
+
+
+        img{
+        object-fit: cover;
+        }
+
+
+  
+}

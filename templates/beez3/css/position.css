@@ -246,6 +246,14 @@ article.item-page > h2 {
     top: -2000px;
 }
 
+#trading span {
+    float: right;
+}
+
+#social {
+    display: inline-flex;
+}
+
 /* ++++++++++++++  nav after content  ++++++++++++++ */
 .left {
     padding-top: 0;

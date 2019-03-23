@@ -96,6 +96,17 @@ h3.js_heading {
 	border: solid 1px #ddd
 }
 
+#submit {
+	border: 1px solid #00335e;
+    background: #00335e;
+    color: #fff !important;
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 4px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
 /* +++++++++++++  table display  Catgegories table, contact etc, ++++++++++++++++++++* */
 table {
 	border: solid 1px #ddd

@@ -1,0 +1,236 @@
+
+.box-sizing(@box-model) { 
+-o-box-sizing:@box-model;
+-webkit-box-sizing: @box-model; 
+-moz-box-sizing: @box-model; 
+box-sizing: @box-model; 
+}
+
+.transform(@transform:scale(1.15)){
+-o-transform+_: @transform;
+-ms-transform+_:@transform;
+ -moz-transform+_: @transform; 
+-webkit-transform+_: @transform ;
+ transform+_: @transform ;  
+}
+
+
+ .transform-origin(@transform-origin){
+-ms-transform-origin: @transform-origin;
+-moz-transform-origin: @transform-origin;
+-webkit-transform-origin: @transform-origin;
+transform-origin: @transform-origin;
+}
+
+ .clearfix {
+  &:before ,&:after{
+    content: "";
+    display: table;
+    clear: both;}
+}
+
+
+
+.item_count_and_width(@count: 3, @width_item: 32){
+
+
+  @margin: (100 - ( @width_item * @count)) / (@count - 1 );
+
+
+  
+    width: ~"@{width_item}%" !important;
+    margin-left: ~"@{margin}%";
+    margin-right: 0px;
+    float: left;
+    box-sizing: border-box;
+
+     &:nth-child( @{count}n +1) {
+      margin-left: 0px;
+    }
+
+    [dir="rtl"]  &{
+      margin-left: 0px ;
+      margin-right: ~"@{margin}%";
+
+       &:nth-child( @{count}n +1) {
+        margin-right: 0px;
+
+       }
+
+    }
+
+}
+
+
+.media_max(@size,@rules) {
+    @px: px;
+    @size_px: e("@{size}@{px}");
+    @media (min-width: @size_px) {
+        @rules();
+    };
+};
+
+.media_max_min(@size_max,@size_min,@rules) {
+    @px: px;
+    @size_max_px: e("@{size_max}@{px}");
+    @size_min_px: e("@{size_min}@{px}");
+
+    @media (max-width: @size_max_px) and (min-width: @size_min_px) {
+        @rules();
+    };
+};
+
+
+.media_min(@size,@rules) {
+    @px: px;
+    @size_px: e("@{size}@{px}");
+
+    @media (max-width: @size_px) {
+        @rules();
+    };
+};
+
+
+
+@global_resolution_2: 1199; 
+@global_resolution_3: 992; 
+@global_resolution_4: 767; 
+@global_resolution_5: 489;
+@global_resolution_1_min: @global_resolution_2 + 1;
+@global_resolution_2_min: @global_resolution_3 + 1;
+@global_resolution_3_min: @global_resolution_4 + 1;
+@global_resolution_4_min: @global_resolution_5 + 1;
+
+
+
+.responsive_item_count_and_width(
+@count_1: 5, @width_item_1: 19,
+@resolution_2: @global_resolution_2, @count_2: 4, @width_item_2: 24,
+@resolution_3: @global_resolution_3, @count_3: 3, @width_item_3: 32,
+@resolution_4: @global_resolution_4, @count_4: 2, @width_item_4: 49,
+@resolution_5: @global_resolution_5, @count_5: 1, @width_item_5: 100
+)
+{
+  @resolution_1_min: @resolution_2 + 1;
+  @resolution_2_min: @resolution_3 + 1;
+  @resolution_3_min: @resolution_4 + 1;
+  @resolution_4_min: @resolution_5 + 1;
+
+
+    .media_max(@resolution_1_min,{
+      .item_count_and_width(@count_1,@width_item_1);
+    });
+
+    .media_max_min(@resolution_2,@resolution_2_min,{
+      .item_count_and_width(@count_2,@width_item_2);
+    });
+
+    .media_max_min(@resolution_3,@resolution_3_min,{
+      .item_count_and_width(@count_3,@width_item_3);
+    });
+
+    .media_max_min(@resolution_4,@resolution_4_min,{
+      .item_count_and_width(@count_4,@width_item_4);
+    });
+
+    .media_min( @resolution_5,{
+      .item_count_and_width(@count_5,@width_item_5);
+    })
+}
+
+
+.make-grid-lg-elenm-count(@max-grid-columns,@min-grid-columns,@data-count,@rules) {
+
+  @selector_for_attr: ~".okno_R[data-columns='@{data-count}']";
+
+
+  // Common styles for all sizes of grid columns, widths 1-12
+  .col(@index) { // initial
+    @item: ~"#contentBox.col-lg-@{index} @{selector_for_attr}";
+    .col((@index + 1), @item);
+  }
+  .col(@index, @list) when (@index =< @max-grid-columns) { // general; "=<" isn't a typo
+    @item: ~"#contentBox.col-lg-@{index}  @{selector_for_attr}";
+    .col((@index + 1), ~"@{list}, @{item}");
+
+     @{list} {
+
+   @rules();
+      // // Prevent columns from collapsing when empty
+      // min-height: 1px;
+      // // Inner gutter via padding
+      // padding-left:  ceil((@grid-gutter-width / 2));
+      // padding-right: floor((@grid-gutter-width / 2));
+    }
+ 
+
+  }
+  .col(@index, @list) when (@index > @max-grid-columns) { // terminal
+   
+  }
+  .col(@min-grid-columns); // kickstart it
+
+       // @rules();
+}
+
+
+.flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex(@values) {
+  -webkit-box-flex: @values;
+  -moz-box-flex:  @values;
+  -webkit-flex:  @values;
+  -ms-flex:  @values;
+  flex:  @values;
+}
+
+ .order(@val) {
+  -webkit-box-ordinal-group: @val;  
+  -moz-box-ordinal-group: @val;     
+  -ms-flex-order: @val;     
+  -webkit-order: @val;  
+  order: @val;
+}
+
+.flex-wrap(@wrap: wrap) {
+  -webkit-flex-wrap: @wrap;
+      -ms-flex-wrap: @wrap;
+          flex-wrap: @wrap;
+}
+
+.flex-direction(@direction: row) {
+  -webkit-flex-direction: @direction;
+      -ms-flex-direction: @direction;
+          flex-direction: @direction;
+}
+
+.flex-basis(@width: auto) {
+-webkit-flex-basis: @width;
+-ms-flex-basis: @width;
+flex-basis: @width;
+}
+
+.justify-content(@justify: flex-start) {
+  -webkit-justify-content: @justify;
+      -ms-justify-content: @justify;
+          justify-content: @justify;
+}
+
+.flex-order(@order: 0) {
+  -webkit-order: @order;
+      -ms-order: @order;
+          order: @order;
+}
+
+.text_cut( @height:auto, @width:auto, @type_text_overflow: ellipsis)
+{height: @height;
+width: @width ;
+overflow: hidden;
+text-overflow: @type_text_overflow;
+}

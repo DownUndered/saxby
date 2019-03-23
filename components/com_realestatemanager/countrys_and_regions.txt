@@ -1,0 +1,4 @@
+England:South East,London,North West,East of England,West Midlands,South West,Yorkshire and the Humber,East Midlands,North East;
+
+country_2:country_2_region_1,country_2_region_2,country_2_region_3;
+country_3:country_3_region_1,country_3_region_2,country_3_region_3;

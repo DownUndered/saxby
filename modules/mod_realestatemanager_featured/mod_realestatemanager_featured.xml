@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" client="site" method="upgrade">
+    <name>RealEstateManager Featured Free</name>
+    <author>Andrey Kvasnevskiy</author>
+    <creationDate>April 2018</creationDate>
+    <copyright>(C) OrdaSoft</copyright>
+    <authorEmail>akbet@mail.ru</authorEmail>
+    <authorUrl>www.ordasoft.com</authorUrl>
+    <version>4.2.7 Free</version>
+    <license>GNU General Public License version 2</license>
+    <description>Displays a selected list of categories or choose houses from the component.</description>
+
+    <files>
+        <filename module="mod_realestatemanager_featured">mod_realestatemanager_featured.php</filename>
+        <filename>index.html</filename>
+        <folder>tmpl</folder>
+    </files>
+
+
+<!-- Joomla 2.5 -->
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+
+
+                <field
+                      name="layout"
+                      type="modulelayout"
+                      label="JFIELD_ALT_LAYOUT_LABEL"
+                      description="JFIELD_ALT_MODULE_LAYOUT_DESC">
+                </field>
+                 
+
+
+                <field name="sortnewby" type="list" default="0" label="Show Property By"
+                    description="Define what is a parametr to sort" >
+                    <option value="0">Last Added</option>
+                    <option value="2">Top</option>
+                    <option value="3">Random</option>
+                    <option value="4">Similar</option>
+                </field>
+
+                <field name="optBedrooms" type="radio" class="btn-group" default="0" label="Bedrooms criterion" description="Taking into account of the bedrooms for the ads similar" showon="sortnewby:4">
+                    <option value="0">Yes</option>
+                    <option value="1">No</option>
+                </field>
+                <field name="optCategory" type="radio" class="btn-group" default="0" label="Category criterion" description="Taking into account of the class for the ads similar" showon="sortnewby:4">
+                    <option value="0">Yes</option>
+                    <option value="1">No</option>
+                </field>
+                <field name="optCity" type="radio" class="btn-group" default="0" label="City criterion" description="Taking into account of the city for the ads similar" showon="sortnewby:4">
+                    <option value="0">Yes</option>
+                    <option value="1">No</option>
+                </field>
+
+              
+
+                <field name="displaytype" type="list" default="Vertical" label="Display Orientation"
+                    description="Display either Horizontal or Vertical" showon="layout:_:default">
+                    <option value="0">Vertical</option>
+                    <option value="1">Horizontal</option>
+                </field>
+
+                <field name="image" type="radio" class="btn-group" extension="com_realestatemanager" default="1"
+                    label="Photo House"
+                    description="Show/Hide image. " showon="layout:_:default">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+
+
+                <field name="item_width" type="number" min="0" max="2000" step="1" extension="com_realestatemanager" default="150"
+                    label="Set item width (px)" description="Width of house item." showon="layout:_:default[AND]displaytype:1"/>
+
+                <field name="container_image_width" type="number" min="0" max="2000" step="1" extension="com_realestatemanager" default="150"
+                    label="Set container image width (px)" description="Width of house container image." showon="layout:_:default[AND]displaytype:0"/>
+
+                <field name="height_auto" type="radio" class="btn-group"  label="Height photo" description="Height of house main photo. Set or auto" default="0" showon="layout:_:default">
+                    <option value="0">auto</option>
+                    <option value="1">set</option>
+                </field>
+
+                <field name="image_height" type="number" min="0" max="2000" step="1" extension="com_realestatemanager" default="150"
+                    label="Set image height (px)" description="Height of house main photo. Width is auto calculated
+                    to keep aspect ratio."  showon="layout:_:default[AND]height_auto:1"/>
+
+
+
+                <field name="status" type="radio" class="btn-group" extension="com_realestatemanager" default="1"
+                    label="Show house listing type" description="Show/Hide listing type.">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+
+                <field name="listing_status" type="radio" class="btn-group" extension="com_realestatemanager" default="1"
+                    label="Show house listing status" description="Show/Hide listing status.">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+
+                <field name="location" type="radio" class="btn-group" extension="com_realstatemanager" default="1"
+                    label="Show house location" description="">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+
+                <field name="categories" type="radio" class="btn-group" extension="com_realestatemanager" default="1"
+                    label="Categories" description="Show/Hide house categories. " showon="layout:_:default">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+
+                <field name="features" type="radio" class="btn-group" extension="com_realestatemanager" default="1"
+                    label="Features" description="Show/Hide house features. ">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+
+                <field name="hits" type="radio" class="btn-group" extension="com_realestatemanager" default="1"
+                    label="Show Hits" description="Show/Hide Hits." showon="layout:_:default">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+
+                <field name="description" id="sssddd" type="radio" class="btn-group" extension="com_realestatemanager"
+                    default="1" label="Description" description="Show/Hide house description. " showon="layout:_:default">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+
+                <field name="words" type="number" min="0" max="2000" step="1" default="" label="Description Words Count"
+                    description="Word limit for Real  Estate description.  Zero means no description,
+                    blank means no limit" showon="layout:_:default" />
+
+                <field name="price" type="radio" class="btn-group" extension="com_realestatemanager" default="1"
+                    label="Show price" description="">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+
+                  <field name="optPricePosition" type="radio" class="btn-group" default="0" label="Price format" description="Select the output format of prices">
+                    <option value="1">First sum</option>
+                    <option value="0">First currency</option>
+                </field>
+
+                <field name="view_listing" type="radio" class="btn-group" extension="com_realestatemanager"
+                    default="1" label="View listing" description="Show/Hide house view listing. " showon="layout:_:default">
+                    <option value="0">Hide</option>
+                    <option value="1">Show</option>
+                </field>
+
+                <field name="count" type="number" min="0" max="100" step="1" extension="com_realestatemanager"
+                    default="5" label="Count of houses " description="Count of houses.
+                    Zero means not display any houses" />
+
+                
+
+                <field name="image_source_type" type="list" default="0" label="Image source size"
+                    description="Image source size. Than more size - than better image quality,
+                    but asked more time for load">
+                        <option value="0">BIG</option>
+                        <option value="1">MEDIUM</option>
+                        <option value="2">SMALL</option>
+                </field>
+
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field name="moduleclass_sfx" type="text" extension="com_realestatemanager"
+                    default="" label="Module Class Suffix" description="Module Class Suffix:
+                    A suffix to be applied to the css class of the module; this allows individual
+                    module styling." />
+
+                <field name="ItemId" type="text" multiple="false" size="3" default="" label="ItemId"
+                    description="Enter Id for Menu Item realestatemanager" />
+            </fieldset>
+        </fields>
+    </config>
+
+
+</extension>
