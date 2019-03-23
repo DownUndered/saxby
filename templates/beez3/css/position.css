@@ -235,6 +235,10 @@ body {
     position: relative;
 }
 
+article.item-page > h2 {
+    display: none;
+}
+
 .unseen,
 .hidelabeltxt,
 #line label {
