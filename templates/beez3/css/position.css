@@ -200,7 +200,12 @@ body {
 
 .team-box .team-box-content {
     background: #fff;
-    padding: 20px;
+}
+
+.team-box {
+    margin: 0 1rem;
+    flex-basis: 50%;
+    background: #fff;
 }
 
 #wrapper2 {
@@ -531,6 +536,14 @@ article.item-page > h2 {
 img {
     border: 0 none;
     max-width: 100%;
+}
+
+#team {
+    display: flex;    
+}
+
+#team img {
+    width: 100%;
 }
 
 /* hide the mobile menu button */
