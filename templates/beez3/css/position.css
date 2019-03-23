@@ -209,23 +209,14 @@ body {
 }
 
 #wrapper2 {
-    width: 75%;
-    float: left;
-    position: relative;
-    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
 
 }
 
-#wrapper2 .item-page {
-    max-width: 660px
-}
 
-#main {
-    padding-top: 10px;
-    padding-bottom: 20px;
-    position: relative;
 
-}
+
 
 .section-style {
     padding: 2rem;
