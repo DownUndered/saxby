@@ -9,6 +9,9 @@ administrator/modules/*
 administrator/templates/*
 !administrator/components/com_compname
 
+templates/beez3/*
+templates/protostar/*
+
 bin/*
 cache/*
 cli/*
@@ -18,6 +21,7 @@ libraries/*
 media/*
 plugins/*
 tmp/*
+
 
 !components/com_compname
 
