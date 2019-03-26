@@ -17,7 +17,12 @@ jimport('joomla.filesystem.file');
 
 class modSlideshowckHelper {
 
-	private static $slideshowparams;
+	private static $_params;
+
+	private static $folderLabels = array();
+
+	private static $imagesOrderByLabels = array();
+
 	/**
 	 * Get a list of the items.
 	 *
@@ -27,7 +32,7 @@ class modSlideshowckHelper {
 	 */
 	static function getItems(&$params) {
 		// Initialise variables.
-		self::$slideshowparams = $params;
+		self::$_params = $params;
 		$db = JFactory::getDbo();
 		$document = JFactory::getDocument();
 
@@ -118,7 +123,7 @@ class modSlideshowckHelper {
 	}
 
 	static function getArticle(&$item, $params) {
-		self::$slideshowparams = $params;
+		self::$_params = $params;
 		// Access filter
 		$access = !JComponentHelper::getParams('com_content')->get('show_noauth');
 		$authorised = JAccess::getAuthorisedViewLevels(JFactory::getUser()->get('id'));
@@ -163,7 +168,7 @@ class modSlideshowckHelper {
 	 * @return	array
 	 */
 	static function getItemsFromfolder(&$params) {
-		self::$slideshowparams = $params;
+		self::$_params = $params;
 		$authorisedExt = array('png', 'jpg', 'JPG', 'JPEG', 'jpeg', 'bmp', 'tiff', 'gif');
 		$items = json_decode(str_replace("|qq|", "\"", $params->get('slidesfromfolder')));
 		foreach ($items as & $item) {
@@ -211,23 +216,111 @@ class modSlideshowckHelper {
 	}
 	
 	static function getItemsAutoloadfolder(&$params) {
-		self::$slideshowparams = $params;
+		self::$_params = $params;
 		$authorisedExt = array('png', 'jpg', 'JPG', 'JPEG', 'jpeg', 'bmp', 'tiff', 'gif');
-		$items = JFolder::files(trim($params->get('autoloadfoldername'), '/'), '.jpg|.png|.jpeg|.gif|.JPG|.JPEG|.jpeg', false, true);
-		foreach ($items as $i => $name) {
-			$item = new stdClass();
-			// $item->imgname = str_replace(JUri::base(),'', $item->imgname);
-			$item->imgthumb = '';
-			$item->imgname = trim(str_replace('\\','/',$name), '/');
-			$item->imgname = trim($item->imgname, '\\');
-			// create new images for mobile
-			if ($params->get('usemobileimage', '0')) { 
-				self::resizeImage($item->imgname, $params->get('mobileimageresolution', '640'), '', $params->get('mobileimageresolution', '640'), '');
+		$folder = trim($params->get('autoloadfoldername'), '/');
+		if (file_exists($folder . '/labels.txt')) {
+			$items = self::loadImagesFromFolder($folder);
+		} else {
+			$items = JFolder::files($folder, '.jpg|.png|.jpeg|.gif|.JPG|.JPEG|.jpeg', false, true);
+			foreach ($items as $i => $name) {
+				$item = new stdClass();
+				// $item->imgname = str_replace(JUri::base(),'', $item->imgname);
+				$item->imgthumb = '';
+				$item->imgname = trim(str_replace('\\','/',$name), '/');
+				$item->imgname = trim($item->imgname, '\\');
+				// create new images for mobile
+				if ($params->get('usemobileimage', '0')) { 
+					self::resizeImage($item->imgname, $params->get('mobileimageresolution', '640'), '', $params->get('mobileimageresolution', '640'), '');
+				}
+				if ($params->get('thumbnails', '1') == '1')
+					$item->imgthumb = JURI::base(true) . '/' . self::resizeImage($item->imgname, $params->get('thumbnailwidth', '100'), $params->get('thumbnailheight', '75'));
+				$thumbext = explode(".", $item->imgname);
+				$thumbext = end($thumbext);
+				// set the variables
+				$item->imgvideo = null;
+				$item->slideselect = null;
+				$item->slideselect = null;
+				$item->imgcaption = null;
+				$item->article = null;
+				$item->slidearticleid = null;
+				$item->imgalignment = null;
+				$item->imgtarget = 'default';
+				$item->imgtime = null;
+				$item->imglink = null;
+				$item->imgtitle = null;
+
+				if (!in_array(strToLower(JFile::getExt($item->imgname)), $authorisedExt))
+					continue;
+
+				// load the image data from txt
+				$item = self::getImageDataFromfolder($item, $params);
+				$item->imgname = JURI::base(true) . '/' . $item->imgname;
+				$items[$i] = $item;
+
+				// route the url
+				if (strcasecmp(substr($item->imglink, 0, 4), 'http') && (strpos($item->imglink, 'index.php?') !== false)) {
+					$item->imglink = JRoute::_($item->imglink, true, false);
+				} else {
+					$item->imglink = JRoute::_($item->imglink);
+				}
 			}
-			if ($params->get('thumbnails', '1') == '1')
-				$item->imgthumb = JURI::base(true) . '/' . self::resizeImage($item->imgname, $params->get('thumbnailwidth', '100'), $params->get('thumbnailheight', '75'));
-			$thumbext = explode(".", $item->imgname);
-			$thumbext = end($thumbext);
+		}
+		return $items;
+	}
+
+	/*
+	 * Load the image from the specified folder 
+	 */
+	public static function loadImagesFromFolder($directory) {
+
+		// encode the folder path, needed if contains an accent
+		try {
+			$translatedDirectory = iconv("UTF-8", "ISO-8859-1//TRANSLIT", urldecode($directory));
+			if ($translatedDirectory) $directory = $translatedDirectory;
+		} catch (Exception $e) {
+			echo 'CK Message : ',  $e->getMessage(), "\n";
+		}
+
+		// load the files from the folder
+		$files = JFolder::files(trim(trim($directory), '/'), '.', false, true);
+
+		if (! $files) return 'CK message : No files found in the directory : ' . $directory;
+
+		self::$imagesOrderByLabels = array();
+		// load the labels from the folder
+		self::getImageLabelsFromFolder($directory);
+
+		$order = self::$_params->get('displayorder');
+		// set the images order
+		if ($order == 'shuffle') {
+			shuffle($files);
+		} else 
+//			if(isset($params->order) && $params->order == 'labels') 
+				{
+			natsort($files);
+			$files = array_map(array(__CLASS__, 'formatPath'), $files);
+			$baseDir = self::formatPath($directory);
+			$labelsOrder = array_reverse(self::$imagesOrderByLabels);
+			foreach ($labelsOrder as $name) {
+				$imgFile = $baseDir . '/' . $name;
+				array_unshift($files, $imgFile);
+			}
+			// now make it unique
+			$files = array_unique($files);
+		} 
+//		else {
+//			natsort($files);
+//		}
+
+		$authorisedExt = array('png','jpg','jpeg','bmp','tiff','gif');
+		$items = array();
+		$i = 0;
+		foreach ($files as $file) {
+			$fileExt = JFile::getExt($file);
+			if (!in_array(strToLower($fileExt),$authorisedExt)) continue;
+
+			$item = new stdClass();
 			// set the variables
 			$item->imgvideo = null;
 			$item->slideselect = null;
@@ -241,25 +334,125 @@ class modSlideshowckHelper {
 			$item->imglink = null;
 			$item->imgtitle = null;
 
-			if (!in_array(strToLower(JFile::getExt($item->imgname)), $authorisedExt))
-				continue;
+			// limit the number of images
+//			if (isset($params->number) && $params->number > 0 && $i > (int)$params->number) $show = false;
 
-			// load the image data from txt
-			$item = self::getImageDataFromfolder($item, $params);
-			$item->imgname = JURI::base(true) . '/' . $item->imgname;
-			$items[$i] = $item;
-			
-			// route the url
-			if (strcasecmp(substr($item->imglink, 0, 4), 'http') && (strpos($item->imglink, 'index.php?') !== false)) {
-				$item->imglink = JRoute::_($item->imglink, true, false);
+			// get the data for the image
+			$filedata = self::getImageDataFromfolder2($file, $directory);
+
+			$file = str_replace("\\", "/", utf8_encode($file));
+			if (isset($filedata->link) && $filedata->link) {
+				$item->imglink = $filedata->link;
 			} else {
-				$item->imglink = JRoute::_($item->imglink);
+				$videoFile = str_replace($fileExt, 'mp4', $file);
+				$hasVideo = file_exists($videoFile);
+				$item->imglink = $hasVideo ? $videoFile : $file;
 			}
+
+			$item->imgname = JURI::base(true) . '/' . $file;
+			$item->imgthumb = $item->imgname;
+			$item->imgtitle = $filedata->title;
+			$item->imgcaption = $filedata->desc;
+			$item->imgvideo = $filedata->video;
+//			$linktitle = $filedata->title || $filedata->desc ? ($filedata->desc ? $filedata->title . '::' . $filedata->desc : $filedata->title) : $title;
+
+			$items[$i] = $item;
+			$i++;
 		}
 
 		return $items;
 	}
-	
+
+	/*
+	 * Remove special character
+	 */
+	private static function cleanName($path) {
+		return preg_replace('/[^a-z0-9]/i', '_', $path);
+	}
+
+	public static function formatPath($p) {
+		return trim(str_replace("\\", "/", $p), "/");
+	}
+
+	private static function getImageLabelsFromFolder($directory) {
+		$dirindex = self::cleanName($directory);
+		if (! empty(self::$folderLabels[$dirindex])) return;
+
+		$items = array();
+		$item = new stdClass();
+
+		// get the language
+		$lang = JFactory::getLanguage();
+		$langtag = $lang->getTag(); // returns fr-FR or en-GB
+
+		// load the image data from txt
+		if (file_exists(JPATH_ROOT . '/' . $directory . '/labels.' . $langtag . '.txt')) {
+			$data = file_get_contents(JPATH_ROOT . '/' . $directory . '/labels.' . $langtag . '.txt');
+		} else if (file_exists(JPATH_ROOT . '/' . $directory . '/labels.txt')) {
+			$data = file_get_contents(JPATH_ROOT . '/' . $directory . '/labels.txt');
+		} else {
+			return null;
+		}
+
+		$doUTF8encode = true;
+		// remove UTF-8 BOM and normalize line endings
+		if (!strcmp("\xEF\xBB\xBF", substr($data,0,3))) {  // file starts with UTF-8 BOM
+			$data = substr($data, 3);  // remove UTF-8 BOM
+			$doUTF8encode = false;
+		}
+		$data = str_replace("\r", "\n", $data);  // normalize line endings
+
+		// if no data found, exit
+		if(! $data) return null;
+
+		// explode the file into rows
+		// $imgdatatmp = explode("\n", $data);
+		$imgdatatmp = preg_split("/\r\n|\n|\r/", $data, -1, PREG_SPLIT_NO_EMPTY);
+
+		$parmsnumb = count($imgdatatmp);
+		for ($i = 0; $i < $parmsnumb; $i++) {
+			$imgdatatmp[$i] = trim($imgdatatmp[$i]);
+			$line = explode('|', $imgdatatmp[$i]);
+
+			// store the order or files from the TXT file
+			self::$imagesOrderByLabels[] = $line[0];
+
+			$item = new stdClass();
+			$item->index = self::cleanName($line[0]);
+			$item->title = (isset($line[1])) ? ( $doUTF8encode ? (utf8_encode($line[1])) : ($line[1]) ) : '';
+			$item->desc = (isset($line[2])) ? ( $doUTF8encode ? (utf8_encode($line[2])) : ($line[2]) ) : '';
+			$item->link = (isset($line[3])) ? ( $doUTF8encode ? (utf8_encode($line[3])) : ($line[3]) ) : '';
+			$item->video = (isset($line[4])) ? ( $doUTF8encode ? (utf8_encode($line[4])) : ($line[4]) ) : '';
+
+			$items[$item->index] = $item;
+		}
+
+		self::$folderLabels[$dirindex] = $items;
+	}
+
+	/*
+	 * Load the data for the image (title and description)
+	 */
+	private static function getImageDataFromfolder2($file, $directory) {
+		$filename = explode('/', $file);
+		$filename = end($filename);
+		$dirindex = self::cleanName($directory);
+		$fileindex = self::cleanName($filename);
+
+		if (! empty(self::$folderLabels[$dirindex]) && ! empty(self::$folderLabels[$dirindex][$fileindex])) {
+				$item = self::$folderLabels[$dirindex][$fileindex];
+		} else {
+			$item = new stdClass();
+			$item->title = null;
+			$item->desc = null;
+			$item->video = null;
+			// old method, get image data from txt file with image name // TODO : remove
+			// $item = self::getImageDataFromImageTxt($file)
+		}
+
+		return $item;
+	}
+
 	/**
 	 * Get a list of the items.
 	 *
@@ -268,7 +461,7 @@ class modSlideshowckHelper {
 	 * @return	array
 	 */
 	static function getItemsAutoloadflickr(&$params) {
-		self::$slideshowparams = $params;
+		self::$_params = $params;
 
 		$url = 'https://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&extras=description,original_format,url_sq,url_t,url_s,url_m,url_o&nojsoncallback=1';
 		$url .= '&api_key=' . $params->get('flickr_apikey');
@@ -695,7 +888,7 @@ class modSlideshowckHelper {
 		if (!$file)
 			return;
 
-		$params = self::$slideshowparams;
+		$params = self::$_params;
 		if (!$params->get('autocreatethumbs','1'))
 			return;
 			
