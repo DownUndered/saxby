@@ -110,10 +110,10 @@ h3.js_heading {
 .list-inline {
     display: inline-flex!important;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-.list-inline ul{
+.list-inline ul, .property-list ul{
 	list-style-type: none;
 }
 
@@ -138,7 +138,73 @@ h3.js_heading {
     position: relative!important;
 }
 
+.property-list .field-label, 
+.property-list .showtime, 
+.property-list .newsflash-image,
+.property-list .property-description,
+.property-list .property-title, .sale-price {
+	display: none;
+}
 
+.property-list img.main-photo {
+	width: 100%;
+    -webkit-transition: all 2s cubic-bezier(.19,1,.22,1) 0ms;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    transition: all 2s cubic-bezier(.19,1,.22,1) 0ms;
+}
+
+.property-list img.main-photo:hover {
+	transform: scale(1.15);
+}
+
+.property-list .field-entry {
+	overflow: hidden;
+}
+
+.property-list ul {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+}
+
+.property-list  li{
+	flex: 0 0 30%;
+    margin: 1rem;
+}
+
+.property-list .newsflash-horiz li {
+	border: 1px solid #eee;
+	transform: translateZ(0);
+	transition: all 2s cubic-bezier(.19,1,.22,1) 0ms;
+	font-size: 1rem;
+	
+}
+
+.property-list .newsflash-horiz h4 {
+	margin-bottom: 1rem;
+}
+
+.property-list .newsflash-horiz li:hover {
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+	border: 1px solid #00335e;	
+}
+
+.property-list a:hover {
+	color: #095197;
+	opacity: .8;
+}
+
+.property-list .fields-container {
+	margin: 0;
+	display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.property-list dd {
+	margin-right: .5rem;
+}
 
 /* +++++++++++++  table display  Catgegories table, contact etc, ++++++++++++++++++++* */
 table {
