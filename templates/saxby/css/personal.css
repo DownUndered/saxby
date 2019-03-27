@@ -107,6 +107,39 @@ h3.js_heading {
     text-transform: uppercase;
 }
 
+.list-inline {
+    display: inline-flex!important;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.list-inline ul{
+	list-style-type: none;
+}
+
+.camera_caption > div {
+	background: transparent;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideshowck .cameraContent  {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.camera_caption {
+	justify-content: center;
+    align-items: center;
+    position: relative!important;
+}
+
+
+
 /* +++++++++++++  table display  Catgegories table, contact etc, ++++++++++++++++++++* */
 table {
 	border: solid 1px #ddd
