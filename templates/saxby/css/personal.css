@@ -166,7 +166,8 @@ h3.js_heading {
 	display: flex;
 	margin: 0;
 	padding: 0;
-	justify-content: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
 }
 
 .property-list  li{
@@ -174,7 +175,7 @@ h3.js_heading {
     margin: 1rem;
 }
 
-.property-list .newsflash-horiz li {
+.property-list .mod-list li {
 	border: 1px solid #eee;
 	transform: translateZ(0);
 	transition: all 2s cubic-bezier(.19,1,.22,1) 0ms;
@@ -182,11 +183,12 @@ h3.js_heading {
 	
 }
 
-.property-list .newsflash-horiz h4 {
+.property-list .mod-list h4 {
 	margin-bottom: 1rem;
+	padding: .5rem;
 }
 
-.property-list .newsflash-horiz li:hover {
+.property-list .mod-list li:hover {
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
 	border: 1px solid #00335e;	
 }
@@ -202,9 +204,80 @@ h3.js_heading {
     flex-wrap: wrap;
 }
 
-.property-list dd {
-	margin-right: .5rem;
-}
+
+.property-address span::before {
+   font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f3c5";
+   display: inline-block;
+   padding: 0 .3rem 0 .5rem;
+   vertical-align: middle;   
+   -webkit-font-smoothing: antialiased;
+   vertical-align: baseline;
+}  
+
+.property-address span::before {
+	font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f3c5";
+	display: inline-block;
+	padding: 0 .3rem 0 .5rem;
+	vertical-align: middle;	
+	-webkit-font-smoothing: antialiased;
+	vertical-align: baseline;
+ }  
+
+ .property-type span::before {
+	font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f015";
+	display: inline-block;
+	padding: 0 .3rem 0 .5rem;
+	vertical-align: middle;	
+	-webkit-font-smoothing: antialiased;
+	vertical-align: baseline;
+ }  
+
+ .bedrooms span::before {
+	font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f236";
+	display: inline-block;
+	padding: 0 .3rem 0 .5rem;
+	vertical-align: middle;	
+	-webkit-font-smoothing: antialiased;
+	vertical-align: baseline;
+ }  
+
+ .bathrooms span::before {
+	font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f2cd";
+	display: inline-block;
+	padding: 0 .3rem 0 .5rem;
+	vertical-align: middle;	
+	-webkit-font-smoothing: antialiased;
+	vertical-align: baseline;
+ }  
+
+ .cars span::before {
+	font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f1b9";
+	display: inline-block;
+	padding: 0 .3rem 0 .5rem;
+	vertical-align: middle;	
+	-webkit-font-smoothing: antialiased;
+	vertical-align: baseline;
+ }  
+
+ .rent-price span::before {
+	content: "$";
+	display: inline-block;
+	padding: 0 0 0 .5rem;
+	vertical-align: middle;	
+	-webkit-font-smoothing: antialiased;
+	vertical-align: baseline;
+ }  
+
+ .rent-price span::after {
+	content: "/week";
+	display: inline-block;	
+
+	vertical-align: middle;	
+	-webkit-font-smoothing: antialiased;
+	vertical-align: baseline;
+ }  
+
+
 
 /* +++++++++++++  table display  Catgegories table, contact etc, ++++++++++++++++++++* */
 table {
