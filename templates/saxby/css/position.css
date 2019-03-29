@@ -201,8 +201,38 @@ span.field-label  {
 .rent-price { order: 9; }
 .property-description { order: 10; }
 
+section .fields-container {
+    width: auto;
+}
 
+section dd.field-entry { 
+    order: unset;
+    flex-basis: unset;
+    font-size: 1rem;
+}
 
+section dd.bedrooms,
+section dd.bathrooms,
+section dd.cars {
+    flex-basis: 15%;
+}
+
+section dd.rent-price {
+    flex-basis: 52%;
+    padding-right: .5rem;
+}
+
+section .main-photo {
+    margin-bottom: .5rem;
+}
+
+section, #testimonials {
+    margin-bottom: 1rem;
+}
+
+section.section-style {
+    margin-bottom: 0;
+}
 
 /* ###################### general ###################### */
 #all {
