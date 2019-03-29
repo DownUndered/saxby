@@ -126,14 +126,11 @@ body {
 dl {
     margin-left: auto;
     margin-right: auto;
-    width: 75%;   
+    width: 60%;   
     display: flex;
     flex-wrap: wrap; 
 }
 
-dl.fields-container .showtime-image {
-    width: 10%;
-}
 
 dl.fields-container .showtime-default .showtime-image {
     margin: 0 .5rem .5rem 0;
@@ -147,6 +144,65 @@ section dl.fields-container {
 span.field-label  {
     display: none;
 }
+
+.property-title { flex-basis: 73%; }
+.property-address { flex-basis: 12%; }
+.property-type { flex-basis: 15%; }
+
+.img-gallery,
+.property-title,
+.property-address,
+.property-type,
+.property-description,
+.bedrooms, 
+.bathrooms, 
+.cars  {
+    padding-bottom: 1rem;
+}
+
+.img-gallery {
+    flex-basis: 100%;     
+}
+
+.property-title {
+    font-size: 1.5rem;
+}
+
+.property-address,
+.property-type,
+.property-description {
+    font-size: 1rem;
+}
+
+.rent-price, 
+.bedrooms, 
+.bathrooms, 
+.cars  {
+    font-size: 1.8rem;
+    text-align: right;
+}
+
+.bedrooms, 
+.bathrooms, 
+.cars  {
+    flex-basis: 10%;
+}
+
+.rent-price { flex-basis: 70%; }
+
+.property-title { order: 1; }
+.property-address { order: 2; }
+.property-type { order: 3; }
+.main-photo { order: 4; }
+.img-gallery { order: 5; }
+.bedrooms { order: 6; }
+.bathrooms { order: 7; }
+.cars { order:8; }
+.rent-price { order: 9; }
+.property-description { order: 10; }
+
+
+
 
 /* ###################### general ###################### */
 #all {
