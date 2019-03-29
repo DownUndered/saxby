@@ -113,7 +113,9 @@ h3.js_heading {
     justify-content: space-around;
 }
 
-.list-inline ul, .property-list ul{
+.list-inline ul, 
+.property-list ul, 
+.blog-list ul {
 	list-style-type: none;
 }
 
@@ -142,11 +144,13 @@ h3.js_heading {
 .property-list .showtime, 
 .property-list .newsflash-image,
 .property-list .property-description,
-.property-list .property-title, .sale-price {
+.property-list .property-title, .sale-price,
+.blog-list .blog-text {
 	display: none;
 }
 
-.property-list img.main-photo {
+.property-list img.main-photo,
+.blog-list img {
 	width: 100%;
     -webkit-transition: all 2s cubic-bezier(.19,1,.22,1) 0ms;
     -webkit-transform: translateZ(0);
@@ -154,15 +158,18 @@ h3.js_heading {
     transition: all 2s cubic-bezier(.19,1,.22,1) 0ms;
 }
 
-.property-list img.main-photo:hover {
+.property-list img.main-photo:hover, 
+.blog-list img:hover {
 	transform: scale(1.15);
 }
 
-.property-list .field-entry {
+.property-list .field-entry,
+.blog-list .field-entry {
 	overflow: hidden;
 }
 
-.property-list ul {
+.property-list ul,
+.blog-list ul {
 	display: flex;
 	margin: 0;
 	padding: 0;
@@ -170,12 +177,23 @@ h3.js_heading {
 	flex-wrap: wrap;
 }
 
-.property-list  li{
+.blog-list ul {
+	align-items: flex-start;
+}
+
+.property-list  li,
+.blog-list li {
 	flex: 0 0 30%;
     margin: 1rem;
 }
 
-.property-list .mod-list li {
+.blog-list li {
+	display: flex;
+    flex-direction: column-reverse;
+}
+
+.property-list .mod-list li,
+.blog-list.mod-list li {
 	border: 1px solid #eee;
 	transform: translateZ(0);
 	transition: all 2s cubic-bezier(.19,1,.22,1) 0ms;
@@ -183,22 +201,26 @@ h3.js_heading {
 	
 }
 
-.property-list .mod-list h4 {
+.property-list .mod-list h4,
+.blog-list .mod-list h4 {
 	margin-bottom: 1rem;
 	padding: .5rem;
 }
 
-.property-list .mod-list li:hover {
+.property-list .mod-list li:hover,
+.blog-list .mod-list li:hover {
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
 	border: 1px solid #00335e;	
 }
 
-.property-list a:hover {
+.property-list a:hover,
+.blog-list a:hover {
 	color: #095197;
 	opacity: .8;
 }
 
-.property-list .fields-container {
+.property-list .fields-container,
+.blog-list .fields-container {
 	margin: 0;
 	display: inline-flex;
     flex-wrap: wrap;
@@ -270,8 +292,7 @@ h3.js_heading {
 
  .rent-price span::after {
 	content: "/week";
-	display: inline-block;	
-
+	display: inline-block;
 	vertical-align: middle;	
 	-webkit-font-smoothing: antialiased;
 	vertical-align: baseline;
