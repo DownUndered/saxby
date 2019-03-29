@@ -145,9 +145,12 @@ span.field-label  {
     display: none;
 }
 
-.property-title { flex-basis: 73%; }
-.property-address { flex-basis: 12%; }
+.property-title { 
+    flex-basis: 100%;
+    font-size: 1.5rem;
+ }
 .property-type { flex-basis: 15%; }
+.main-photo { flex-basis: 100%; }
 
 .img-gallery,
 .property-title,
@@ -162,10 +165,6 @@ span.field-label  {
 
 .img-gallery {
     flex-basis: 100%;     
-}
-
-.property-title {
-    font-size: 1.5rem;
 }
 
 .property-address,

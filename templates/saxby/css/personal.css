@@ -315,6 +315,12 @@ h3.js_heading {
 	 padding-left: 0;
  }
 
+#testimonials .cameraContents {
+	width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 
 /* +++++++++++++  table display  Catgegories table, contact etc, ++++++++++++++++++++* */
