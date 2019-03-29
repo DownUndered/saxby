@@ -26,11 +26,6 @@ a:visited {
 	color: #095197
 }
 
-a:hover,
-a:active,
-a:focus {
-	color: #FFF;
-}
 
 .logoheader {
 	color: #FFF;
@@ -213,8 +208,13 @@ h3.js_heading {
 	border: 1px solid #00335e;	
 }
 
+#userForm a {
+	text-decoration: none;
+}
+
 .property-list a:hover,
-.blog-list a:hover {
+.blog-list a:hover,
+#userForm a:hover {
 	color: #095197;
 	opacity: .8;
 }
@@ -297,6 +297,23 @@ h3.js_heading {
 	-webkit-font-smoothing: antialiased;
 	vertical-align: baseline;
  }  
+
+ #facebook {
+	 color: #3C5A99;
+ }
+
+ #linkedin {
+	 color: #0077B5;
+ }
+
+ #map {
+	 margin-bottom: 1rem;
+	 filter: grayscale(45%);
+ }
+
+ .padding-left-0 {
+	 padding-left: 0;
+ }
 
 
 

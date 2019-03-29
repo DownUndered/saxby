@@ -201,10 +201,8 @@ form {
 }
 
 fieldset {
-	border: solid 1px #ddd;
-	margin: 10px 0;
-	padding: 20px;
-	border-radius: 5px
+	margin: 0 0 1rem;
+	padding: 0 1rem 1rem 1rem;
 }
 
 fieldset.formContainer {
@@ -492,7 +490,9 @@ dd.result-text {
 
 /* +++++++++++++++++++  Contact Form +++++++++++++++++++++++++++++++++ */
 
-
+#userForm label {
+	display: inline-block!important;
+}
 .panel .contact-form,.panel .contact-miscinfo {
 	padding: 10px
 }
@@ -501,9 +501,21 @@ dd.result-text {
 	margin: 20px 0 0 0
 }
 
+.rsform-block-lastname {
+	padding-left: .5rem;
+}
+
+.rsform-block-first-name {
+	padding-right: .5rem;
+}
+
+.close {
+	color: #DC143C;
+}
+
 textarea,.contact-form input[type="text"],.contact-form input[type="email"],.contact-form textarea
 	{
-	width: 80%;
+	width: 100%;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	border: 1px solid #DDDDDD;
