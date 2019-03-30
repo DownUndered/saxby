@@ -1,4 +1,8 @@
-html, body {width: auto!important; overflow-x: hidden!important} 
+html,
+body {
+	width: auto !important;
+	overflow-x: hidden !important
+}
 
 body {
 	background: #eee
@@ -645,7 +649,7 @@ section .block-wrapper ul {
 	display: inline-block;
 	font-size: 0.8em;
 	font-size: 0.75em;
-	
+
 }
 
 
@@ -718,6 +722,7 @@ section .block-wrapper ul {
 		padding: 6px 10px;
 
 	}
+	
 }
 
 
@@ -738,30 +743,10 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 
 @media only screen and (max-width: 600px) {
-/* Small screens */
-  
-  } 
-  
-  @media 
-	(min-device-width: 800px) 
-	and (max-device-width: 1280px) {
-	  .header-bar__message {
-		font-size: .8rem;
-	  }
-  }
-  
-  
-  @media only screen and (orientation: portrait) {
-  
+	/* Small screens */
+
 	
-	}
-  
- 
-  
-  
-  /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
-  /* Portrait */
-  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {    
+
 	#logo img {
 		width: 40%;
 	}
@@ -772,6 +757,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 	#menuwrapper {
 		padding: 1rem;
+		flex-basis: 100%;
 	}
 
 	#menu-wrapper {
@@ -780,7 +766,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		align-items: center;
 	}
 
-	#menuwrapper, #footer {
+	#menuwrapper,
+	#footer {
 		width: 100%;
 	}
 
@@ -815,13 +802,13 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	}
 
 	section .block-wrapper,
-	dl.fields-container  {
+	dl.fields-container {
 		width: 85%;
 	}
 
 	section .block-wrapper .list-inline {
 		font-size: .7rem;
-	}	
+	}
 
 	.property-list .mod-list {
 		flex-direction: column;
@@ -833,95 +820,13 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 	dl.fields-container dd.bedrooms,
 	dl.fields-container dd.bathrooms,
-	dl.fields-container dd.cars
-	 {
+	dl.fields-container dd.cars {
 		flex-basis: 29%;
 	}
 
-	dl.fields-container dd.rent-price {
+	section dl.fields-container dd.rent-price {
 		flex-basis: 100%;
-		margin-bottom: 1rem;
 	}
-
-	.img-gallery .showtime-image {
-		flex-direction: row;
-		flex-wrap: wrap;
-		flex-basis: 30%;
-	}
-
-	#main .row {
-		padding: 0 .5rem 0 .5rem;
-	}
-
-	#main .columns {
-		padding-left: 0.9375rem;
-	}
-
-	#main .columns p,
-	#main .columns a,
-	#trading {
-		padding: 0 .9375rem 0 .9375rem;
-	}
-
-	#main .columns #social a {
-		padding: 0;
-	}
-	
-  }
-  
-  /* Landscape */
-  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-	
-	#menu-wrapper {
-		align-items: center;
-		width: 100%;
-		padding: .5rem;
-	}  
-
-	#logoheader {
-		flex-basis: 35%;
-	}
-
-	#menuwrapper {
-		font-size: .6rem;
-	}
-
-	#logo img {
-		width: 50%;
-	}
-
-	#map {
-		margin-top: -3%;
-	}
-
-	#footer {
-		flex-direction: column;
-	}
-
-	#footer ul {
-		margin-bottom: .5rem;
-	}
-
-	.team-box-content p { font-size: .6rem; }
-
-	#top { margin-top: 12%; }
-
-	.block-wrapper { width: 85%; }
-
-	.property-list ul.mod-list { justify-content: space-between; }
-
-	.property-list ul.mod-list li { flex-basis: 44%; } 
-
-	dl.fields-container dd.property-type { flex-basis: 50%; }
-
-	dl.fields-container dd.bedrooms,
-	dl.fields-container dd.bathrooms,
-	dl.fields-container dd.cars
-	 {
-		flex-basis: 29%;
-	}
-
-	section dl.fields-container dd.rent-price { flex-basis: 100%; }
 
 	dl.fields-container dd.rent-price {
 		flex-basis: 100%;
@@ -953,33 +858,130 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		padding: 0;
 	}
 
-	#main .medium-8 { width: 75%; } 
+}
 
 
 
-	  
-  }
-  
-  /* ----------- iPhone 6+, 7+ and 8+ ----------- */
-  /* Portrait */
-  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
-	  #map {
-		  margin-top: -6%;
-	  }
-  }
-  
-  /* ----------- iPhone X ----------- */
-  /* Portrait */
-  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
-  
-  /* Landscape */
-  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {   
+
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+	#logo img {
+		width: 40%;
+	}
+
+	#menuNav {
+		right: 0;
+	}
+
+	#menuwrapper {
+		padding: 1rem;
+	}
+
+	#menu-wrapper {
+		width: 100%;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	#menuwrapper,
+	#footer {
+		width: 100%;
+	}
+
+	.camera_fakehover {
+		font-size: 1rem;
+	}
+
+	.blog-list ul.mod-list,
+	#footer {
+		flex-direction: column;
+	}
+
+	#footer ul {
+		margin-bottom: 1rem;
+	}
+
+	section.dark {
+		padding: 1rem 1rem 0 1rem;
+	}
+
+	#team {
+		flex-direction: column;
+		width: 85%;
+	}
+
+	#team .team-box {
+		margin-bottom: 1rem;
+	}
+
+	#top {
+		margin-top: 18%;
+	}
+
+	section .block-wrapper,
+	dl.fields-container {
+		width: 85%;
+	}
+
+	section .block-wrapper .list-inline {
+		font-size: .7rem;
+	}
+
+	.property-list .mod-list {
+		flex-direction: column;
+	}
+
+	dl.fields-container dd.property-type {
+		flex-basis: 40%;
+	}
+
+	dl.fields-container dd.bedrooms,
+	dl.fields-container dd.bathrooms,
+	dl.fields-container dd.cars {
+		flex-basis: 29%;
+	}
+
+	dl.fields-container dd.rent-price {
+		flex-basis: 100%;
+		margin-bottom: 1rem;
+	}
+
+	.img-gallery .showtime-image {
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex-basis: 30%;
+	}
+
+	#main .row {
+		padding: 0 .5rem 0 .5rem;
+	}
+
+	#main .columns {
+		padding-left: 0.9375rem;
+	}
+
+	#main .columns p,
+	#main .columns a,
+	#trading {
+		padding: 0 .9375rem 0 .9375rem;
+	}
+
+	#main .columns #social a {
+		padding: 0;
+	}
+
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
 
 	#menu-wrapper {
 		align-items: center;
 		width: 100%;
 		padding: .5rem;
-	}  
+	}
 
 	#logoheader {
 		flex-basis: 35%;
@@ -1005,26 +1007,39 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		margin-bottom: .5rem;
 	}
 
-	.team-box-content p { font-size: .6rem; }
+	.team-box-content p {
+		font-size: .6rem;
+	}
 
-	#top { margin-top: 10%; }
+	#top {
+		margin-top: 12%;
+	}
 
-	.block-wrapper { width: 85%; }
+	.block-wrapper {
+		width: 85%;
+	}
 
-	.property-list ul.mod-list { justify-content: space-between; }
+	.property-list ul.mod-list {
+		justify-content: space-between;
+	}
 
-	.property-list ul.mod-list li { flex-basis: 44%; } 
+	.property-list ul.mod-list li {
+		flex-basis: 44%;
+	}
 
-	dl.fields-container dd.property-type { flex-basis: 50%; }
+	dl.fields-container dd.property-type {
+		flex-basis: 50%;
+	}
 
 	dl.fields-container dd.bedrooms,
 	dl.fields-container dd.bathrooms,
-	dl.fields-container dd.cars
-	 {
+	dl.fields-container dd.cars {
 		flex-basis: 29%;
 	}
 
-	section dl.fields-container dd.rent-price { flex-basis: 100%; }
+	section dl.fields-container dd.rent-price {
+		flex-basis: 100%;
+	}
 
 	dl.fields-container dd.rent-price {
 		flex-basis: 100%;
@@ -1056,21 +1071,141 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		padding: 0;
 	}
 
-	#main .medium-8 { width: 75%; } 
-  
-  }
-  
-  /* ----------- iPad 1, 2, Mini and Air ----------- */
-  /* Portrait */
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+	#main .medium-8 {
+		width: 75%;
+	}
+
+
+
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+	#map {
+		margin-top: -6%;
+	}
+}
+
+/* ----------- iPhone X ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+
+	#menu-wrapper {
+		align-items: center;
+		width: 100%;
+		padding: .5rem;
+	}
+
+	#logoheader {
+		flex-basis: 35%;
+	}
+
+	#menuwrapper {
+		font-size: .6rem;
+	}
+
+	#logo img {
+		width: 50%;
+	}
+
+	#map {
+		margin-top: -3%;
+	}
+
+	#footer {
+		flex-direction: column;
+	}
+
+	#footer ul {
+		margin-bottom: .5rem;
+	}
+
+	.team-box-content p {
+		font-size: .6rem;
+	}
+
+	#top {
+		margin-top: 10%;
+	}
+
+	.block-wrapper {
+		width: 85%;
+	}
+
+	.property-list ul.mod-list {
+		justify-content: space-between;
+	}
+
+	.property-list ul.mod-list li {
+		flex-basis: 44%;
+	}
+
+	dl.fields-container dd.property-type {
+		flex-basis: 50%;
+	}
+
+	dl.fields-container dd.bedrooms,
+	dl.fields-container dd.bathrooms,
+	dl.fields-container dd.cars {
+		flex-basis: 29%;
+	}
+
+	section dl.fields-container dd.rent-price {
+		flex-basis: 100%;
+	}
+
+	dl.fields-container dd.rent-price {
+		flex-basis: 100%;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.img-gallery .showtime-image {
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex-basis: 30%;
+	}
+
+	#main .row {
+		padding: 0 .5rem 0 .5rem;
+	}
+
+	#main .columns {
+		padding-left: 0.9375rem;
+	}
+
+	#main .columns p,
+	#main .columns a,
+	#trading {
+		padding: 0 .9375rem 0 .9375rem;
+	}
+
+	#main .columns #social a {
+		padding: 0;
+	}
+
+	#main .medium-8 {
+		width: 75%;
+	}
+
+}
+
+/* ----------- iPad 1, 2, Mini and Air ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
 
 
 	#menu-wrapper {
 		align-items: center;
 		width: 100%;
 		padding: 1rem;
-	}  
-	
+	}
+
 	.property-list .mod-list {
 		flex-direction: column;
 	}
@@ -1087,8 +1222,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 	dl.fields-container dd.bedrooms,
 	dl.fields-container dd.bathrooms,
-	dl.fields-container dd.cars
-	 {
+	dl.fields-container dd.cars {
 		flex-basis: 29%;
 	}
 
@@ -1115,28 +1249,37 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	#main .columns #social a {
 		padding: 0;
 	}
-	
-  }
-  
-  /* Landscape */
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {    
 
-	#top { margin-top: 10%; }
-  
-	.property-list ul.mod-list { justify-content: space-between; }
+}
 
-	.property-list ul.mod-list li { flex-basis: 44%; } 
+/* Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
 
-	dl.fields-container dd.property-type { flex-basis: 50%; }
+	#top {
+		margin-top: 10%;
+	}
+
+	.property-list ul.mod-list {
+		justify-content: space-between;
+	}
+
+	.property-list ul.mod-list li {
+		flex-basis: 44%;
+	}
+
+	dl.fields-container dd.property-type {
+		flex-basis: 50%;
+	}
 
 	dl.fields-container dd.bedrooms,
 	dl.fields-container dd.bathrooms,
-	dl.fields-container dd.cars
-	 {
+	dl.fields-container dd.cars {
 		flex-basis: 29%;
 	}
 
-	section dl.fields-container dd.rent-price { flex-basis: 100%; }
+	section dl.fields-container dd.rent-price {
+		flex-basis: 100%;
+	}
 
 	dl.fields-container dd.rent-price {
 		flex-basis: 100%;
@@ -1168,23 +1311,25 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		padding: 0;
 	}
 
-	#main .medium-8 { width: 75%; } 
-  
-  }
-  
-  /* ----------- iPad Pro 12.9" ----------- */
-  /* Landscape */
-  /* Declare the same value for min- and max-width to avoid colliding with desktops */
-  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-  @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-	  
-	#top { margin-top: 7%; }
-	  
-  
-  }
-  
-  /* Laptop */
-  /* ----------- Retina Screens ----------- */
-  @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {}
-  
-  
+	#main .medium-8 {
+		width: 75%;
+	}
+
+}
+
+/* ----------- iPad Pro 12.9" ----------- */
+/* Landscape */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+	#top {
+		margin-top: 7%;
+	}
+
+
+}
+
+/* Laptop */
+/* ----------- Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {}
