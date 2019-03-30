@@ -250,7 +250,6 @@ section.section-style {
 
 #menuNav {
     position: fixed;
-    padding: 10px 0;
     background-color: #7f7f7f;
     width: 100%;
     display: flex;
@@ -261,7 +260,8 @@ section.section-style {
 #menu-wrapper {
     display: inline-flex;
     justify-content: space-between;
-    padding: 10px 0;
+    flex-wrap: wrap;
+    padding: 1rem 0;
     width: 75%;
 
 }

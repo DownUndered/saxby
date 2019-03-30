@@ -1,3 +1,5 @@
+html, body {width: auto!important; overflow-x: hidden!important} 
+
 body {
 	background: #eee
 }
@@ -43,7 +45,8 @@ a:visited {
 	text-transform: uppercase;
 }
 
-#header ul.menu a:link, #footer ul.menu a:link {
+#header ul.menu a:link,
+#footer ul.menu a:link {
 	transition: all .3s linear;
 }
 
@@ -91,55 +94,89 @@ h3.js_heading {
 	border: solid 1px #ddd
 }
 
+#menuopener {
+	margin-left: .25rem;
+	margin-right: .25rem;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 16px;
+	cursor: pointer;
+	color: #f8f8ff;
+}
+
+#menuopener span {
+	display: none;
+}
+
+#menuopener::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: #fefefe;
+	box-shadow: 0 7px 0 #fefefe, 0 14px 0 #fefefe;
+	content: '';
+}
+
+#menuopener:hover::after {
+	background: #cacaca;
+	box-shadow: 0 7px 0 #cacaca, 0 14px 0 #cacaca;
+}
+
 #submit {
 	border: 1px solid #00335e;
-    background: #00335e;
-    color: #fff !important;
-    display: inline-block;
-    padding: 15px 40px;
-    border-radius: 4px;
-    font-size: 16px;
-    text-transform: uppercase;
+	background: #00335e;
+	color: #fff !important;
+	display: inline-block;
+	padding: 15px 40px;
+	border-radius: 4px;
+	font-size: 16px;
+	text-transform: uppercase;
 }
 
 .list-inline {
-    display: inline-flex!important;
-    width: 100%;
-    justify-content: space-around;
+	display: inline-flex !important;
+	width: 100%;
+	justify-content: space-around;
 }
 
-.list-inline ul, 
-.property-list ul, 
+.list-inline ul,
+.property-list ul,
 .blog-list ul {
 	list-style-type: none;
 }
 
-.camera_caption > div {
+.camera_caption>div {
 	background: transparent;
-    color: #444;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	color: #444;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.slideshowck .cameraContent  {
+.slideshowck .cameraContent {
 	display: flex;
-    justify-content: center;
-    align-items: center;
+	justify-content: center;
+	align-items: center;
 }
 
 .camera_caption {
 	justify-content: center;
-    align-items: center;
-    position: relative!important;
+	align-items: center;
+	position: relative !important;
 }
 
-.property-list .field-label, 
-.property-list .showtime, 
+.property-list .field-label,
+.property-list .showtime,
 .property-list .newsflash-image,
 .property-list .property-description,
-.property-list .property-title, .sale-price,
+.property-list .property-title,
+.sale-price,
 .blog-list .blog-text {
 	display: none;
 }
@@ -147,13 +184,13 @@ h3.js_heading {
 .property-list img.main-photo,
 .blog-list img {
 	width: 100%;
-    -webkit-transition: all 2s cubic-bezier(.19,1,.22,1) 0ms;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    transition: all 2s cubic-bezier(.19,1,.22,1) 0ms;
+	-webkit-transition: all 2s cubic-bezier(.19, 1, .22, 1) 0ms;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	transition: all 2s cubic-bezier(.19, 1, .22, 1) 0ms;
 }
 
-.property-list img.main-photo:hover, 
+.property-list img.main-photo:hover,
 .blog-list img:hover {
 	transform: scale(1.15);
 }
@@ -176,24 +213,24 @@ h3.js_heading {
 	align-items: flex-start;
 }
 
-.property-list  li,
+.property-list li,
 .blog-list li {
 	flex: 0 0 30%;
-    margin: 1rem;
+	margin: 1rem;
 }
 
 .blog-list li {
 	display: flex;
-    flex-direction: column-reverse;
+	flex-direction: column-reverse;
 }
 
 .property-list .mod-list li,
 .blog-list.mod-list li {
 	border: 1px solid #eee;
 	transform: translateZ(0);
-	transition: all 2s cubic-bezier(.19,1,.22,1) 0ms;
+	transition: all 2s cubic-bezier(.19, 1, .22, 1) 0ms;
 	font-size: 1rem;
-	
+
 }
 
 .property-list .mod-list h4,
@@ -204,8 +241,8 @@ h3.js_heading {
 
 .property-list .mod-list li:hover,
 .blog-list .mod-list li:hover {
-	box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
-	border: 1px solid #00335e;	
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+	border: 1px solid #00335e;
 }
 
 #userForm a {
@@ -223,103 +260,116 @@ h3.js_heading {
 .blog-list .fields-container {
 	margin: 0;
 	display: inline-flex;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
 
 .property-address span::before {
-   font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f3c5";
-   display: inline-block;
-   padding: 0 .3rem 0 .5rem;
-   vertical-align: middle;   
-   -webkit-font-smoothing: antialiased;
-   vertical-align: baseline;
-}  
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f3c5";
+	display: inline-block;
+	padding: 0 .3rem 0 .5rem;
+	vertical-align: middle;
+	-webkit-font-smoothing: antialiased;
+	vertical-align: baseline;
+}
 
 .property-address span::before {
-	font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f3c5";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f3c5";
 	display: inline-block;
 	padding: 0 .3rem 0 .5rem;
-	vertical-align: middle;	
+	vertical-align: middle;
 	-webkit-font-smoothing: antialiased;
 	vertical-align: baseline;
- }  
+}
 
- .property-type span::before {
-	font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f015";
+.property-type span::before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f015";
 	display: inline-block;
 	padding: 0 .3rem 0 .5rem;
-	vertical-align: middle;	
+	vertical-align: middle;
 	-webkit-font-smoothing: antialiased;
 	vertical-align: baseline;
- }  
+}
 
- .bedrooms span::before {
-	font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f236";
+.bedrooms span::before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f236";
 	display: inline-block;
 	padding: 0 .3rem 0 .5rem;
-	vertical-align: middle;	
+	vertical-align: middle;
 	-webkit-font-smoothing: antialiased;
 	vertical-align: baseline;
- }  
+}
 
- .bathrooms span::before {
-	font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f2cd";
+.bathrooms span::before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f2cd";
 	display: inline-block;
 	padding: 0 .3rem 0 .5rem;
-	vertical-align: middle;	
+	vertical-align: middle;
 	-webkit-font-smoothing: antialiased;
 	vertical-align: baseline;
- }  
+}
 
- .cars span::before {
-	font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f1b9";
+.cars span::before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f1b9";
 	display: inline-block;
 	padding: 0 .3rem 0 .5rem;
-	vertical-align: middle;	
+	vertical-align: middle;
 	-webkit-font-smoothing: antialiased;
 	vertical-align: baseline;
- }  
+}
 
- .rent-price span::before {
+.rent-price span::before {
 	content: "$";
 	display: inline-block;
 	padding: 0 0 0 .5rem;
-	vertical-align: middle;	
+	vertical-align: middle;
 	-webkit-font-smoothing: antialiased;
 	vertical-align: baseline;
- }  
+}
 
- .rent-price span::after {
+.rent-price span::after {
 	content: "/week";
 	display: inline-block;
-	vertical-align: middle;	
+	vertical-align: middle;
 	-webkit-font-smoothing: antialiased;
 	vertical-align: baseline;
- }  
+}
 
- #facebook {
-	 color: #3C5A99;
- }
+#facebook {
+	color: #3C5A99;
+}
 
- #linkedin {
-	 color: #0077B5;
- }
+#linkedin {
+	color: #0077B5;
+}
 
- #map {
-	 margin-bottom: 1rem;
-	 filter: grayscale(45%);
- }
+#map {
+	margin-bottom: 1rem;
+	filter: grayscale(45%);
+}
 
- .padding-left-0 {
-	 padding-left: 0;
- }
+.padding-left-0 {
+	padding-left: 0;
+}
 
 #testimonials .cameraContents {
 	width: 60%;
-    margin-left: auto;
-    margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
+
 
 
 
@@ -380,12 +430,9 @@ p.readmore a:hover,
 .profile-edit a:focus,
 #fontsize a:hover,
 #fontsize a:active,
-#fontsize a:focus,
-#mobile_select h2 a {
+#fontsize a:focus {
 	color: #00335e;
 	-webkit-font-smoothing: antialiased;
-
-
 
 }
 
@@ -541,7 +588,7 @@ ul.tabs li a.linkopen:focus {
 	color: #fff;
 	display: flex;
 	justify-content: space-between;
-    align-items: center;
+	align-items: center;
 }
 
 #footer a {
@@ -567,6 +614,11 @@ ul.tabs li a.linkopen:focus {
 }
 
 
+section .block-wrapper ul {
+	padding-left: 0;
+	margin-left: 0;
+}
+
 
 
 
@@ -584,19 +636,16 @@ ul.tabs li a.linkopen:focus {
 /* responsive */
 #mobile_select h2 {
 	border: 0;
-	margin: -17px 0 0 0;
 	padding: 0;
-	background: #0C1D43;
-	text-align: right
+	text-align: right;
+	margin: 0;
 }
 
 #mobile_select h2 a {
 	display: inline-block;
 	font-size: 0.8em;
-	border-radius: 4px 4px 0 0;
-	padding: 6px;
 	font-size: 0.75em;
-	margin-right: 5px;
+	
 }
 
 
@@ -633,7 +682,6 @@ ul.tabs li a.linkopen:focus {
 	}
 
 	.logoheader {
-		min-height: 100px;
 		margin: 0
 	}
 
@@ -672,7 +720,7 @@ ul.tabs li a.linkopen:focus {
 	}
 }
 
-@media only screen and (min-width: 600px) {}
+
 
 @media only screen and (min-width: 768px) {}
 
@@ -687,3 +735,456 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
 	/* Styles */
 }
+
+
+@media only screen and (max-width: 600px) {
+/* Small screens */
+  
+  } 
+  
+  @media 
+	(min-device-width: 800px) 
+	and (max-device-width: 1280px) {
+	  .header-bar__message {
+		font-size: .8rem;
+	  }
+  }
+  
+  
+  @media only screen and (orientation: portrait) {
+  
+	
+	}
+  
+ 
+  
+  
+  /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+  /* Portrait */
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {    
+	#logo img {
+		width: 40%;
+	}
+
+	#menuNav {
+		right: 0;
+	}
+
+	#menuwrapper {
+		padding: 1rem;
+	}
+
+	#menu-wrapper {
+		width: 100%;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	#menuwrapper, #footer {
+		width: 100%;
+	}
+
+	.camera_fakehover {
+		font-size: 1rem;
+	}
+
+	.blog-list ul.mod-list,
+	#footer {
+		flex-direction: column;
+	}
+
+	#footer ul {
+		margin-bottom: 1rem;
+	}
+
+	section.dark {
+		padding: 1rem 1rem 0 1rem;
+	}
+
+	#team {
+		flex-direction: column;
+		width: 85%;
+	}
+
+	#team .team-box {
+		margin-bottom: 1rem;
+	}
+
+	#top {
+		margin-top: 18%;
+	}
+
+	section .block-wrapper,
+	dl.fields-container  {
+		width: 85%;
+	}
+
+	section .block-wrapper .list-inline {
+		font-size: .7rem;
+	}	
+
+	.property-list .mod-list {
+		flex-direction: column;
+	}
+
+	dl.fields-container dd.property-type {
+		flex-basis: 40%;
+	}
+
+	dl.fields-container dd.bedrooms,
+	dl.fields-container dd.bathrooms,
+	dl.fields-container dd.cars
+	 {
+		flex-basis: 29%;
+	}
+
+	dl.fields-container dd.rent-price {
+		flex-basis: 100%;
+		margin-bottom: 1rem;
+	}
+
+	.img-gallery .showtime-image {
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex-basis: 30%;
+	}
+
+	#main .row {
+		padding: 0 .5rem 0 .5rem;
+	}
+
+	#main .columns {
+		padding-left: 0.9375rem;
+	}
+
+	#main .columns p,
+	#main .columns a,
+	#trading {
+		padding: 0 .9375rem 0 .9375rem;
+	}
+
+	#main .columns #social a {
+		padding: 0;
+	}
+	
+  }
+  
+  /* Landscape */
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	
+	#menu-wrapper {
+		align-items: center;
+		width: 100%;
+		padding: .5rem;
+	}  
+
+	#logoheader {
+		flex-basis: 35%;
+	}
+
+	#menuwrapper {
+		font-size: .6rem;
+	}
+
+	#logo img {
+		width: 50%;
+	}
+
+	#map {
+		margin-top: -3%;
+	}
+
+	#footer {
+		flex-direction: column;
+	}
+
+	#footer ul {
+		margin-bottom: .5rem;
+	}
+
+	.team-box-content p { font-size: .6rem; }
+
+	#top { margin-top: 12%; }
+
+	.block-wrapper { width: 85%; }
+
+	.property-list ul.mod-list { justify-content: space-between; }
+
+	.property-list ul.mod-list li { flex-basis: 44%; } 
+
+	dl.fields-container dd.property-type { flex-basis: 50%; }
+
+	dl.fields-container dd.bedrooms,
+	dl.fields-container dd.bathrooms,
+	dl.fields-container dd.cars
+	 {
+		flex-basis: 29%;
+	}
+
+	section dl.fields-container dd.rent-price { flex-basis: 100%; }
+
+	dl.fields-container dd.rent-price {
+		flex-basis: 100%;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.img-gallery .showtime-image {
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex-basis: 30%;
+	}
+
+	#main .row {
+		padding: 0 .5rem 0 .5rem;
+	}
+
+	#main .columns {
+		padding-left: 0.9375rem;
+	}
+
+	#main .columns p,
+	#main .columns a,
+	#trading {
+		padding: 0 .9375rem 0 .9375rem;
+	}
+
+	#main .columns #social a {
+		padding: 0;
+	}
+
+	#main .medium-8 { width: 75%; } 
+
+
+
+	  
+  }
+  
+  /* ----------- iPhone 6+, 7+ and 8+ ----------- */
+  /* Portrait */
+  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+	  #map {
+		  margin-top: -6%;
+	  }
+  }
+  
+  /* ----------- iPhone X ----------- */
+  /* Portrait */
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
+  
+  /* Landscape */
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {   
+
+	#menu-wrapper {
+		align-items: center;
+		width: 100%;
+		padding: .5rem;
+	}  
+
+	#logoheader {
+		flex-basis: 35%;
+	}
+
+	#menuwrapper {
+		font-size: .6rem;
+	}
+
+	#logo img {
+		width: 50%;
+	}
+
+	#map {
+		margin-top: -3%;
+	}
+
+	#footer {
+		flex-direction: column;
+	}
+
+	#footer ul {
+		margin-bottom: .5rem;
+	}
+
+	.team-box-content p { font-size: .6rem; }
+
+	#top { margin-top: 10%; }
+
+	.block-wrapper { width: 85%; }
+
+	.property-list ul.mod-list { justify-content: space-between; }
+
+	.property-list ul.mod-list li { flex-basis: 44%; } 
+
+	dl.fields-container dd.property-type { flex-basis: 50%; }
+
+	dl.fields-container dd.bedrooms,
+	dl.fields-container dd.bathrooms,
+	dl.fields-container dd.cars
+	 {
+		flex-basis: 29%;
+	}
+
+	section dl.fields-container dd.rent-price { flex-basis: 100%; }
+
+	dl.fields-container dd.rent-price {
+		flex-basis: 100%;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.img-gallery .showtime-image {
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex-basis: 30%;
+	}
+
+	#main .row {
+		padding: 0 .5rem 0 .5rem;
+	}
+
+	#main .columns {
+		padding-left: 0.9375rem;
+	}
+
+	#main .columns p,
+	#main .columns a,
+	#trading {
+		padding: 0 .9375rem 0 .9375rem;
+	}
+
+	#main .columns #social a {
+		padding: 0;
+	}
+
+	#main .medium-8 { width: 75%; } 
+  
+  }
+  
+  /* ----------- iPad 1, 2, Mini and Air ----------- */
+  /* Portrait */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+
+
+	#menu-wrapper {
+		align-items: center;
+		width: 100%;
+		padding: 1rem;
+	}  
+	
+	.property-list .mod-list {
+		flex-direction: column;
+	}
+
+	.img-gallery .showtime-image {
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex-basis: 23%;
+	}
+
+	dl.fields-container dd.property-type {
+		flex-basis: 40%;
+	}
+
+	dl.fields-container dd.bedrooms,
+	dl.fields-container dd.bathrooms,
+	dl.fields-container dd.cars
+	 {
+		flex-basis: 29%;
+	}
+
+	dl.fields-container dd.rent-price {
+		flex-basis: 100%;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	#main .row {
+		padding: 0 .5rem 0 .5rem;
+	}
+
+	#main .columns {
+		padding-left: 0.9375rem;
+	}
+
+	#main .columns p,
+	#main .columns a,
+	#trading {
+		padding: 0 .9375rem 0 .9375rem;
+	}
+
+	#main .columns #social a {
+		padding: 0;
+	}
+	
+  }
+  
+  /* Landscape */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {    
+
+	#top { margin-top: 10%; }
+  
+	.property-list ul.mod-list { justify-content: space-between; }
+
+	.property-list ul.mod-list li { flex-basis: 44%; } 
+
+	dl.fields-container dd.property-type { flex-basis: 50%; }
+
+	dl.fields-container dd.bedrooms,
+	dl.fields-container dd.bathrooms,
+	dl.fields-container dd.cars
+	 {
+		flex-basis: 29%;
+	}
+
+	section dl.fields-container dd.rent-price { flex-basis: 100%; }
+
+	dl.fields-container dd.rent-price {
+		flex-basis: 100%;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.img-gallery .showtime-image {
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex-basis: 30%;
+	}
+
+	#main .row {
+		padding: 0 .5rem 0 .5rem;
+	}
+
+	#main .columns {
+		padding-left: 0.9375rem;
+	}
+
+	#main .columns p,
+	#main .columns a,
+	#trading {
+		padding: 0 .9375rem 0 .9375rem;
+	}
+
+	#main .columns #social a {
+		padding: 0;
+	}
+
+	#main .medium-8 { width: 75%; } 
+  
+  }
+  
+  /* ----------- iPad Pro 12.9" ----------- */
+  /* Landscape */
+  /* Declare the same value for min- and max-width to avoid colliding with desktops */
+  /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+  @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+	  
+	#top { margin-top: 7%; }
+	  
+  
+  }
+  
+  /* Laptop */
+  /* ----------- Retina Screens ----------- */
+  @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {}
+  
+  

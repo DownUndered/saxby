@@ -21,8 +21,8 @@ JText::script('TPL_BEEZ3_SMALLER');
 JText::script('TPL_BEEZ3_INCREASE_SIZE');
 JText::script('TPL_BEEZ3_REVERT_STYLES_TO_DEFAULT');
 JText::script('TPL_BEEZ3_DECREASE_SIZE');
-JText::script('TPL_BEEZ3_OPENMENU');
-JText::script('TPL_BEEZ3_CLOSEMENU');
+//JText::script('TPL_BEEZ3_OPENMENU');
+//JText::script('TPL_BEEZ3_CLOSEMENU');
 
 $this->addScriptDeclaration("
 	var big        = '" . (int) $this->params->get('wrapperLarge') . "%';
