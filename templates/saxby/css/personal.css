@@ -360,9 +360,7 @@ h3.js_heading {
 	text-decoration: none;
 }
 
-.property-list a:hover,
-.blog-list a:hover,
-#userForm a:hover {
+a:hover {
 	color: #095197;
 	opacity: .8;
 }
