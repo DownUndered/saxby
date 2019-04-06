@@ -56,9 +56,9 @@ body h5 {
 }
 
 body p,body ol,body ul,body dl,body address {
-	margin-bottom: 1.5em;
-	font-size: 1.0em;
-	line-height: 1.5em;
+	margin-bottom: 1.5rem;
+	font-size: 1.0rem;
+	line-height: 1.5rem;
 	word-wrap: break-word;
 }
 

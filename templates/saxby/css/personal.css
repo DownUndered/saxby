@@ -5,28 +5,45 @@ body {
 }
 
 body {
-	background: #eee
+	background: #FCFCFC;
 }
 
-h1, h2, h3, h4, 
+h1,
+h2,
+h3,
+h4,
 #camera_wrap_95 .camera_caption div.camera_caption_desc,
-.slogan {
-	font-family: 'Montserrat', sans-serif!important;
+.slogan,
+.sub-heading {
+	font-family: 'Montserrat', sans-serif !important;
 }
 
-p, a, li, #camera_wrap_95 .camera_caption div.camera_caption_title {
-	font-family: 'Muli', sans-serif!important;
+p,
+a,
+li,
+#camera_wrap_95 .camera_caption div.camera_caption_title {
+	font-family: 'Muli', sans-serif !important;
+}
+
+body h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.sub-heading {
+	font-size: 1.5rem;
 }
 
 h3 {
-	color: #555
+	color: #2d2d2d;
 }
+
+h2 { font-size: 2rem; }
 
 h2 a {
 	text-decoration: none
 }
 
-h2,
 .moduletable h3,
 .items-leading h2 {
 	border-bottom: solid 1px #ddd;
@@ -42,6 +59,34 @@ a:visited {
 	color: #095197
 }
 
+.separator-left {
+	text-align: left !important;
+}
+
+.separator-left::before,
+.separator-left::after {
+	display: table;
+	content: ' ';
+	-webkit-flex-basis: 0;
+	-ms-flex-preferred-size: 0;
+	flex-basis: 0;
+	-webkit-box-ordinal-group: 2;
+	-webkit-order: 1;
+	-ms-flex-order: 1;
+	order: 1;
+}
+
+.separator-left::after {
+	clear: both;
+}
+
+.separator-left::after {
+	position: relative !important;
+	width: 3rem;
+	border-bottom: 0.125rem solid #2b71ab;
+	margin: 1rem auto 0;
+	margin-left: 0 !important;
+}
 
 .logoheader {
 	color: #FCFCFC;
@@ -50,8 +95,8 @@ a:visited {
 
 .customMainBanner .bannerStyle {
 	background: black;
-    margin: 0;
-    line-height: 0.5em;
+	margin: 0;
+	line-height: 0.5em;
 }
 
 .customMainBanner .bannerStyle img {
@@ -60,34 +105,34 @@ a:visited {
 
 .customMainBanner .sloganBlock {
 	position: absolute;
-    top: 0;
+	top: 0;
 	bottom: 0;
 	right: 0;
-    padding: 1em;
-    margin: auto;
-    font-size: 3em;
-    letter-spacing: .2em;
+	padding: 1rem;
+	margin: auto;
+	font-size: 2.5rem;
+	letter-spacing: .25rem;
 	color: #FCFCFC;
 	display: flex;
-    flex-direction: column;
-    justify-content: center;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .customMainBanner .sloganBlock a.button {
-	padding: .5em 1em;
-    font-size: .5em;
-    letter-spacing: initial;
-    align-self: center;
-    width: fit-content;
-    color: #FCFCFC;
+	padding: .5rem 1rem;
+	font-size: 1.5rem;
+	letter-spacing: initial;
+	align-self: center;
+	width: fit-content;
+	color: #FCFCFC;
 	background: transparent;
 	text-transform: uppercase;
 	transition: all .3s ease;
 }
 
 .customMainBanner .sloganBlock a.button:hover {
-	transition: all .3s ease;		
-	background: rgba(252,252,252,.7);
+	transition: all .3s ease;
+	background: rgba(252, 252, 252, .7);
 	color: #555;
 }
 
@@ -122,6 +167,17 @@ a:visited {
 
 }
 
+#camera_wrap_95 .camera_caption > div div.camera_caption_title {
+	font-size: 1.8rem!important;
+    line-height: 1.3em;
+}
+
+#camera_wrap_95 .camera_caption > div div.camera_caption_desc {
+	font-size: 1.5rem!important;
+}
+
+.figure-right { margin-left: auto; }
+
 /*  grey background */
 .button,
 button,
@@ -134,7 +190,7 @@ p.readmore a,
 .profile-edit a:visited,
 h3.js_heading {
 	background-color: #FCFCFC;
-	
+
 	border-color: #b2b2b2 #b2b2b2 hsl(114, 0%, 62.5%);
 
 	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.49);
@@ -423,7 +479,7 @@ h3.js_heading {
 	margin-right: auto;
 }
 
-#camera_wrap_95 .camera_caption > div div.camera_caption_title {
+#camera_wrap_95 .camera_caption>div div.camera_caption_title {
 	margin-bottom: 1em;
 }
 
@@ -516,9 +572,9 @@ span.pagenav {
 
 /* +++++++++++++++++  content  +++++++++++++++ */
 .article-info {
-	background-color: #fbfbfb;	
+	background-color: #fbfbfb;
 	border: 1px solid #ddd;
-	
+
 }
 
 ul.menu a:link,
@@ -765,7 +821,7 @@ section .block-wrapper ul {
 		padding: 6px 10px;
 
 	}
-	
+
 }
 
 
@@ -788,7 +844,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 @media only screen and (max-width: 600px) {
 	/* Small screens */
 
-	
+
 
 	#logo img {
 		width: 40%;
