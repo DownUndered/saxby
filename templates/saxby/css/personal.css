@@ -244,6 +244,8 @@ h3.js_heading {
 	text-transform: uppercase;
 }
 
+#submit:hover { opacity: .8; }
+
 .list-inline {
 	display: inline-flex !important;
 	width: 100%;
