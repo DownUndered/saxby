@@ -8,7 +8,9 @@ body {
 	background: #eee
 }
 
-h1, h2, h3, h4, #camera_wrap_95 .camera_caption div.camera_caption_desc {
+h1, h2, h3, h4, 
+#camera_wrap_95 .camera_caption div.camera_caption_desc,
+.slogan {
 	font-family: 'Montserrat', sans-serif!important;
 }
 
@@ -42,13 +44,56 @@ a:visited {
 
 
 .logoheader {
-	color: #FFF;
+	color: #FCFCFC;
 	z-index: 1;
 }
 
+.customMainBanner .bannerStyle {
+	background: black;
+    margin: 0;
+    line-height: 0.5em;
+}
+
+.customMainBanner .bannerStyle img {
+	opacity: .7;
+}
+
+.customMainBanner .sloganBlock {
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	right: 0;
+    padding: 1em;
+    margin: auto;
+    font-size: 3em;
+    letter-spacing: .2em;
+	color: #FCFCFC;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.customMainBanner .sloganBlock a.button {
+	padding: .5em 1em;
+    font-size: .5em;
+    letter-spacing: initial;
+    align-self: center;
+    width: fit-content;
+    color: #FCFCFC;
+	background: transparent;
+	text-transform: uppercase;
+	transition: all .3s ease;
+}
+
+.customMainBanner .sloganBlock a.button:hover {
+	transition: all .3s ease;		
+	background: rgba(252,252,252,.7);
+	color: #555;
+}
+
 #all {
-	background: #FFFFFF;
-	color: #444;
+	background: #FCFCFC;
+	color: #2d2d2d;
 }
 
 
@@ -64,7 +109,7 @@ a:visited {
 
 #header ul.menu a:link,
 #header ul.menu a:visited {
-	color: #fff;
+	color: #FCFCFC;
 	display: inline-block;
 	font-weight: bold;
 	text-decoration: none;
@@ -88,15 +133,8 @@ p.readmore a,
 .profile-edit a:link,
 .profile-edit a:visited,
 h3.js_heading {
-	background-color: #ddd;
-	background-repeat: repeat-x;
-	background-image: -khtml-gradient(linear, left top, left bottom, from(#ffffff), to(#dddddd));
-	background-image: -moz-linear-gradient(top, #ffffff, #dddddd);
-	background-image: -ms-linear-gradient(top, #ffffff, #dddddd);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
-	background-image: -webkit-linear-gradient(top, #ffffff, #dddddd);
-	background-image: -o-linear-gradient(top, #ffffff, #dddddd);
-	background-image: linear-gradient(#ffffff, #dddddd);
+	background-color: #FCFCFC;
+	
 	border-color: #b2b2b2 #b2b2b2 hsl(114, 0%, 62.5%);
 
 	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.49);
@@ -115,7 +153,7 @@ h3.js_heading {
 	width: 20px;
 	height: 16px;
 	cursor: pointer;
-	color: #f8f8ff;
+	color: #FCFCFC;
 }
 
 #menuopener span {
@@ -142,7 +180,7 @@ h3.js_heading {
 #submit {
 	border: 1px solid #00335e;
 	background: #00335e;
-	color: #fff !important;
+	color: #FCFCFC !important;
 	display: inline-block;
 	padding: 15px 40px;
 	border-radius: 4px;
@@ -399,7 +437,7 @@ table {
 
 table th {
 	background-color: #0074cc;
-	color: #fff;
+	color: #FCFCFC;
 	background-image: -moz-linear-gradient(top, #095197, #1B6BA5);
 	background-image: -ms-linear-gradient(top, #095197, #1B6BA5);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#095197),
@@ -414,7 +452,7 @@ table th {
 
 table th a:link,
 table th a:visited {
-	color: #fff
+	color: #FCFCFC
 }
 
 tr.odd,
@@ -465,7 +503,7 @@ p.readmore a:hover,
 /* active item */
 span.pagenav {
 	background: #095197;
-	color: #fff
+	color: #FCFCFC
 }
 
 .pagination-start span.pagenav,
@@ -478,19 +516,9 @@ span.pagenav {
 
 /* +++++++++++++++++  content  +++++++++++++++ */
 .article-info {
-	background-color: #fbfbfb;
-	background-image: -moz-linear-gradient(top, #ffffff, #f5f5f5);
-	background-image: -ms-linear-gradient(top, #ffffff, #f5f5f5);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff),
-		to(#f5f5f5));
-	background-image: -webkit-linear-gradient(top, #ffffff, #f5f5f5);
-	background-image: -o-linear-gradient(top, #ffffff, #f5f5f5);
-	background-image: linear-gradient(top, #ffffff, #f5f5f5);
-	background-repeat: repeat-x;
+	background-color: #fbfbfb;	
 	border: 1px solid #ddd;
-	-webkit-box-shadow: inset 0 1px 0 #ffffff;
-	-moz-box-shadow: inset 0 1px 0 #ffffff;
-	box-shadow: inset 0 1px 0 #ffffff;
+	
 }
 
 ul.menu a:link,
@@ -572,7 +600,7 @@ ul.tabs li a:focus {
 
 .tabcontent,
 div.current {
-	background: #fff;
+	background: #FCFCFC;
 	color: #000;
 	border: solid 1px #ddd;
 }
@@ -585,7 +613,7 @@ div.current {
 ul.tabs li a.linkopen,
 dl.tabs dt.open h3 a:link,
 dl.tabs dt.open h3 a:visited {
-	background: #fff;
+	background: #FCFCFC;
 	color: #333;
 	border-radius: 5px 5px 0px 0px;
 }
@@ -597,21 +625,21 @@ ul.tabs li a.linkopen:hover,
 ul.tabs li a.linkopen:active,
 ul.tabs li a.linkopen:focus {
 	background: #555;
-	color: #fff
+	color: #FCFCFC
 }
 
 
 #footer {
 	background: #7f7f7f;
 	margin: 0 auto;
-	color: #fff;
+	color: #FCFCFC;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
 #footer a {
-	color: #fff;
+	color: #FCFCFC;
 	background: none
 }
 
