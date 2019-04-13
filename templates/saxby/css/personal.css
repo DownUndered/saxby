@@ -258,6 +258,13 @@ h3.js_heading {
 	list-style-type: none;
 }
 
+#welcomePhoto {
+	float: left;
+    margin-right: 1em;
+    width: 25em;
+    height: auto;
+}
+
 .camera_caption>div {
 	background: transparent;
 	color: #444;
