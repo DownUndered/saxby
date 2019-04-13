@@ -109,13 +109,17 @@ a:visited {
 	bottom: 0;
 	right: 0;
 	padding: 1rem;
-	margin: auto;
-	font-size: 2.5rem;
-	letter-spacing: .25rem;
-	color: #FCFCFC;
+	margin: auto;	
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+.customMainBanner .sloganBlock, 
+.sloganBlock .slogan { 
+	font-size: 2.5rem;
+	letter-spacing: .25rem;
+	color: #FCFCFC;
 }
 
 .customMainBanner .sloganBlock a.button {
