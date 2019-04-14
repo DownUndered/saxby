@@ -233,6 +233,8 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 		</div>
 	</div>
 	<jdoc:include type="modules" name="debug" />
+
+
 </body>
 
 </html>

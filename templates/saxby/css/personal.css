@@ -45,8 +45,7 @@ h2 a {
 	text-decoration: none
 }
 
-#mobile_select {display: block!important;}
-#menuwrapper {display: none!important;}
+
 
 
 .moduletable h3,
@@ -913,7 +912,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	}
 
 	#top {
-		margin-top: 18%;
+		position: relative;
+		top: 3em;
 	}
 
 	section .block-wrapper,
@@ -1030,10 +1030,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	#team .team-box {
 		margin-bottom: 1rem;
 	}
-
-	#top {
-		margin-top: 18%;
-	}
+	
 
 	section .block-wrapper,
 	dl.fields-container {
@@ -1126,9 +1123,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		font-size: .6rem;
 	}
 
-	#top {
-		margin-top: 12%;
-	}
 
 	.block-wrapper {
 		width: 85%;
@@ -1250,10 +1244,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		font-size: .6rem;
 	}
 
-	#top {
-		margin-top: 10%;
-	}
-
+	
 	.block-wrapper {
 		width: 85%;
 	}
@@ -1376,9 +1367,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
 /* Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
 
-	#top {
-		margin-top: 10%;
-	}
 
 	.property-list ul.mod-list {
 		justify-content: space-between;
@@ -1446,10 +1434,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 
-	#top {
-		margin-top: 7%;
-	}
-	
+
 
 
 }
@@ -1461,8 +1446,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 @media only screen and (min-width: 768px) {
 	/* For desktop: */
-	#mobile_select {display: none!important;}
-	#menuwrapper {display: block!important;}
+
 
 }
 
@@ -1470,7 +1454,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	/* Extra small screens */
 	#menu-wrapper {padding: .5rem;}
 	#logo img {width: 30%;}
-	#top {margin-top: 12%;}
 
 	.customMainBanner .sloganBlock, 
 	.sloganBlock .slogan {
@@ -1504,8 +1487,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 @media only screen and (orientation: portrait) {
-	#mobile_select {display: block!important;}
-	#menuwrapper {display: none!important;}
+
 
 	section figure {
 		margin-left: auto;
