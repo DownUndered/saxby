@@ -1104,6 +1104,19 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		margin-left: auto;
 	}
 
+	div.customMainBanner {position: relative;}
+
+	.customMainBanner .sloganBlock, 
+	.sloganBlock .slogan {
+		text-align: center;
+		justify-content: unset;		
+	}
+
+	.customMainBanner .sloganBlock {
+		top: 50%;
+    	transform: translateY(-50%);
+	}
+
 	#logo img {
 		width: 50%;
 	}
@@ -1185,6 +1198,12 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		width: 75%;
 	}
 
+	#testimonials h3 {margin-bottom: 0;}
+	#testimonials .cameraContents {width: 100%;}
+
+	#camera_wrap_95 .camera_caption > div div.camera_caption_title {font-size: 1.2em!important;}
+	#camera_wrap_95 .camera_caption > div div.camera_caption_desc {font-size: 1em!important;}
+
 
 
 
@@ -1213,7 +1232,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 	#menu-wrapper {
 		align-items: center;
-		width: 100%;
+		width: 100%!important;
 		padding: .5rem;
 	}
 
@@ -1307,6 +1326,33 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		width: 75%;
 	}
 
+	#top {
+		position: relative;
+		top: 3em;
+	}
+
+	.customMainBanner .sloganBlock {
+		max-height: fit-content;
+		margin: 0;	
+		top: 50%;
+    	transform: translateY(-50%);
+	}
+
+	.customMainBanner .sloganBlock, 
+	.sloganBlock .slogan {
+		text-align: center;
+		justify-content: unset;			
+	}
+
+	.sloganBlock .slogan {line-height: 2.5rem;}
+
+	#testimonials h3 {margin-bottom: 0;}
+	#testimonials .cameraContents {width: 100%;}
+
+	#camera_wrap_95 .camera_caption > div div.camera_caption_title {font-size: 1.2em!important;}
+	#camera_wrap_95 .camera_caption > div div.camera_caption_desc {font-size: 1em!important;}
+
+
 }
 
 /* ----------- iPad 1, 2, Mini and Air ----------- */
@@ -1363,6 +1409,23 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	#main .columns #social a {
 		padding: 0;
 	}
+
+	.customMainBanner .sloganBlock {
+		max-height: fit-content;
+		margin: 0;	
+		top: 50%;
+		transform: translateY(-50%);
+		padding: 2em;
+	}
+
+	.customMainBanner .sloganBlock, 
+	.sloganBlock .slogan {
+		text-align: center;
+		justify-content: unset;			
+	}
+
+	.sloganBlock .slogan {line-height: 2.5rem;}
+
 
 }
 
@@ -1428,6 +1491,26 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 	#menu-wrapper {width: 80%;}
 
+	div.customMainBanner {position: relative;}
+
+	.customMainBanner .sloganBlock {
+		max-height: fit-content;
+		margin: 0;			
+		padding: 2em;
+		left: 0;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.customMainBanner .sloganBlock, 
+	.sloganBlock .slogan {
+		text-align: center;
+		justify-content: unset;			
+	}
+
+	.sloganBlock .slogan {line-height: 2.5rem;}
+
 
 
 }
@@ -1437,6 +1520,26 @@ only screen and (min-device-pixel-ratio: 1.5) {
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+	div.customMainBanner {position: relative;}
+
+	.customMainBanner .sloganBlock {
+		max-height: fit-content;
+		margin: 0;			
+		padding: 2em;
+		left: 0;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.customMainBanner .sloganBlock, 
+	.sloganBlock .slogan {
+		text-align: center;
+		justify-content: unset;			
+	}
+
+	.sloganBlock .slogan {line-height: 2.5rem;}
 
 
 }
@@ -1478,11 +1581,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	#testimonials h3 {margin-bottom: 0;}
 	#testimonials .cameraContents {width: 100%;}
 
-	#camera_wrap_95 .camera_caption > div div.camera_caption_title {font-size: 1.2em!important;}
-	#camera_wrap_95 .camera_caption > div div.camera_caption_desc {font-size: 1em!important;}
+	#camera_wrap_95 .camera_caption > div div.camera_caption_title {font-size: 1.1em!important;}
+	#camera_wrap_95 .camera_caption > div div.camera_caption_desc {font-size: .9em!important;}
 
 	#footer, #footer ul {
-		font-size: .9em;
+		font-size: .8em;
 	}
 
 
@@ -1510,6 +1613,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		width: 85%;	
 		text-align: center;	
 	}
+
 
 	
 }
