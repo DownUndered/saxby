@@ -1511,6 +1511,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 	.sloganBlock .slogan {line-height: 2.5rem;}
 
+	#camera_wrap_95 .camera_caption > div div.camera_caption_title {font-size: 1.2em!important;}
+	#camera_wrap_95 .camera_caption > div div.camera_caption_desc {font-size: 1em!important;}
+
 
 
 }
