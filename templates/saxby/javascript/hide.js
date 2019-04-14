@@ -299,20 +299,20 @@ var mobileMenu = function(){
 		createElements();
 
 		// show the elements if the browser size is smaller
-		if (getX() <= 461 && !displayed) {
+		if (getX() <= 769 && !displayed) {
 			display();
 		}
 
 		// react on resize events
 		$(window).on('resize', function () {
-			if (getX() >= 461) {
+			if (getX() >= 769) {
 				if (displayed) {
 					$mobile.hide();
 					$('#menuwrapper').show();
 					displayed = false;
 				}
 			}
-			if (getX() < 461) {
+			if (getX() < 769) {
 				if (!displayed) {
 					display();
 				}

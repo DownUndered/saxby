@@ -871,7 +871,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 	#menuwrapper {
 		padding: 1rem;
-		flex-basis: 100%;
+		flex-basis: 100%;		
 	}
 
 	#menu-wrapper {
@@ -1101,6 +1101,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 	#menuwrapper {
 		font-size: .6rem;
+		margin-left: auto;
 	}
 
 	#logo img {
@@ -1222,6 +1223,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 	#menuwrapper {
 		font-size: .6rem;
+		margin-left: auto;
 	}
 
 	#logo img {
@@ -1314,7 +1316,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 	#menu-wrapper {
 		align-items: center;
-		width: 100%;
+		width: 80%;
 		padding: 1rem;
 	}
 
@@ -1424,6 +1426,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		width: 75%;
 	}
 
+	#menu-wrapper {width: 80%;}
+
 
 
 }
@@ -1433,8 +1437,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-
-
 
 
 }
