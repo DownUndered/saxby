@@ -184,7 +184,11 @@ a:visited {
 	font-size: 1.5rem!important;
 }
 
-.figure-right { margin-left: auto; }
+#landingAbout {
+	display: flex;
+    flex-wrap: wrap;
+}
+
 
 /*  grey background */
 .button,
@@ -741,11 +745,12 @@ section .block-wrapper ul {
 
 
 
+section figure {
+	margin-left: auto;
+	margin-right: auto;
+}
 
-
-
-
-
+section figure img {height: auto;}
 
 
 
@@ -1204,6 +1209,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	#camera_wrap_95 .camera_caption > div div.camera_caption_title {font-size: 1.2em!important;}
 	#camera_wrap_95 .camera_caption > div div.camera_caption_desc {font-size: 1em!important;}
 
+	#right-col {flex-basis: 100%;}
+
 
 
 
@@ -1346,6 +1353,13 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 	.sloganBlock .slogan {line-height: 2.5rem;}
 
+	#landingAbout {justify-content: space-between;}
+	#left-col {flex-basis: 70%;}
+	#right-col {
+		flex-basis: 25%!important;
+		margin-top: 0!important;
+	}
+
 	#testimonials h3 {margin-bottom: 0;}
 	#testimonials .cameraContents {width: 100%;}
 
@@ -1365,6 +1379,14 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		width: 80%;
 		padding: 1rem;
 	}
+
+	#left-col {flex-basis: 70%!important;}
+	#right-col {
+		flex-basis: 25%!important;
+		margin-top: 0!important;
+		margin-left: 1em;
+	}
+
 
 	.property-list .mod-list {
 		flex-direction: column;
@@ -1432,6 +1454,12 @@ only screen and (min-device-pixel-ratio: 1.5) {
 /* Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
 
+	#left-col {flex-basis: 70%!important;}
+	#right-col {
+		flex-basis: 25%!important;
+		margin-top: 0!important;
+		margin-left: 1em;
+	}
 
 	.property-list ul.mod-list {
 		justify-content: space-between;
@@ -1516,6 +1544,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 
 
+
+
 }
 
 /* ----------- iPad Pro 12.9" ----------- */
@@ -1544,7 +1574,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 	.sloganBlock .slogan {line-height: 2.5rem;}
 
-
+	#left-col {flex-basis: 70%!important;}
 }
 
 /* Laptop */
@@ -1554,6 +1584,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 @media only screen and (min-width: 768px) {
 	/* For desktop: */
+	#left-col {flex-basis: 70%;}
+	#right-col {
+		flex-basis: 30%;
+		margin-top: -3em;
+	}
 
 
 }
@@ -1581,6 +1616,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		margin-bottom: 1em;
 	}
 
+	#right-col {flex-basis: 100%;}
+
 	#testimonials h3 {margin-bottom: 0;}
 	#testimonials .cameraContents {width: 100%;}
 
@@ -1596,11 +1633,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 @media only screen and (orientation: portrait) {
 
+	#right-col {flex-basis: 100%;}
 
-	section figure {
-		margin-left: auto;
-		margin-right: auto;
-	}
 
 	div.customMainBanner {position: relative;}
 
