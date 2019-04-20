@@ -13,7 +13,7 @@ h2,
 h3,
 h4,
 #camera_wrap_95 .camera_caption div.camera_caption_desc,
-.slogan,
+#camera_wrap_109 .camera_caption > div,
 .sub-heading {
 	font-family: 'Montserrat', sans-serif !important;
 }
@@ -97,50 +97,53 @@ a:visited {
 	z-index: 1;
 }
 
-.customMainBanner .bannerStyle {
+#camera_wrap_109 {
 	background: black;
-	margin: 0;
-	line-height: 0.5em;
+	margin: 0;	
 }
 
-.customMainBanner .bannerStyle img {
+#camera_wrap_109 img {
 	opacity: .7;
 }
 
-.customMainBanner .sloganBlock {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	padding: 1rem;
-	margin: auto;	
-	display: flex;
-	flex-direction: column;
+#camera_wrap_109 .cameraContent  {
+	width: 70%;
+	margin-left: auto;
 	justify-content: center;
+	align-items: center;	
+    text-align: center;
 }
 
-.customMainBanner .sloganBlock, 
-.sloganBlock .slogan { 
-	font-size: 2.5rem;
-	letter-spacing: .25rem;
+#camera_wrap_109 .cameraContent.cameracurrent,
+#camera_wrap_95 .cameraContent.cameracurrent {display: flex!important;}
+
+#camera_wrap_109 .camera_caption > div {
 	color: #FCFCFC;
 }
 
-.customMainBanner .sloganBlock a.button {
+#camera_wrap_109 .camera_caption > div div.camera_caption_title {
+	margin-bottom: 1em;
+	letter-spacing: .25rem;
+	font-size: 2em;
+}
+
+
+
+#camera_wrap_109 .camera_caption_desc a.button {
 	padding: .5rem 1rem;
 	font-size: 1.5rem;
 	letter-spacing: initial;
 	align-self: center;
 	width: fit-content;
 	color: #FCFCFC;
-	background: transparent;
+	background: transparent!important;
 	text-transform: uppercase;
 	transition: all .3s ease;
 }
 
-.customMainBanner .sloganBlock a.button:hover {
+#camera_wrap_109 .camera_caption_desc a.button:hover {
 	transition: all .3s ease;
-	background: rgba(252, 252, 252, .7);
+	background: rgba(252, 252, 252, .7)!important;
 	color: #555;
 }
 
@@ -192,6 +195,7 @@ a:visited {
 
 /*  grey background */
 .button,
+#camera_wrap_95 .camera_caption .button,
 button,
 p.readmore a,
 #header input.button,
@@ -202,14 +206,10 @@ p.readmore a,
 .profile-edit a:visited,
 h3.js_heading {
 	background-color: #FCFCFC;
-
-	border-color: #b2b2b2 #b2b2b2 hsl(114, 0%, 62.5%);
-
-	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.49);
 	-webkit-font-smoothing: antialiased;
 	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
 	color: #095197;
-	border: solid 1px #ddd
+	border: solid 1px #ddd!important;
 }
 
 #menuopener {
@@ -1109,19 +1109,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		margin-left: auto;
 	}
 
-	div.customMainBanner {position: relative;}
-
-	.customMainBanner .sloganBlock, 
-	.sloganBlock .slogan {
-		text-align: center;
-		justify-content: unset;		
-	}
-
-	.customMainBanner .sloganBlock {
-		top: 50%;
-    	transform: translateY(-50%);
-	}
-
 	#logo img {
 		width: 50%;
 	}
@@ -1223,11 +1210,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		margin-top: -6%;
 	}
 
-	.customMainBanner .sloganBlock, 
-	.sloganBlock .slogan {
-		font-size: 1.5rem;
-		text-align: center;
-	}
+
 }
 
 /* ----------- iPhone X ----------- */
@@ -1338,18 +1321,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		top: 3em;
 	}
 
-	.customMainBanner .sloganBlock {
-		max-height: fit-content;
-		margin: 0;	
-		top: 50%;
-    	transform: translateY(-50%);
-	}
 
-	.customMainBanner .sloganBlock, 
-	.sloganBlock .slogan {
-		text-align: center;
-		justify-content: unset;			
-	}
 
 	.sloganBlock .slogan {line-height: 2.5rem;}
 
@@ -1432,21 +1404,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		padding: 0;
 	}
 
-	.customMainBanner .sloganBlock {
-		max-height: fit-content;
-		margin: 0;	
-		top: 50%;
-		transform: translateY(-50%);
-		padding: 2em;
-	}
 
-	.customMainBanner .sloganBlock, 
-	.sloganBlock .slogan {
-		text-align: center;
-		justify-content: unset;			
-	}
-
-	.sloganBlock .slogan {line-height: 2.5rem;}
 
 
 }
@@ -1519,25 +1477,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 	#menu-wrapper {width: 80%;}
 
-	div.customMainBanner {position: relative;}
 
-	.customMainBanner .sloganBlock {
-		max-height: fit-content;
-		margin: 0;			
-		padding: 2em;
-		left: 0;
-		right: 0;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-
-	.customMainBanner .sloganBlock, 
-	.sloganBlock .slogan {
-		text-align: center;
-		justify-content: unset;			
-	}
-
-	.sloganBlock .slogan {line-height: 2.5rem;}
 
 	#camera_wrap_95 .camera_caption > div div.camera_caption_title {font-size: 1.2em!important;}
 	#camera_wrap_95 .camera_caption > div div.camera_caption_desc {font-size: 1em!important;}
@@ -1554,25 +1494,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 
-	div.customMainBanner {position: relative;}
 
-	.customMainBanner .sloganBlock {
-		max-height: fit-content;
-		margin: 0;			
-		padding: 2em;
-		left: 0;
-		right: 0;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-
-	.customMainBanner .sloganBlock, 
-	.sloganBlock .slogan {
-		text-align: center;
-		justify-content: unset;			
-	}
-
-	.sloganBlock .slogan {line-height: 2.5rem;}
 
 	#left-col {flex-basis: 70%!important;}
 }
@@ -1598,14 +1520,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	#menu-wrapper {padding: .5rem;}
 	#logo img {width: 30%;}
 
-	.customMainBanner .sloganBlock, 
-	.sloganBlock .slogan {
-		font-size: 1.5rem;
-	}
 
-	.customMainBanner .sloganBlock a.button {
-		font-size: 1rem;
-	}
 
 	body h1 {font-size: 2rem;}
 	body h2 {font-size: 1.5rem;}
@@ -1636,13 +1551,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	#right-col {flex-basis: 100%;}
 
 
-	div.customMainBanner {position: relative;}
 
-	.customMainBanner .sloganBlock, 
-	.sloganBlock .slogan {
-		text-align: center;
-		justify-content: unset;
-	}
 
 	#footer {
 		margin-left: auto;
