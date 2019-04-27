@@ -259,10 +259,10 @@ section.section-style {
 #menu-wrapper {
     display: inline-flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
-    padding: 1rem 0;
+    padding: .5rem 0;
     width: 75%;
-
 }
 
 #header ul.menu {

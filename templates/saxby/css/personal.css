@@ -106,13 +106,7 @@ a:visited {
 	opacity: .7;
 }
 
-#camera_wrap_109 .cameraContent  {
-	width: 70%;
-	margin-left: auto;
-	justify-content: center;
-	align-items: center;	
-    text-align: center;
-}
+
 
 #camera_wrap_109 .cameraContent.cameracurrent,
 #camera_wrap_95 .cameraContent.cameracurrent {display: flex!important;}
@@ -131,7 +125,7 @@ a:visited {
 
 #camera_wrap_109 .camera_caption_desc a.button {
 	padding: .5rem 1rem;
-	font-size: 1.5rem;
+	font-size: 1.5em;
 	letter-spacing: initial;
 	align-self: center;
 	width: fit-content;
@@ -492,11 +486,22 @@ a:hover {
 	padding-left: 0;
 }
 
+
+#camera_wrap_109 .cameraContent  {
+	width: 100%;
+	margin-left: auto;
+	justify-content: center;
+	align-items: center;	
+	text-align: center;
+}
+
 #testimonials .cameraContents {
 	width: 60%;
 	margin-left: auto;
 	margin-right: auto;
 }
+
+
 
 #camera_wrap_95 .camera_caption>div div.camera_caption_title {
 	margin-bottom: 1em;
@@ -867,7 +872,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 
 	#logo img {
-		width: 40%;
+		width: 30%;
 	}
 
 	#menuNav {
@@ -883,6 +888,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		width: 100%;
 		justify-content: space-around;
 		align-items: center;
+		padding: .5rem 0;
 	}
 
 	#menuwrapper,
@@ -920,6 +926,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		position: relative;
 		top: 3em;
 	}
+
+	#top + .camera_wrap {margin-bottom: 4em;}
 
 	section .block-wrapper,
 	dl.fields-container {
@@ -1013,6 +1021,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	.camera_fakehover {
 		font-size: 1rem;
 	}
+
+	
 
 	.blog-list ul.mod-list,
 	#footer {
@@ -1110,8 +1120,12 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	}
 
 	#logo img {
-		width: 50%;
+		width: 30%;
 	}
+
+	#camera_wrap_109 .camera_caption > div div.camera_caption_title {font-size: 1.5em;}
+	#camera_wrap_109 .camera_caption_desc a.button {font-size: 1em;}
+
 
 	#map {
 		margin-top: -3%;
@@ -1210,6 +1224,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		margin-top: -6%;
 	}
 
+	
+
 
 }
 
@@ -1234,6 +1250,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		font-size: .6rem;
 		margin-left: auto;
 	}
+	
+	#camera_wrap_109 .camera_caption > div div.camera_caption_title {font-size: 1.5em;}
+	#camera_wrap_109 .camera_caption_desc a.button {font-size: 1em;}
 
 	#logo img {
 		width: 50%;
@@ -1349,8 +1368,10 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	#menu-wrapper {
 		align-items: center;
 		width: 80%;
-		padding: 1rem;
+		padding: .5rem;
 	}
+
+	#logo img {width:35%;}
 
 	#left-col {flex-basis: 70%!important;}
 	#right-col {
@@ -1359,6 +1380,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		margin-left: 1em;
 	}
 
+	
 
 	.property-list .mod-list {
 		flex-direction: column;
@@ -1411,6 +1433,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 /* Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+
+	#camera_wrap_109 .camera_caption > div div.camera_caption_title {font-size: 1.5em;}
+	#camera_wrap_109 .camera_caption_desc a.button {font-size: 1em;}
 
 	#left-col {flex-basis: 70%!important;}
 	#right-col {
@@ -1512,6 +1537,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		margin-top: -3em;
 	}
 
+	#camera_wrap_109 .cameraContent  {
+		width: 70%;
+		
+	}
+
 
 }
 
@@ -1520,6 +1550,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	#menu-wrapper {padding: .5rem;}
 	#logo img {width: 30%;}
 
+	
 
 
 	body h1 {font-size: 2rem;}
@@ -1550,7 +1581,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 	#right-col {flex-basis: 100%;}
 
-
+	#camera_wrap_109 .camera_caption > div div.camera_caption_title {font-size: 1.5em;}
+	#camera_wrap_109 .camera_caption_desc a.button {font-size: 1em;}
 
 
 	#footer {
