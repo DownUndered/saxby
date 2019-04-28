@@ -92,8 +92,17 @@ a:visited {
 	margin-left: 0 !important;
 }
 
+.logoheader,
+#camera_wrap_109 .camera_caption > div,
+#camera_wrap_109 .camera_caption_desc a.button,
+#header ul.menu a:link,
+#header ul.menu a:visited,
+#menuopener,
+table th,
+#footer,
+#footer a {color: #FCFCFC;}
+
 .logoheader {
-	color: #FCFCFC;
 	z-index: 1;
 }
 
@@ -111,9 +120,6 @@ a:visited {
 #camera_wrap_109 .cameraContent.cameracurrent,
 #camera_wrap_95 .cameraContent.cameracurrent {display: flex!important;}
 
-#camera_wrap_109 .camera_caption > div {
-	color: #FCFCFC;
-}
 
 #camera_wrap_109 .camera_caption > div div.camera_caption_title {
 	margin-bottom: 1em;
@@ -129,7 +135,6 @@ a:visited {
 	letter-spacing: initial;
 	align-self: center;
 	width: fit-content;
-	color: #FCFCFC;
 	background: transparent!important;
 	text-transform: uppercase;
 	transition: all .3s ease;
@@ -159,7 +164,6 @@ a:visited {
 
 #header ul.menu a:link,
 #header ul.menu a:visited {
-	color: #FCFCFC;
 	display: inline-block;
 	font-weight: bold;
 	text-decoration: none;
@@ -216,7 +220,6 @@ h3.js_heading {
 	width: 20px;
 	height: 16px;
 	cursor: pointer;
-	color: #FCFCFC;
 }
 
 #menuopener span {
@@ -228,7 +231,6 @@ h3.js_heading {
 	top: 0;
 	left: 0;
 	display: block;
-	width: 100%;
 	height: 2px;
 	background: #fefefe;
 	box-shadow: 0 7px 0 #fefefe, 0 14px 0 #fefefe;
@@ -255,7 +257,6 @@ h3.js_heading {
 
 .list-inline {
 	display: inline-flex !important;
-	width: 100%;
 	justify-content: space-around;
 }
 
@@ -296,7 +297,6 @@ h3.js_heading {
 #camera_wrap_109 .camera_caption > div {background-color: transparent;}
 
 .property-list .field-label,
-/*.property-list .showtime,*/
 .property-list .newsflash-image,
 .property-list .property-description,
 .property-list .property-title,
@@ -305,6 +305,9 @@ h3.js_heading {
 .property-list .showtime .showtime-image {display: none;}
 
 .property-list .showtime .showtime-image:first-child {display: block;}
+
+#menuopener::after,
+.list-inline,
 .property-list .img-gallery,
 .property-list .showtime-image,
 .property-list .showtime-image img,
@@ -537,7 +540,6 @@ table {
 
 table th {
 	background-color: #0074cc;
-	color: #FCFCFC;
 	background-image: -moz-linear-gradient(top, #095197, #1B6BA5);
 	background-image: -ms-linear-gradient(top, #095197, #1B6BA5);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#095197),
@@ -732,20 +734,14 @@ ul.tabs li a.linkopen:focus {
 #footer {
 	background: #7f7f7f;
 	margin: 0 auto;
-	color: #FCFCFC;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-#footer a {
-	color: #FCFCFC;
-	background: none
-}
+#footer a,
+#bottom a {background: none;}
 
-#bottom a {
-	background: none
-}
 
 .box1 {
 	border-right: solid 1px #ccc
@@ -755,16 +751,13 @@ ul.tabs li a.linkopen:focus {
 	border-left: solid 1px #ccc
 }
 
-#bottom ul li a {
-	background-image: none;
-	padding-left: 0
-}
+section .block-wrapper ul,
+#bottom ul li a {padding-left: 0}
+
+#bottom ul li a {background-image: none;}
 
 
-section .block-wrapper ul {
-	padding-left: 0;
-	margin-left: 0;
-}
+section .block-wrapper ul {margin-left: 0;}
 
 
 
@@ -905,12 +898,12 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	}
 
 	#menu-wrapper {
-		width: 100%;
 		justify-content: space-around;
 		align-items: center;
 		padding: .5rem 0;
 	}
 
+	#menu-wrapper,
 	#menuwrapper,
 	#footer {
 		width: 100%;
@@ -1027,11 +1020,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	}
 
 	#menu-wrapper {
-		width: 100%;
 		justify-content: space-around;
 		align-items: center;
 	}
 
+	#menu-wrapper,
 	#menuwrapper,
 	#footer {
 		width: 100%;
