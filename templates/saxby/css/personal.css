@@ -181,6 +181,8 @@ a:visited {
 	font-size: 1.5rem!important;
 }
 
+
+
 #landingAbout {
 	display: flex;
     flex-wrap: wrap;
@@ -201,7 +203,6 @@ p.readmore a,
 h3.js_heading {
 	background-color: #FCFCFC;
 	-webkit-font-smoothing: antialiased;
-	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
 	color: #095197;
 	border: solid 1px #ddd!important;
 }
@@ -292,34 +293,50 @@ h3.js_heading {
 	position: relative !important;
 }
 
+#camera_wrap_109 .camera_caption > div {background-color: transparent;}
+
 .property-list .field-label,
-.property-list .showtime,
+/*.property-list .showtime,*/
 .property-list .newsflash-image,
 .property-list .property-description,
 .property-list .property-title,
 .sale-price,
-.blog-list .blog-text {
-	display: none;
+.blog-list .blog-text,
+.property-list .showtime .showtime-image {display: none;}
+
+.property-list .showtime .showtime-image:first-child {display: block;}
+.property-list .img-gallery,
+.property-list .showtime-image,
+.property-list .showtime-image img,
+.blog-list img,
+.showtime-image:first-child a {width: 100%;}
+
+.property-list dl.fields-container .showtime-default .showtime-image {margin-right: 0;}
+.property-list .showtime-image img {
+	border: 0;
+	height: auto;
+}
+.property-list .showtime-image img:hover,
+.blog-list img:hover {transform: scale(1.1);}
+
+.showtime-image:first-child {
+	flex-basis: 100%;
+    margin: 0;
 }
 
-.property-list img.main-photo,
+.showtime-image:first-child a {margin: 0;}
+
+.property-list .showtime-image img,
 .blog-list img {
-	width: 100%;
 	-webkit-transition: all 2s cubic-bezier(.19, 1, .22, 1) 0ms;
 	-webkit-transform: translateZ(0);
 	transform: translateZ(0);
 	transition: all 2s cubic-bezier(.19, 1, .22, 1) 0ms;
 }
 
-.property-list img.main-photo:hover,
-.blog-list img:hover {
-	transform: scale(1.15);
-}
-
 .property-list .field-entry,
-.blog-list .field-entry {
-	overflow: hidden;
-}
+.blog-list .field-entry,
+.property-list dl.fields-container .showtime-default .showtime-image {overflow: hidden;}
 
 .property-list ul,
 .blog-list ul {
@@ -482,6 +499,8 @@ a:hover {
 	filter: grayscale(45%);
 }
 
+#map iframe {margin-top: -3em;}
+
 .padding-left-0 {
 	padding-left: 0;
 }
@@ -500,6 +519,7 @@ a:hover {
 	margin-left: auto;
 	margin-right: auto;
 }
+
 
 
 
