@@ -322,12 +322,13 @@ h3.js_heading {
 .property-list .showtime-image img:hover,
 .blog-list img:hover {transform: scale(1.1);}
 
-.showtime-image:first-child {
-	flex-basis: 100%;
-    margin: 0;
-}
+.showtime-image:first-child,
+.img-gallery .showtime-image:first-child {flex-basis: 100%;}
 
-.showtime-image:first-child a {margin: 0;}
+.showtime-image:first-child ,
+.showtime-image:first-child a,
+.img-gallery .showtime-image:first-child,
+.img-gallery .showtime-image:first-child a {margin: 0;}
 
 .property-list .showtime-image img,
 .blog-list img {
@@ -1041,6 +1042,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		flex-direction: column;
 	}
 
+
+
 	#footer ul {
 		margin-bottom: 1rem;
 	}
@@ -1064,9 +1067,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		width: 85%;
 	}
 
-	section .block-wrapper .list-inline {
-		font-size: .7rem;
-	}
+	section .block-wrapper .list-inline ul {font-size: .7em;}
 
 	.property-list .mod-list {
 		flex-direction: column;
@@ -1159,6 +1160,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	.block-wrapper {
 		width: 85%;
 	}
+
+	section .block-wrapper .list-inline ul {font-size: .8em;}
 
 	.property-list ul.mod-list {
 		justify-content: space-between;
@@ -1395,8 +1398,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	
 
 	.property-list .mod-list {
-		flex-direction: column;
+		flex-direction: row;
+		justify-content: center;
 	}
+	.property-list .mod-list li {flex-basis: 40%;}
+	.property-list .mod-list li * {font-size: .7rem;}
 
 	.img-gallery .showtime-image {
 		flex-direction: row;
@@ -1404,15 +1410,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		flex-basis: 23%;
 	}
 
-	dl.fields-container dd.property-type {
-		flex-basis: 40%;
-	}
+	dl.fields-container dd.property-type {flex-basis: 40%;}
 
 	dl.fields-container dd.bedrooms,
 	dl.fields-container dd.bathrooms,
-	dl.fields-container dd.cars {
-		flex-basis: 29%;
-	}
+	dl.fields-container dd.cars {flex-basis: 29%;}
 
 	dl.fields-container dd.rent-price {
 		flex-basis: 100%;

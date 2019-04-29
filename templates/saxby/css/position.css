@@ -187,7 +187,7 @@ span.field-label  {
     flex-basis: 10%;
 }
 
-.rent-price { flex-basis: 70%; }
+.rent-price { flex-basis: 20%; }
 
 .property-title { order: 1; }
 .property-address { order: 2; }
@@ -197,7 +197,10 @@ span.field-label  {
 .bedrooms { order: 6; }
 .bathrooms { order: 7; }
 .cars { order:8; }
-.rent-price { order: 9; }
+.rent-price { 
+    order: 9;
+    padding-right: 1rem;
+}
 .property-description { order: 10; }
 
 section .fields-container {
