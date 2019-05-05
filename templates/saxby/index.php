@@ -34,6 +34,7 @@ $headerImage    = $this->params->get('headerImage');
 $config         = JFactory::getConfig();
 $bootstrap      = explode(',', $this->params->get('bootstrap'));
 $option         = JFactory::getApplication()->input->getCmd('option', '');
+$catID 			= JRequest::getVar('catid');
 
 // Output as HTML5
 $this->setHtml5(true);
@@ -168,6 +169,14 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 						<jdoc:include type="message" />
 						<jdoc:include type="component" />
 
+						<aside>				
+					<?php if ($catID == 10) : ?>
+						<jdoc:include type="modules" name="relevant-rent-properties" />
+					<?php elseif ($catID == 9) : ?>
+						<jdoc:include type="modules" name="relevant-sales-properties" />
+					<?php endif; ?>
+				</aside>
+
 					</div><!-- end main -->
 				</div><!-- end wrapper -->
 
@@ -188,6 +197,7 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 				</aside><!-- end right -->
 				<?php endif; ?>
 
+
 				<?php if ($navposition === 'center' and $showleft) : ?>
 				<nav class="left <?php if ($showRightColumn == null) { echo 'leftbigger'; } ?>" id="nav">
 
@@ -198,11 +208,14 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 				</nav><!-- end navi -->
 				<?php endif; ?>
 
-				<div class="wrap"></div>
+				
 			</div> <!-- end contentarea -->
 		</div><!-- back -->
 	</div><!-- all -->
 
+	
+
+	
 	<div id="footer-outer">
 		<?php if ($showbottom) : ?>
 		<div id="footer-inner">
