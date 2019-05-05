@@ -46,8 +46,6 @@ h2 a {
 }
 
 
-
-
 .moduletable h3,
 .items-leading h2 {
 	border-bottom: solid 1px #ddd;
@@ -627,6 +625,14 @@ span.pagenav {
 ul.menu a:link,
 ul.menu a:visited {
 	color: #444;
+}
+
+dl {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;   
+    display: flex;
+    flex-wrap: wrap; 
 }
 
 /* ++++++++++++++++++++++  menu ++++++++++++++++++++++++++  */
@@ -1555,6 +1561,54 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		width: 70%;
 		
 	}
+
+	dl { 
+		width: 100%;
+		margin: 0;
+	}
+
+	.float-left { float: left; }
+	.float-right { float: right;}
+
+	article.float-left { 
+		width: 50%;
+		margin-left: 10%;
+		padding-right: 1em;
+	}
+	aside.float-right { 
+		width: 20%; 
+		margin-right: 10%;
+	}
+
+	.showtime-default .showtime-image { width: 15% }
+
+	
+	aside.float-right .showtime-image:not(:first-child),
+	aside.float-right .property-description { display: none; }
+
+	aside.float-right .property-address,
+	aside.float-right .property-type { flex-basis: 45%; }
+
+	aside.float-right .img-gallery { flex-basis: 80%; }
+	aside.float-right .rent-price { display: none; } 
+
+	aside.float-right .property-title { font-size: 1.3rem; }
+
+	aside.float-right .bedrooms, 
+	aside.float-right .bathrooms, 
+	aside.float-right .cars { font-size: 1.2rem; }
+
+	aside.float-right .bedrooms, 
+	aside.float-right .bathrooms, 
+	aside.float-right .cars { flex-basis: 33%;}
+
+	aside.float-right .property-address,
+	aside.float-right .property-type,
+	aside.float-right .bedrooms, 
+	aside.float-right .bathrooms, 
+	aside.float-right .cars { text-align: left; }
+
+
 
 
 }

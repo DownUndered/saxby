@@ -167,15 +167,16 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 						<?php endif; ?>
 
 						<jdoc:include type="message" />
+						
 						<jdoc:include type="component" />
 
-						<aside>				
-					<?php if ($catID == 10) : ?>
-						<jdoc:include type="modules" name="relevant-rent-properties" />
-					<?php elseif ($catID == 9) : ?>
-						<jdoc:include type="modules" name="relevant-sales-properties" />
-					<?php endif; ?>
-				</aside>
+						<aside class="float-right">				
+							<?php if ($catID == 10) : ?>
+								<jdoc:include type="modules" name="relevant-rent-properties" />
+							<?php elseif ($catID == 9) : ?>
+								<jdoc:include type="modules" name="relevant-sales-properties" />
+							<?php endif; ?>
+						</aside>
 
 					</div><!-- end main -->
 				</div><!-- end wrapper -->

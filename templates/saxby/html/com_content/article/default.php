@@ -14,6 +14,7 @@ $templateparams = $app->getTemplate(true)->params;
 $images         = json_decode($this->item->images);
 $urls           = json_decode($this->item->urls);
 $user           = JFactory::getUser();
+$catID 			= JRequest::getVar('catid');
 
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 JHtml::_('behavior.caption');
@@ -26,7 +27,7 @@ $showPrintIcon = $params->get('show_print_icon');
 $showEmailIcon = $params->get('show_email_icon');
 
 ?>
-<article class="item-page<?php echo $this->pageclass_sfx?>">
+<article class="item-page<?php if($catID == 10 || $catID == 9) : ?><?php echo ' float-left'?><?php endif; ?><?php echo $this->pageclass_sfx?>">
 <?php if ($showPageHeading = $this->params->get('show_page_heading')) : ?>
 
 <?php if ($showPageHeading and $params->get('show_title')) :?>
