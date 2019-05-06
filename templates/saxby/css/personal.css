@@ -488,13 +488,17 @@ a:hover {
 	vertical-align: baseline;
 }
 
+aside.float-right .showtime-image:not(:first-child),
+aside.float-right .property-description,
+aside.float-right .rent-price { display: none; }
+
+aside.float-right h3 { margin-bottom: 1em; }
+
 #facebook {
 	color: #3C5A99;
 }
 
-#linkedin {
-	color: #0077B5;
-}
+#linkedin { color: #0077B5; 	}
 
 #map {
 	margin-bottom: 1rem;
@@ -503,9 +507,7 @@ a:hover {
 
 #map iframe {margin-top: -3em;}
 
-.padding-left-0 {
-	padding-left: 0;
-}
+.padding-left-0 { padding-left: 0; }
 
 
 #camera_wrap_109 .cameraContent  {
@@ -523,12 +525,12 @@ a:hover {
 }
 
 
+#camera_wrap_95 .camera_caption>div div.camera_caption_title { margin-bottom: 1em; }
 
-
-#camera_wrap_95 .camera_caption>div div.camera_caption_title {
-	margin-bottom: 1em;
-}
-
+article.float-left .icon,
+aside.float-right .icon { text-align: left; }
+article.float-left .icon span::before,
+aside.float-right .icon span::before { padding-left: 0; }
 
 
 
@@ -1125,74 +1127,59 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 	#menu-wrapper {
 		align-items: center;
-		width: 100%;
 		padding: .5rem;
 	}
 
-	#logoheader {
-		flex-basis: 35%;
-	}
+	#logoheader { flex-basis: 35%; }
 
 	#menuwrapper {
 		font-size: .6rem;
 		margin-left: auto;
 	}
 
-	#logo img {
-		width: 30%;
-	}
+	#logo img { width: 30%; }
 
 	#camera_wrap_109 .camera_caption > div div.camera_caption_title {font-size: 1.5em;}
 	#camera_wrap_109 .camera_caption_desc a.button {font-size: 1em;}
 
+	#map { margin-top: -3%; }
 
-	#map {
-		margin-top: -3%;
-	}
+	#footer { flex-direction: column; }
 
-	#footer {
-		flex-direction: column;
-	}
+	#footer ul { margin-bottom: .5rem; }
 
-	#footer ul {
-		margin-bottom: .5rem;
-	}
+	.team-box-content p { font-size: .6rem; }
 
-	.team-box-content p {
-		font-size: .6rem;
-	}
+	.block-wrapper,
+	aside.float-right h3 { width: 85%; }
 
+	section .block-wrapper .list-inline ul { font-size: .8em; }
 
-	.block-wrapper {
-		width: 85%;
-	}
+	.property-list ul.mod-list { justify-content: space-between; }
 
-	section .block-wrapper .list-inline ul {font-size: .8em;}
+	.property-list ul.mod-list li { flex-basis: 44%; }
 
-	.property-list ul.mod-list {
-		justify-content: space-between;
-	}
-
-	.property-list ul.mod-list li {
-		flex-basis: 44%;
-	}
-
-	dl.fields-container dd.property-type {
-		flex-basis: 50%;
-	}
+	dl.fields-container dd.property-type { flex-basis: 50%; }
 
 	dl.fields-container dd.bedrooms,
 	dl.fields-container dd.bathrooms,
-	dl.fields-container dd.cars {
-		flex-basis: 29%;
+	dl.fields-container dd.cars { flex-basis: 29%; }
+
+	article.float-left dl.fields-container dd.icon,
+	aside.float-right dd.icon,
+	aside.float-right dd.property-address.icon { flex-basis: 25%;}
+
+	article.float-left dl.fields-container dd.rent-price {
+		margin-top: 0;
+		text-align: left;
 	}
 
-	section dl.fields-container dd.rent-price {
-		flex-basis: 100%;
-	}
+	article.float-left dl.fields-container dd.rent-price span::before { padding-left: 0;}
+
+	dl.fields-container dd.rent-price,
+	#right-col { flex-basis: 100%; }
 
 	dl.fields-container dd.rent-price {
-		flex-basis: 100%;
 		margin-top: 1rem;
 		margin-bottom: 1rem;
 	}
@@ -1203,37 +1190,27 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		flex-basis: 30%;
 	}
 
-	#main .row {
-		padding: 0 .5rem 0 .5rem;
-	}
+	#main .row { padding: 0 .5rem 0 .5rem; }
 
-	#main .columns {
-		padding-left: 0.9375rem;
-	}
+	#main .columns { padding-left: 0.9375rem; }
 
 	#main .columns p,
 	#main .columns a,
-	#trading {
-		padding: 0 .9375rem 0 .9375rem;
-	}
+	#trading { padding: 0 .9375rem 0 .9375rem; }
 
-	#main .columns #social a {
-		padding: 0;
-	}
+	#main .columns #social a { padding: 0; }
 
-	#main .medium-8 {
-		width: 75%;
-	}
+	#main .medium-8 { width: 75%; }
 
 	#testimonials h3 {margin-bottom: 0;}
+
+	#menu-wrapper,
 	#testimonials .cameraContents {width: 100%;}
 
 	#camera_wrap_95 .camera_caption > div div.camera_caption_title {font-size: 1.2em!important;}
 	#camera_wrap_95 .camera_caption > div div.camera_caption_desc {font-size: 1em!important;}
 
-	#right-col {flex-basis: 100%;}
-
-
+	aside.float-right h3 { margin: 0 auto 1em auto; }
 
 
 }
@@ -1241,12 +1218,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 /* Portrait */
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
-	#map {
-		margin-top: -6%;
-	}
-
-	
-
+	#map { margin-top: -6%; }
 
 }
 
@@ -1263,9 +1235,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		padding: .5rem;
 	}
 
-	#logoheader {
-		flex-basis: 35%;
-	}
+	#logoheader { flex-basis: 35%; }
 
 	#menuwrapper {
 		font-size: .6rem;
@@ -1275,52 +1245,33 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	#camera_wrap_109 .camera_caption > div div.camera_caption_title {font-size: 1.5em;}
 	#camera_wrap_109 .camera_caption_desc a.button {font-size: 1em;}
 
-	#logo img {
-		width: 50%;
-	}
+	#logo img { width: 50%; }
 
-	#map {
-		margin-top: -3%;
-	}
+	#map { margin-top: -3%; }
 
-	#footer {
-		flex-direction: column;
-	}
+	#footer { flex-direction: column; }
 
-	#footer ul {
-		margin-bottom: .5rem;
-	}
+	#footer ul { margin-bottom: .5rem; }
 
-	.team-box-content p {
-		font-size: .6rem;
-	}
+	.team-box-content p { font-size: .6rem; }
 
-	
-	.block-wrapper {
-		width: 85%;
-	}
+	.block-wrapper { width: 85%; }
 
-	.property-list ul.mod-list {
-		justify-content: space-between;
-	}
+	aside.float-right h3 { margin: 0 auto 1em auto; }
 
-	.property-list ul.mod-list li {
-		flex-basis: 44%;
-	}
+	.property-list ul.mod-list { justify-content: space-between; }
 
-	dl.fields-container dd.property-type {
-		flex-basis: 50%;
-	}
+	.property-list ul.mod-list li { flex-basis: 44%; }
+
+	dl.fields-container dd.property-type,
+	article.float-left dd.property-address.icon, 
+	article.float-left dd.property-type.icon { flex-basis: 50%; }
 
 	dl.fields-container dd.bedrooms,
 	dl.fields-container dd.bathrooms,
-	dl.fields-container dd.cars {
-		flex-basis: 29%;
-	}
+	dl.fields-container dd.cars { flex-basis: 29%; }
 
-	section dl.fields-container dd.rent-price {
-		flex-basis: 100%;
-	}
+	section dl.fields-container dd.rent-price { flex-basis: 100%; }
 
 	dl.fields-container dd.rent-price {
 		flex-basis: 100%;
@@ -1328,40 +1279,35 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		margin-bottom: 1rem;
 	}
 
+	article.float-left dl.fields-container dd.rent-price { text-align: left; }
+
+	article.float-left dl.fields-container dd.rent-price span::before { padding-left: 0; }
+
+	aside.float-right dd.property-title { font-size: 1rem; }
+	aside.float-right dd.icon { font-size: .7rem;}
+
 	.img-gallery .showtime-image {
 		flex-direction: row;
 		flex-wrap: wrap;
 		flex-basis: 30%;
 	}
 
-	#main .row {
-		padding: 0 .5rem 0 .5rem;
-	}
+	#main .row { padding: 0 .5rem 0 .5rem; }
 
-	#main .columns {
-		padding-left: 0.9375rem;
-	}
+	#main .columns { padding-left: 0.9375rem; }
 
 	#main .columns p,
 	#main .columns a,
-	#trading {
-		padding: 0 .9375rem 0 .9375rem;
-	}
+	#trading { padding: 0 .9375rem 0 .9375rem; }
 
-	#main .columns #social a {
-		padding: 0;
-	}
+	#main .columns #social a { padding: 0; }
 
-	#main .medium-8 {
-		width: 75%;
-	}
+	#main .medium-8 { width: 75%; }
 
 	#top {
 		position: relative;
 		top: 3em;
 	}
-
-
 
 	.sloganBlock .slogan {line-height: 2.5rem;}
 
@@ -1377,6 +1323,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 	#camera_wrap_95 .camera_caption > div div.camera_caption_title {font-size: 1.2em!important;}
 	#camera_wrap_95 .camera_caption > div div.camera_caption_desc {font-size: 1em!important;}
+
+	
 
 
 }
@@ -1442,9 +1390,17 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		padding: 0 .9375rem 0 .9375rem;
 	}
 
-	#main .columns #social a {
-		padding: 0;
-	}
+	#main .columns #social a { padding: 0; }
+
+	aside.float-right h3 { width: 100%!important; }
+
+	article.float-left dd.property-address,
+	article.float-left dd.property-type,
+	aside.float-right dd.property-address,
+	aside.float-right dd.property-type { flex-basis: 50%!important; }
+
+	aside.float-right dd.property-title { font-size: 1rem; }
+	aside.float-right dd.icon { font-size: .7rem;}
 
 
 
@@ -1464,27 +1420,17 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		margin-left: 1em;
 	}
 
-	.property-list ul.mod-list {
-		justify-content: space-between;
-	}
+	.property-list ul.mod-list { justify-content: space-between; }
 
-	.property-list ul.mod-list li {
-		flex-basis: 44%;
-	}
+	.property-list ul.mod-list li { flex-basis: 44%; }
 
-	dl.fields-container dd.property-type {
-		flex-basis: 50%;
-	}
+	dl.fields-container dd.property-type { flex-basis: 50%; }
 
 	dl.fields-container dd.bedrooms,
 	dl.fields-container dd.bathrooms,
-	dl.fields-container dd.cars {
-		flex-basis: 29%;
-	}
+	dl.fields-container dd.cars { flex-basis: 29%; }
 
-	section dl.fields-container dd.rent-price {
-		flex-basis: 100%;
-	}
+	section dl.fields-container dd.rent-price { flex-basis: 100%; }
 
 	dl.fields-container dd.rent-price {
 		flex-basis: 100%;
@@ -1498,38 +1444,31 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		flex-basis: 30%;
 	}
 
-	#main .row {
-		padding: 0 .5rem 0 .5rem;
-	}
+	#main .row { padding: 0 .5rem 0 .5rem; }
 
-	#main .columns {
-		padding-left: 0.9375rem;
-	}
+	#main .columns { padding-left: 0.9375rem; }
 
 	#main .columns p,
 	#main .columns a,
-	#trading {
-		padding: 0 .9375rem 0 .9375rem;
-	}
+	#trading { padding: 0 .9375rem 0 .9375rem; }
 
-	#main .columns #social a {
-		padding: 0;
-	}
+	#main .columns #social a { padding: 0; }
 
-	#main .medium-8 {
-		width: 75%;
-	}
+	#main .medium-8 { width: 75%; }
 
 	#menu-wrapper {width: 80%;}
 
+	aside.float-right dd.property-title { font-size: 1rem; }
+	aside.float-right dd.icon { font-size: .7rem;}
+
+	article.float-left dd.property-address,
+	article.float-left dd.property-type,
+	aside.float-right dd.property-address,
+	aside.float-right dd.property-type { flex-basis: 50%!important; }
 
 
 	#camera_wrap_95 .camera_caption > div div.camera_caption_title {font-size: 1.2em!important;}
 	#camera_wrap_95 .camera_caption > div div.camera_caption_desc {font-size: 1em!important;}
-
-
-
-
 
 }
 
@@ -1539,9 +1478,10 @@ only screen and (min-device-pixel-ratio: 1.5) {
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 
-
-
 	#left-col {flex-basis: 70%!important;}
+
+	article.float-left dd.property-address,
+	article.float-left dd.property-type { flex-basis: 30%!important; }
 }
 
 /* Laptop */
@@ -1557,10 +1497,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		margin-top: -3em;
 	}
 
-	#camera_wrap_109 .cameraContent  {
-		width: 70%;
-		
-	}
+	#camera_wrap_109 .cameraContent  { width: 70%; }
 
 	dl { 
 		width: 100%;
@@ -1571,26 +1508,24 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	.float-right { float: right;}
 
 	article.float-left { 
-		width: 50%;
-		margin-left: 10%;
+		width: 45%;
+		margin-left: 15%;
 		padding-right: 1em;
 	}
 	aside.float-right { 
 		width: 20%; 
-		margin-right: 10%;
+		margin-right: 15%;
 	}
 
 	.showtime-default .showtime-image { width: 15% }
 
+	article.float-left dd.property-address,
+	article.float-left dd.property-type { flex-basis: 15%; }
 	
-	aside.float-right .showtime-image:not(:first-child),
-	aside.float-right .property-description { display: none; }
-
 	aside.float-right .property-address,
 	aside.float-right .property-type { flex-basis: 45%; }
 
 	aside.float-right .img-gallery { flex-basis: 80%; }
-	aside.float-right .rent-price { display: none; } 
 
 	aside.float-right .property-title { font-size: 1.3rem; }
 
@@ -1602,13 +1537,12 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	aside.float-right .bathrooms, 
 	aside.float-right .cars { flex-basis: 33%;}
 
-	aside.float-right .property-address,
-	aside.float-right .property-type,
-	aside.float-right .bedrooms, 
-	aside.float-right .bathrooms, 
-	aside.float-right .cars { text-align: left; }
+	article.float-left .rent-price {
+		flex-basis: 50%;
+		padding-right: 0;
+	}
 
-
+ 
 
 
 }
@@ -1617,8 +1551,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	/* Extra small screens */
 	#menu-wrapper {padding: .5rem;}
 	#logo img {width: 30%;}
-
-	
 
 
 	body h1 {font-size: 2rem;}
@@ -1638,9 +1570,12 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	#camera_wrap_95 .camera_caption > div div.camera_caption_title {font-size: 1.1em!important;}
 	#camera_wrap_95 .camera_caption > div div.camera_caption_desc {font-size: .9em!important;}
 
-	#footer, #footer ul {
-		font-size: .8em;
-	}
+	article.float-left dd.property-address,
+	article.float-left dd.property-type,
+	aside.float-right dd.property-address,
+	aside.float-right dd.property-type { flex-basis: 50%; }
+
+	#footer, #footer ul { font-size: .8em; }
 
 
 }
@@ -1652,13 +1587,16 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	#camera_wrap_109 .camera_caption > div div.camera_caption_title {font-size: 1.5em;}
 	#camera_wrap_109 .camera_caption_desc a.button {font-size: 1em;}
 
+	article.float-left .rent-price { text-align: left;}
+	article.float-left .rent-price span::before { padding-left: 0; }
 
+	aside.float-right h3,
 	#footer {
-		margin-left: auto;
-    	margin-right: auto;
-		width: 85%;	
-		text-align: center;	
+		width: 85%;
+		margin: 0 auto 1em auto;
 	}
+
+	#footer { text-align: center; }
 
 
 	

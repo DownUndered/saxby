@@ -170,7 +170,8 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 						
 						<jdoc:include type="component" />
 
-						<aside class="float-right">				
+						<aside class="float-right">	
+							<h3 class="separator-left">Related Properties</h3>			
 							<?php if ($catID == 10) : ?>
 								<jdoc:include type="modules" name="relevant-rent-properties" />
 							<?php elseif ($catID == 9) : ?>
