@@ -454,11 +454,11 @@ a:hover {
 	content: "/week";
 }
 
-aside.float-right .showtime-image:not(:first-child),
-aside.float-right .property-description,
-aside.float-right .rent-price { display: none; }
+.related-properties .showtime-image:not(:first-child),
+.related-properties .property-description,
+.related-properties .rent-price { display: none; }
 
-aside.float-right h3 { margin-bottom: 1em; }
+.related-properties h3 { margin-bottom: 1em; }
 
 #facebook {
 	color: #3C5A99;
@@ -492,10 +492,10 @@ aside.float-right h3 { margin-bottom: 1em; }
 
 #camera_wrap_95 .camera_caption>div div.camera_caption_title { margin-bottom: 1em; }
 
-article.float-left .icon,
-aside.float-right .icon { text-align: left; }
-article.float-left .icon span::before,
-aside.float-right .icon span::before { padding-left: 0; }
+.property-details .icon,
+.related-properties .icon { text-align: left; }
+.property-details .icon span::before,
+.related-properties .icon span::before { padding-left: 0; }
 
 
 /* blue background */
@@ -661,8 +661,14 @@ section figure img {height: auto;}
 
 #right-col {flex-basis: 100%;}
 
+.property-list .mod-list { justify-content: flex-start; }
+
 
 /* responsive */
+#menuwrapper { display: none; }
+#mobile_select { display: block!important; }
+
+
 #mobile_select h2 {
 	border: 0;
 	padding: 0;
@@ -683,10 +689,10 @@ section figure img {height: auto;}
 	#camera_wrap_109 .camera_caption > div div.camera_caption_title {font-size: 1.5em;}
 	#camera_wrap_109 .camera_caption_desc a.button {font-size: 1em;}
 
-	article.float-left .rent-price { text-align: left;}
-	article.float-left .rent-price span::before { padding-left: 0; }
+	.property-details .rent-price { text-align: left;}
+	.property-details .rent-price span::before { padding-left: 0; }
 
-	aside.float-right h3,
+	.related-properties h3,
 	#footer {
 		width: 85%;
 		margin: 0 auto 1em auto;
@@ -782,10 +788,10 @@ section figure img {height: auto;}
 	#camera_wrap_95 .camera_caption > div div.camera_caption_title {font-size: 1.1em!important;}
 	#camera_wrap_95 .camera_caption > div div.camera_caption_desc {font-size: .9em!important;}
 
-	article.float-left dd.property-address,
-	article.float-left dd.property-type,
-	aside.float-right dd.property-address,
-	aside.float-right dd.property-type { flex-basis: 50%; }
+	.property-details dd.property-address,
+	.property-details dd.property-type,
+	.related-properties dd.property-address,
+	.related-properties dd.property-type { flex-basis: 50%; }
 
 	#footer, #footer ul { font-size: .8em; }	
 
@@ -800,7 +806,6 @@ section figure img {height: auto;}
 	}
 
 	#menu-wrapper {
-		justify-content: space-around;
 		align-items: center;
 		padding: .5rem 0;
 	}
@@ -897,7 +902,6 @@ section figure img {height: auto;}
 	}
 
 	#menu-wrapper {
-		justify-content: space-around;
 		align-items: center;
 	}
 
@@ -1003,7 +1007,6 @@ section figure img {height: auto;}
 
 	.property-list .mod-list {
 		flex-direction: row;
-		justify-content: center;
 	}
 	.property-list .mod-list li,
 	dl.fields-container dd.property-type {flex-basis: 40%;}
@@ -1041,27 +1044,35 @@ section figure img {height: auto;}
 
 	#main .columns #social a { padding: 0; }
 
-	aside.float-right h3 { width: 100%!important; }
+	.related-properties h3 { width: 100%!important; }
 
-	article.float-left dd.property-address,
-	article.float-left dd.property-type,
-	aside.float-right dd.property-address,
-	aside.float-right dd.property-type { flex-basis: 50%!important; }
+	.property-details dd.property-address,
+	.property-details dd.property-type,
+	.related-properties dd.property-address,
+	.related-properties dd.property-type { flex-basis: 50%; }
 
-	aside.float-right dd.property-title { font-size: 1rem; }
-	aside.float-right dd.icon { font-size: .7rem;}
+	.related-properties dd.property-title { font-size: 1rem; }
+	.related-properties dd.icon { font-size: .7rem;}
 }
 
 @media only screen and (min-width: 992px) {
 
 	#left-col {flex-basis: 70%!important;}
 
-	article.float-left dd.property-address,
-	article.float-left dd.property-type { flex-basis: 30%!important; }
+	.property-details dd.property-address,
+	.property-details dd.property-type { flex-basis: 30%; }
 }
 
 @media only screen and (min-width: 1382px) {
 	/* Styles */
+
+	#menu-wrapper { justify-content: space-between; }
+	#menuwrapper { width: auto; }
+
+	#menuwrapper { display: block; }
+	#mobile_select { display: none!important; }
+
+	#logo img { width: 60%; }
 
 	#left-col {flex-basis: 70%;}
 	#right-col {
@@ -1071,53 +1082,57 @@ section figure img {height: auto;}
 
 	#camera_wrap_109 .cameraContent  { width: 70%; }
 
-	dl { 
+	dl.fields-container { 
 		width: 100%;
 		margin: 0;
-	}
+	}	
 
-	.float-left { float: left; }
-	.float-right { float: right;}
+		
+	.property-list .mod-list li, dl.fields-container dd.property-type { flex-basis: 30%; }
 
-	article.float-left { 
-		width: 45%;
-		margin-left: 15%;
-		padding-right: 1em;
+	.property-details,
+	.related-properties { 
+		width: 75%;
+		margin-left: auto;
+		margin-right: auto;
 	}
-	aside.float-right { 
-		width: 20%; 
-		margin-right: 15%;
+		
+	.related-properties .newsflash {
+		display: flex;
+		flex-direction: row;
 	}
 
 	.showtime-default .showtime-image { width: 15% }
-
-	article.float-left dd.property-address,
-	article.float-left dd.property-type { flex-basis: 15%; }
 	
-	aside.float-right .property-address,
-	aside.float-right .property-type { flex-basis: 45%; }
+	.related-properties .property-address,
+	.related-properties .property-type { flex-basis: 45%; }
 
-	aside.float-right .img-gallery { flex-basis: 80%; }
+	.related-properties .img-gallery { flex-basis: 80%; }
 
-	aside.float-right .property-title { font-size: 1.3rem; }
+	.related-properties .property-title { font-size: 1.3rem; }
 
-	aside.float-right .bedrooms, 
-	aside.float-right .bathrooms, 
-	aside.float-right .cars { font-size: 1.2rem; }
+	.related-properties .bedrooms, 
+	.related-properties .bathrooms, 
+	.related-properties .cars { font-size: 1.2rem; }
 
-	aside.float-right .bedrooms, 
-	aside.float-right .bathrooms, 
-	aside.float-right .cars { flex-basis: 33%;}
+	.property-details dd.property-address,
+	.property-details dd.property-type,
+	.property-details dl.fields-container dd.bedrooms, 
+	.property-details dl.fields-container dd.bathrooms, 
+	.property-details dl.fields-container dd.cars,
+	.property-details dl.fields-container dd.rent-price { flex-basis: 10%; }
 
-	article.float-left .rent-price {
-		flex-basis: 50%;
-		padding-right: 0;
+	.property-details dl.fields-container dd.rent-price {
+		padding: 0;
+		margin: 0;
 	}
 
 }
 
 /* iPad Landscape */
-@media only screen and (min-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx) {
+
+
 
 	#camera_wrap_109 .camera_caption > div div.camera_caption_title {font-size: 1.5em;}
 
@@ -1128,9 +1143,8 @@ section figure img {height: auto;}
 		margin-left: 1em;
 	}
 
-	.property-list ul.mod-list { justify-content: space-between; }
+	.property-list .mod-list li, dl.fields-container dd.property-type { flex-basis: 25%; }
 
-	.property-list ul.mod-list li { flex-basis: 44%; }
 
 	dl.fields-container dd.bedrooms,
 	dl.fields-container dd.bathrooms,
@@ -1163,16 +1177,16 @@ section figure img {height: auto;}
 	#menu-wrapper {width: 80%;}
 
 	#camera_wrap_109 .camera_caption_desc a.button,
-	aside.float-right dd.property-title,
+	.related-properties dd.property-title,
 	#camera_wrap_95 .camera_caption > div div.camera_caption_desc { font-size: 1em!important; }
 
-	aside.float-right dd.icon { font-size: .7rem;}
+	.related-properties dd.icon { font-size: .7rem;}
 
 	dl.fields-container dd.property-type,
-	article.float-left dd.property-address,
-	article.float-left dd.property-type,
-	aside.float-right dd.property-address,
-	aside.float-right dd.property-type { flex-basis: 50%!important; }
+	.property-details dd.property-address,
+	.property-details dd.property-type,
+	.related-properties dd.property-address,
+	.related-properties dd.property-type { flex-basis: 50%!important; }
 
 
 	#camera_wrap_95 .camera_caption > div div.camera_caption_title {font-size: 1.2em!important;}

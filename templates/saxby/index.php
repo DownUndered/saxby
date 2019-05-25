@@ -173,14 +173,14 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 						<jdoc:include type="component" />
 						
 						<?php if ($catID == 10 || $catID == 9) : ?>
-							<aside class="float-right">	
+							<section class="related-properties">	
 								<h3 class="separator-left">Related Properties</h3>			
 								<?php if ($catID == 10) : ?>
 									<jdoc:include type="modules" name="related-rent-properties" />
 								<?php elseif ($catID == 9) : ?>
 									<jdoc:include type="modules" name="related-sales-properties" />
 								<?php endif; ?>
-							</aside>
+							</section>
 						<?php endif; ?>
 
 					</div><!-- end main -->

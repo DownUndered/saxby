@@ -197,7 +197,6 @@ section .fields-container {
 
 section dd.field-entry { 
     order: unset;
-    flex-basis: unset;
     font-size: 1rem;
 }
 
@@ -648,7 +647,3 @@ img {
     width: 100%;
 }
 
-/* hide the mobile menu button */
-#mobile_select {
-    display: none
-}
