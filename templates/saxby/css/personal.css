@@ -1015,7 +1015,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
 /* Portrait */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+@media only screen and (min-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 	#logo img {
 		width: 40%;
 	}
@@ -1123,7 +1123,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 /* Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+@media only screen and (min-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
 
 	#menu-wrapper {
 		align-items: center;
@@ -1217,17 +1217,17 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 /* Portrait */
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+@media only screen and (min-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
 	#map { margin-top: -6%; }
 
 }
 
 /* ----------- iPhone X ----------- */
 /* Portrait */
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
+@media only screen and (min-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {}
 
 /* Landscape */
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+@media only screen and (min-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
 
 	#menu-wrapper {
 		align-items: center;
@@ -1331,7 +1331,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 /* ----------- iPad 1, 2, Mini and Air ----------- */
 /* Portrait */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
 
 
 	#menu-wrapper {
@@ -1408,7 +1408,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 /* Landscape */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
 
 	#camera_wrap_109 .camera_caption > div div.camera_caption_title {font-size: 1.5em;}
 	#camera_wrap_109 .camera_caption_desc a.button {font-size: 1em;}
@@ -1476,7 +1476,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 /* Landscape */
 /* Declare the same value for min- and max-width to avoid colliding with desktops */
 /* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
-@media only screen and (min-device-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 1366px) and (max-device-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 
 	#left-col {flex-basis: 70%!important;}
 
@@ -1486,7 +1486,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 /* Laptop */
 /* ----------- Retina Screens ----------- */
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {}
+@media screen and (min-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {}
 
 
 @media only screen and (min-width: 768px) {
