@@ -1129,6 +1129,16 @@ section figure img {height: auto;}
 
 }
 
+
+/* ----------- iPhone X ----------- */
+/* Landscape */
+@media only screen and (min-width: 375px) and (max-width: 812px) and (min-resolution: 3dppx) and (orientation: landscape) {   
+
+	#menuwrapper { display: none; }
+	#mobile_select { display: block!important; }
+  
+  }
+
 /* iPad Landscape */
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx) {
 
