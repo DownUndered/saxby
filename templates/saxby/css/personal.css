@@ -1070,6 +1070,8 @@ section figure img {height: auto;}
 		flex-direction: row;
 	}
 
+	.list-item { flex-basis: 20%; }
+	
 	section .block-wrapper .list-inline ul,
 	.property-list .mod-list li * { font-size: inherit; }
 
