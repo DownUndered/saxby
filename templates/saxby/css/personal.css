@@ -680,7 +680,13 @@ section figure img {height: auto;}
 	display: inline-block;
 	font-size: 0.8em;
 	font-size: 0.75em;
+}
 
+#menu-wrapper { padding: .5rem 1rem; }
+
+.related-properties {
+	width: 85%;
+    margin: 0 auto;
 }
 
 @media only screen and (orientation: portrait) {
@@ -692,10 +698,8 @@ section figure img {height: auto;}
 	.property-details .rent-price { text-align: left;}
 	.property-details .rent-price span::before { padding-left: 0; }
 
-	.related-properties h3,
 	#footer {
 		width: 85%;
-		margin: 0 auto 1em auto;
 	}	
 
 	
@@ -807,12 +811,11 @@ section figure img {height: auto;}
 
 	#menu-wrapper {
 		align-items: center;
-		padding: .5rem 0;
+		padding: .5rem .5rem;
 	}
 
 	#menu-wrapper,
-	#menuwrapper,
-	#footer {
+	#menuwrapper {
 		width: 100%;
 	}
 
@@ -993,7 +996,6 @@ section figure img {height: auto;}
 	#menu-wrapper {
 		align-items: center;
 		width: 80%;
-		padding: .5rem;
 	}
 
 	#logo img {width:35%;}
@@ -1018,9 +1020,9 @@ section figure img {height: auto;}
 		flex-basis: 23%;
 	}
 
-	dl.fields-container dd.bedrooms,
-	dl.fields-container dd.bathrooms,
-	dl.fields-container dd.cars {flex-basis: 29%;}
+	.related-properties dl.fields-container dd.bedrooms,
+	.related-properties dl.fields-container dd.bathrooms,
+	.related-properties dl.fields-container dd.cars {flex-basis: 29%;}
 
 	dl.fields-container dd.rent-price {
 		flex-basis: 100%;
@@ -1053,18 +1055,45 @@ section figure img {height: auto;}
 
 	.related-properties dd.property-title { font-size: 1rem; }
 	.related-properties dd.icon { font-size: .7rem;}
+	
 }
 
 @media only screen and (min-width: 992px) {
 
+	.related-properties .newsflash {
+		display: flex;
+		flex-direction: row;
+	}
+
+	section .block-wrapper .list-inline ul,
+	.property-list .mod-list li * { font-size: inherit; }
+
 	#left-col {flex-basis: 70%!important;}
+
+	dl.fields-container dd.bedrooms, 
+	dl.fields-container dd.bathrooms, 
+	dl.fields-container dd.cars { flex-basis: 15%; }
+
+	dl.fields-container dd.rent-price {
+		flex-basis: 50%;
+		margin: 0;
+	}
 
 	.property-details dd.property-address,
 	.property-details dd.property-type { flex-basis: 30%; }
+
+	#team {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+	
+	.team-box { flex-basis: 40%; }
+
+	.blog-list ul.mod-list { flex-direction: row; }
 }
 
 @media only screen and (min-width: 1382px) {
-	/* Styles */
 
 	#menu-wrapper { justify-content: space-between; }
 	#menuwrapper { width: auto; }
@@ -1082,6 +1111,7 @@ section figure img {height: auto;}
 
 	#camera_wrap_109 .cameraContent  { width: 70%; }
 
+
 	dl.fields-container { 
 		width: 100%;
 		margin: 0;
@@ -1095,13 +1125,8 @@ section figure img {height: auto;}
 		width: 75%;
 		margin-left: auto;
 		margin-right: auto;
-	}
-		
-	.related-properties .newsflash {
-		display: flex;
-		flex-direction: row;
-	}
-
+	}		
+	
 	.showtime-default .showtime-image { width: 15% }
 	
 	.related-properties .property-address,
