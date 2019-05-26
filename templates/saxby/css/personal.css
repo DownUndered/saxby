@@ -248,6 +248,11 @@ h3.js_heading {
 
 #submit:hover { opacity: .8; }
 
+.team-box .team-box-content {
+	background: #fff;
+	padding: 0 1rem;
+}
+
 .list-inline {
 	display: inline-flex !important;
 	justify-content: space-around;
@@ -1222,7 +1227,6 @@ section figure img {height: auto;}
 	.property-details dd.property-type,
 	.related-properties dd.property-address,
 	.related-properties dd.property-type { flex-basis: 50%!important; }
-
 
 	#camera_wrap_95 .camera_caption > div div.camera_caption_title {font-size: 1.2em!important;}
 

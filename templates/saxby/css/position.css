@@ -296,10 +296,6 @@ section.section-style {
     background-color: #f5f5f5;
 }
 
-.team-box .team-box-content {
-    background: #fff;
-}
-
 .team-box {
     margin: 0 1rem;
     flex-basis: 50%;
