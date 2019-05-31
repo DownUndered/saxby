@@ -299,36 +299,40 @@ h3.js_heading {
 .property-list .property-description,
 .property-list .property-title,
 .sale-price,
-.blog-list .blog-text,
-.property-list .showtime .showtime-image {display: none;}
+.blog-list .blog-text {display: none;}
 
-.property-list .showtime .showtime-image:first-child {display: block;}
+
+
+.img-gallery {
+	max-width: 100%;
+	display: block;
+}
 
 #menuopener::after,
 .list-inline,
 .property-list .img-gallery,
 .property-list .showtime-image,
 .property-list .showtime-image img,
-.blog-list img,
-.showtime-image:first-child a {width: 100%;}
+.blog-list img {width: 100%;}
 
 .property-list dl.fields-container .showtime-default .showtime-image {margin-right: 0;}
 .property-list .showtime-image img {
 	border: 0;
 	height: auto;
 }
-.property-list .showtime-image img:hover,
+
 .blog-list img:hover {transform: scale(1.1);}
 
+/*
 .showtime-image:first-child,
 .img-gallery .showtime-image:first-child {flex-basis: 100%;}
 
 .showtime-image:first-child ,
 .showtime-image:first-child a,
 .img-gallery .showtime-image:first-child,
-.img-gallery .showtime-image:first-child a {margin: 0;}
+.img-gallery .showtime-image:first-child a {margin: 0;}*/
 
-.property-list .showtime-image img,
+/*.property-list .showtime-image img,*/
 .blog-list img {
 	-webkit-transition: all 2s cubic-bezier(.19, 1, .22, 1) 0ms;
 	-webkit-transform: translateZ(0);
@@ -696,7 +700,8 @@ section figure img {height: auto;}
 
 @media only screen and (orientation: portrait) {
 
-	
+	.property-details { padding-top: 1rem;}
+
 	#camera_wrap_109 .camera_caption > div div.camera_caption_title {font-size: 1.5em;}
 	#camera_wrap_109 .camera_caption_desc a.button {font-size: 1em;}
 
@@ -868,12 +873,12 @@ section figure img {height: auto;}
 		margin-top: 1rem;
 		margin-bottom: 1rem;
 	}
-
+/*
 	.img-gallery .showtime-image {
 		flex-direction: row;
 		flex-wrap: wrap;
 		flex-basis: 30%;
-	}
+	}*/
 
 	#main .row {
 		padding: 0 .5rem 0 .5rem;
@@ -970,12 +975,12 @@ section figure img {height: auto;}
 		flex-basis: 100%;
 		margin-bottom: 1rem;
 	}
-
+/*
 	.img-gallery .showtime-image {
 		flex-direction: row;
 		flex-wrap: wrap;
 		flex-basis: 30%;
-	}
+	}*/
 
 	#main .row {
 		padding: 0 .5rem 0 .5rem;
@@ -1018,12 +1023,12 @@ section figure img {height: auto;}
 	.property-list .mod-list li,
 	dl.fields-container dd.property-type {flex-basis: 40%;}
 	.property-list .mod-list li * {font-size: .7rem;}
-
+/*
 	.img-gallery .showtime-image {
 		flex-direction: row;
 		flex-wrap: wrap;
 		flex-basis: 23%;
-	}
+	}*/
 
 	.related-properties dl.fields-container dd.bedrooms,
 	.related-properties dl.fields-container dd.bathrooms,
@@ -1067,7 +1072,21 @@ section figure img {height: auto;}
 
 	.related-properties .newsflash {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
+	}
+
+	article.property-details {
+		float: left;
+		width: 50%;
+		margin-left: 10%;
+		padding-right: 1em;
+	}
+
+	.related-properties {
+		float: right;
+		width: 20%;
+		margin-right: 10%;
+		padding-top: 0;
 	}
 
 	.list-item { flex-basis: 20%; }
@@ -1127,19 +1146,21 @@ section figure img {height: auto;}
 		
 	.property-list .mod-list li, dl.fields-container dd.property-type { flex-basis: 30%; }
 
+/*
 	.property-details,
 	.related-properties { 
 		width: 75%;
 		margin-left: auto;
 		margin-right: auto;
 	}		
+	Temp disabled*/
 	
 	.showtime-default .showtime-image { width: 15% }
 	
 	.related-properties .property-address,
 	.related-properties .property-type { flex-basis: 45%; }
-
-	.related-properties .img-gallery { flex-basis: 80%; }
+/*
+	.related-properties .img-gallery { flex-basis: 80%; }*/
 
 	.related-properties .property-title { font-size: 1.3rem; }
 
@@ -1152,7 +1173,7 @@ section figure img {height: auto;}
 	.property-details dl.fields-container dd.bedrooms, 
 	.property-details dl.fields-container dd.bathrooms, 
 	.property-details dl.fields-container dd.cars,
-	.property-details dl.fields-container dd.rent-price { flex-basis: 10%; }
+	.property-details dl.fields-container dd.rent-price { flex-basis: 15%; }
 
 	.property-details dl.fields-container dd.rent-price {
 		padding: 0;
@@ -1197,12 +1218,12 @@ section figure img {height: auto;}
 		margin-top: 1rem;
 		margin-bottom: 1rem;
 	}
-
+/*
 	.img-gallery .showtime-image {
 		flex-direction: row;
 		flex-wrap: wrap;
 		flex-basis: 30%;
-	}
+	}*/
 
 	#main .row { padding: 0 .5rem 0 .5rem; }
 
