@@ -323,16 +323,26 @@ h3.js_heading {
 
 .blog-list img:hover {transform: scale(1.1);}
 
-/*
-.showtime-image:first-child,
-.img-gallery .showtime-image:first-child {flex-basis: 100%;}
+.property-list .showtime-image,
+.related-properties .showtime-slideshow-navigation { display: none; }
 
-.showtime-image:first-child ,
-.showtime-image:first-child a,
-.img-gallery .showtime-image:first-child,
-.img-gallery .showtime-image:first-child a {margin: 0;}*/
+.property-list .slick-track { transform: none!important; }
 
-/*.property-list .showtime-image img,*/
+.property-list .slick-track,
+.property-list .showtime-slideshow-navigation .slick-track .showtime-image.slick-slide.slick-current.slick-active { 
+	width: 100%!important; 
+}
+
+.property-list .showtime-slideshow-navigation,
+.property-list .showtime-slideshow-navigation .slick-track .showtime-image.slick-slide.slick-current.slick-active { padding: 0; }
+
+.property-list .slick-slider button.slick-arrow { display: none!important; }
+
+.property-list .showtime-slideshow-navigation .slick-track .showtime-image.slick-slide.slick-current.slick-active {
+	display: block;
+    margin: 0;
+}
+
 .blog-list img {
 	-webkit-transition: all 2s cubic-bezier(.19, 1, .22, 1) 0ms;
 	-webkit-transform: translateZ(0);
@@ -670,7 +680,7 @@ section figure img {height: auto;}
 
 #right-col {flex-basis: 100%;}
 
-.property-list .mod-list { justify-content: flex-start; }
+.property-list .mod-list { justify-content: center; }
 
 
 /* responsive */
@@ -873,12 +883,6 @@ section figure img {height: auto;}
 		margin-top: 1rem;
 		margin-bottom: 1rem;
 	}
-/*
-	.img-gallery .showtime-image {
-		flex-direction: row;
-		flex-wrap: wrap;
-		flex-basis: 30%;
-	}*/
 
 	#main .row {
 		padding: 0 .5rem 0 .5rem;
@@ -975,12 +979,6 @@ section figure img {height: auto;}
 		flex-basis: 100%;
 		margin-bottom: 1rem;
 	}
-/*
-	.img-gallery .showtime-image {
-		flex-direction: row;
-		flex-wrap: wrap;
-		flex-basis: 30%;
-	}*/
 
 	#main .row {
 		padding: 0 .5rem 0 .5rem;
@@ -1023,12 +1021,6 @@ section figure img {height: auto;}
 	.property-list .mod-list li,
 	dl.fields-container dd.property-type {flex-basis: 40%;}
 	.property-list .mod-list li * {font-size: .7rem;}
-/*
-	.img-gallery .showtime-image {
-		flex-direction: row;
-		flex-wrap: wrap;
-		flex-basis: 23%;
-	}*/
 
 	.related-properties dl.fields-container dd.bedrooms,
 	.related-properties dl.fields-container dd.bathrooms,
@@ -1159,8 +1151,6 @@ section figure img {height: auto;}
 	
 	.related-properties .property-address,
 	.related-properties .property-type { flex-basis: 45%; }
-/*
-	.related-properties .img-gallery { flex-basis: 80%; }*/
 
 	.related-properties .property-title { font-size: 1.3rem; }
 
@@ -1218,12 +1208,6 @@ section figure img {height: auto;}
 		margin-top: 1rem;
 		margin-bottom: 1rem;
 	}
-/*
-	.img-gallery .showtime-image {
-		flex-direction: row;
-		flex-wrap: wrap;
-		flex-basis: 30%;
-	}*/
 
 	#main .row { padding: 0 .5rem 0 .5rem; }
 
