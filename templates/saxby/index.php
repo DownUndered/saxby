@@ -165,7 +165,19 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 
 						<jdoc:include type="message" />
 						
-						<jdoc:include type="component" />						
+						<jdoc:include type="component" />
+
+						<section id="testimonials" class="section-style dark">
+							<jdoc:include type="modules" name="below-article-1" style="xhtml" />
+						</section>
+
+						<section class="block-wrapper">
+							<div class="blog-list">
+								<jdoc:include type="modules" name="below-article-2" style="xhtml"  />
+							</div>
+						</section>
+						
+						
 						
 						<?php if ($catID == 10 || $catID == 9) : ?>
 							<section class="related-properties">	
@@ -193,8 +205,7 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 				<aside id="right">
 					<h2 class="unseen"><?php echo JText::_('TPL_BEEZ3_ADDITIONAL_INFORMATION'); ?></h2>
 					<jdoc:include type="modules" name="position-6" style="beezDivision" headerLevel="3" />
-					<jdoc:include type="modules" name="position-8" style="beezDivision" headerLevel="3" />
-					<jdoc:include type="modules" name="position-3" style="beezDivision" headerLevel="3" />
+					<jdoc:include type="modules" name="position-8" style="beezDivision" headerLevel="3" />					
 				</aside><!-- end right -->
 				<?php endif; ?>
 
@@ -203,7 +214,6 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 				<nav class="left <?php if ($showRightColumn == null) { echo 'leftbigger'; } ?>" id="nav">
 
 					<jdoc:include type="modules" name="position-7" style="beezDivision" headerLevel="3" />
-					<jdoc:include type="modules" name="position-4" style="beezHide" headerLevel="3" state="0 " />
 					<jdoc:include type="modules" name="position-5" style="beezTabs" headerLevel="2" id="3" />
 
 				</nav><!-- end navi -->
