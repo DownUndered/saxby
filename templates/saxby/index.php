@@ -15,7 +15,7 @@ defined('_JEXEC') or die;
 JLoader::import('joomla.filesystem.file');
 
 // Check modules
-$showRightColumn = ($this->countModules('position-3') or $this->countModules('position-6') or $this->countModules('position-8'));
+$showRightColumn = ($this->countModules('right-column'));
 $showbottom      = ($this->countModules('position-9') or $this->countModules('position-10') or $this->countModules('position-11'));
 $showleft        = ($this->countModules('position-4') or $this->countModules('position-7') or $this->countModules('position-5'));
 
@@ -175,36 +175,15 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 							<jdoc:include type="modules" name="below-article-2" style="xhtml"  />
 						</section>
 						
-						
-						
-						<?php if ($catID == 10 || $catID == 9) : ?>
-							<section class="related-properties">	
-								<h3 class="separator-left">Related Properties</h3>			
-								<?php if ($catID == 10) : ?>
-									<jdoc:include type="modules" name="related-rent-properties" />
-								<?php elseif ($catID == 9) : ?>
-									<jdoc:include type="modules" name="related-sales-properties" />
-								<?php endif; ?>
-							</section>
-						<?php endif; ?>
+
 
 					</div><!-- end main -->
 				</div><!-- end wrapper -->
 
 				<?php if ($showRightColumn) : ?>
-				<div id="close">
-					<a href="#" onclick="auf('right')">
-						<span id="bild">
-							<?php echo JText::_('TPL_BEEZ3_TEXTRIGHTCLOSE'); ?>
-						</span>
-					</a>
-				</div>
-
-				<aside id="right">
-					<h2 class="unseen"><?php echo JText::_('TPL_BEEZ3_ADDITIONAL_INFORMATION'); ?></h2>
-					<jdoc:include type="modules" name="position-6" style="beezDivision" headerLevel="3" />
-					<jdoc:include type="modules" name="position-8" style="beezDivision" headerLevel="3" />					
-				</aside><!-- end right -->
+					<aside id="right">
+						<jdoc:include type="modules" name="right-column" style="xhtml" />
+					</aside><!-- end right -->
 				<?php endif; ?>
 
 

@@ -90,9 +90,6 @@ section {
     display: block;
 }
 
-#nav, #right, #close {
-    display: none;
-}
 
 #contentarea2 {
     display: flex;
