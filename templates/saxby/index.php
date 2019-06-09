@@ -171,10 +171,8 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 							<jdoc:include type="modules" name="below-article-1" style="xhtml" />
 						</section>
 
-						<section class="block-wrapper">
-							<div class="blog-list">
-								<jdoc:include type="modules" name="below-article-2" style="xhtml"  />
-							</div>
+						<section class="block-wrapper blog-list">
+							<jdoc:include type="modules" name="below-article-2" style="xhtml"  />
 						</section>
 						
 						
