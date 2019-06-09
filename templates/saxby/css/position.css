@@ -79,6 +79,8 @@ video {
     background: transparent;
 }
 
+article, section { margin-bottom: 1rem; }
+
 article,
 aside,
 figure,
@@ -212,9 +214,7 @@ section, #testimonials {
     margin-bottom: 1rem;
 }
 
-section.section-style {
-    margin-bottom: 0;
-}
+
 
 /* ###################### general ###################### */
 #all {
@@ -313,13 +313,7 @@ section.section-style {
     text-align: center;
 }
 
-#right {
-    float: left;
-    width: 20%;
-    margin: 10px 0 10px 2%;
-    padding: 0 0 5px 0;
-    position: relative;
-}
+#right { position: relative; }
 
 article.item-page > h2 {
     display: none;

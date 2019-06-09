@@ -167,13 +167,9 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 						
 						<jdoc:include type="component" />
 
-						<section id="testimonials" class="section-style dark">
-							<jdoc:include type="modules" name="below-article-1" style="xhtml" />
-						</section>
+						<jdoc:include type="modules" name="below-article-1" style="xhtml" />
 
-						<section class="block-wrapper blog-list">
-							<jdoc:include type="modules" name="below-article-2" style="xhtml"  />
-						</section>
+						<jdoc:include type="modules" name="below-article-2" style="xhtml"  />
 						
 
 
