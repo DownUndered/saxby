@@ -565,12 +565,9 @@ form ul {
 /* +++++++++++++++++ Breadcrumbs  +++++++++++++++++++++++++++  */
 
 .breadcrumbs,.article-info {
-	padding: 7px;
-	margin: 0 0 18px;
+	margin: 0 0 1rem;
 	list-style: none;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+
 }
 
 .breadcrumbs li {

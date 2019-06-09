@@ -106,16 +106,7 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 <body id="shadow">
 	<div id="all">
 		<div id="back">
-			<header id="header">
-				<ul class="skiplinks">
-					<li><a href="#main" class="u2"><?php echo JText::_('TPL_BEEZ3_SKIP_TO_CONTENT'); ?></a></li>
-					<li><a href="#nav" class="u2"><?php echo JText::_('TPL_BEEZ3_JUMP_TO_NAV'); ?></a></li>
-					<?php if ($showRightColumn) : ?>
-					<li><a href="#right" class="u2"><?php echo JText::_('TPL_BEEZ3_JUMP_TO_INFO'); ?></a></li>
-					<?php endif; ?>
-				</ul>
-				<h2 class="unseen"><?php echo JText::_('TPL_BEEZ3_NAV_VIEW_SEARCH'); ?></h2>
-				<h3 class="unseen"><?php echo JText::_('TPL_BEEZ3_NAVIGATION'); ?></h3>
+			<header id="header">			
 				<div id="menuNav">
 					<div id="menu-wrapper">
 						<div class="logoheader">
@@ -136,20 +127,24 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 								</span></h1>
 						</div><!-- end logoheader -->
 
-						<jdoc:include type="modules" name="position-1" />
+						<jdoc:include type="modules" name="top-naviagtion" />
 					</div>
+					
 				</div>
 				<div id="line">
 					<div id="fontsize"></div>
 					<h3 class="unseen"><?php echo JText::_('TPL_BEEZ3_SEARCH'); ?></h3>
 					<jdoc:include type="modules" name="position-0" />
 				</div> <!-- end line -->
+
+				<?php if ($this->countModules('head-banner')) : ?>
+					<div id="top">
+						<jdoc:include type="modules" name="head-banner" />
+					</div>
+				<?php endif; ?>
 			</header><!-- end header -->
 			<div id="<?php echo $showRightColumn ? 'contentarea2' : 'contentarea'; ?>">
-				<div id="breadcrumbs">
-					<jdoc:include type="modules" name="position-2" />
-				</div>
-
+				
 				<?php if ($navposition === 'left' and $showleft) : ?>
 				<nav class="left1 <?php if ($showRightColumn == null) { echo 'leftbigger';} ?>" id="nav">
 					<jdoc:include type="modules" name="position-7" style="beezDivision" headerLevel="3" />
@@ -160,17 +155,17 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 
 				<div id="<?php echo $showRightColumn ? 'wrapper' : 'wrapper2'; ?>"
 					<?php if (isset($showno)){echo 'class="shownocolumns"';}?>>
-					<div id="main">
+					<div id="main">				
 
-						<?php if ($this->countModules('position-12')) : ?>
-						<div id="top">
-							<jdoc:include type="modules" name="position-12" />
+						<?php if ($this->countModules('breadcrumbs')) : ?>
+						<div id="breadcrumbs">
+							<jdoc:include type="modules" name="breadcrumbs" />
 						</div>
 						<?php endif; ?>
 
 						<jdoc:include type="message" />
 						
-						<jdoc:include type="component" />
+						<jdoc:include type="component" />						
 						
 						<?php if ($catID == 10 || $catID == 9) : ?>
 							<section class="related-properties">	

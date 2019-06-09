@@ -703,7 +703,7 @@ section figure img {height: auto;}
 
 #menu-wrapper { padding: .5rem 1rem; }
 
-.related-properties {
+#breadcrumbs, .related-properties {
 	width: 85%;
     margin: 0 auto;
 }

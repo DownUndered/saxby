@@ -90,7 +90,7 @@ section {
     display: block;
 }
 
-#nav, #right, #breadcrumbs, #close {
+#nav, #right, #close {
     display: none;
 }
 
@@ -234,6 +234,7 @@ section.section-style {
 }
 
 #menuNav {
+    z-index: 10;
     position: fixed;
     background-color: #7f7f7f;
     width: 100%;
@@ -525,7 +526,7 @@ article.item-page > h2 {
 }
 
 #top {
-    margin: 0 0 20px 0;
+    margin: 0;
     overflow: hidden
 }
 
