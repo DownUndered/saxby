@@ -803,6 +803,9 @@ class modSlideshowckHelper {
 				$slideItem->imgtitle = null;
 				$slideItem->article->title = $item->title;
 				$slideItem->article->text = JHTML::_('content.prepare', $slideItem_article_text);
+				if ($params->get('striptags', '0') == '1') {
+					$slideItem->article->text = strip_tags($slideItem->article->text);
+				}
 				$slideItem->article->text = self::truncate($slideItem->article->text, $params->get('articlelength', '150'));
 				$slideItem->article->link = $item->link;
 				

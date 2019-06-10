@@ -74,19 +74,31 @@ $needJModal = false;
 					</div>
 					<?php if ($params->get('usecaptiondesc', '1')) { ?>
 					<div class="camera_caption_desc">
-						<?php echo str_replace("|dq|", "\"", $item->imgcaption); ?>
+						<?php 
+						$caption = str_replace("|dq|", "\"", $item->imgcaption); 
+						if ($params->get('striptags', '0') == '1') {
+								echo strip_tags($caption);
+							} else {
+								echo $caption;
+							}
+						?>
 						<?php
 						if ($item->article) {
 							if ($params->get('htmlfixer', '0') == '1' && trim($item->article->text)) {
 								// Parse the html code of the text into a fixer to avoid bad rendering issues
 								$htmlfixer = new SlideshowCKHtmlFixer();
 								$captionFixed = $htmlfixer->getFixedHtml(trim($item->article->text));
-								echo $captionFixed;
+								$caption = $captionFixed;
 							} else {
-								echo $item->article->text;
+								$caption = $item->article->text;
+							}
+							if ($params->get('striptags', '0') == '1') {
+								echo strip_tags($caption);
+							} else {
+								echo $caption;
 							}
 							if ($params->get('articlelink', 'readmore') == 'readmore')
-								echo '<a href="' . $item->article->link . '">' . JText::_('COM_CONTENT_READ_MORE_TITLE') . '</a>';
+								echo '<a href="' . $item->article->link . '">' . JText::_('PLG_SLIDESHOWCK_READMORE') . '</a>';
 						}
 						?>
 					</div>

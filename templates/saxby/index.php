@@ -131,19 +131,14 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 					</div>
 					
 				</div>
-				<div id="line">
-					<div id="fontsize"></div>
-					<h3 class="unseen"><?php echo JText::_('TPL_BEEZ3_SEARCH'); ?></h3>
-					<jdoc:include type="modules" name="position-0" />
-				</div> <!-- end line -->
-
+			
 				<?php if ($this->countModules('head-banner')) : ?>
 					<div id="top">
 						<jdoc:include type="modules" name="head-banner" />
 					</div>
 				<?php endif; ?>
 			</header><!-- end header -->
-			<div id="<?php echo $showRightColumn ? 'contentarea2' : 'contentarea'; ?>">
+			<div id="<?php echo $showRightColumn ? 'contentarea2' : 'contentarea'; ?>" >
 				
 				<?php if ($navposition === 'left' and $showleft) : ?>
 				<nav class="left1 <?php if ($showRightColumn == null) { echo 'leftbigger';} ?>" id="nav">
@@ -167,9 +162,9 @@ JHtml::_('script', 'jui/html5.js', array('version' => 'auto', 'relative' => true
 						
 						<jdoc:include type="component" />
 
-						<jdoc:include type="modules" name="below-article-1" style="xhtml" />
+						<jdoc:include type="modules" name="below-article" style="xhtml" />
 
-						<jdoc:include type="modules" name="below-article-2" style="xhtml"  />
+			
 						
 
 

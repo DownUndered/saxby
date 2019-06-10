@@ -99,22 +99,6 @@ if ($langdirection == 'rtl' && JFile::exists('modules/mod_slideshowck/themes/' .
 } else {
 	$document->addStyleSheet(JURI::base(true) . '/modules/mod_slideshowck/themes/' . $theme . '/css/camera.css');
 }
-// deactivate this to allow front edition icon to work
-/*
-if (JFile::exists('modules/mod_slideshowck/themes/' . $theme . '/css/camera_ie.css')) {
-	echo '
-		<!--[if lte IE 7]>
-		<link href="' . JURI::base(true) . '/modules/mod_slideshowck/themes/' . $theme . '/css/camera_ie.css" rel="stylesheet" type="text/css" />
-		<![endif]-->';
-}
-
-if (JFile::exists('modules/mod_slideshowck/themes/' . $theme . '/css/camera_ie8.css')) {
-	echo '
-		<!--[if IE 8]>
-		<link href="' . JURI::base(true) . '/modules/mod_slideshowck/themes/' . $theme . '/css/camera_ie8.css" rel="stylesheet" type="text/css" />
-		<![endif]-->';
-}
-*/
 
 // set the navigation variables
 if (count($items) == 1) { // for only one slide, no navigation, no button

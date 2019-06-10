@@ -28,14 +28,12 @@
 	</files>
 
 	<positions>
-		<position>debug</position>
-		<position>position-0</position>
+		<position>debug</position>		
 		<position>position-1</position>
 		<position>top-naviagtion</position>
 		<position>head-banner</position>
 		<position>breadcrumbs</position>
-		<position>below-article-1</position>
-		<position>below-article-2</position>
+		<position>below-article</position>
 		<position>position-5</position>
 		<position>right-column</position>
 		<position>position-7</position>

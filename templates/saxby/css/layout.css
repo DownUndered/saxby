@@ -59,6 +59,11 @@ body p,body ol,body ul,body dl,body address {
 	word-wrap: break-word;
 }
 
+#right dl  {
+	border-bottom: 1px solid #DCDCDC;
+	padding-bottom: .5rem;
+}
+
 small {
 	font-size: 0.9rem;
 }
