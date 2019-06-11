@@ -811,6 +811,22 @@ section figure img {
 	margin: 0 auto;
 }
 
+#contentarea2 { flex-direction: column; }
+
+article.property-details, 
+#right {
+	width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article.property-details dl.fields-container,
+#right .slick-track { width: 100%; }
+
+dd.bedrooms,
+dd.rent-price,
+.property-list dd.property-address { padding-left: .5rem }
+
 @media only screen and (orientation: portrait) {
 
 	.property-details {
@@ -832,6 +848,8 @@ section figure img {
 	.property-details .rent-price span::before {
 		padding-left: 0;
 	}
+
+	dl.fields-container dd.rent-price { margin-top: 0!important; }
 
 	#footer {
 		width: 85%;
@@ -862,7 +880,6 @@ section figure img {
 	.cols-3 .column-1,
 	.cols-3 .column-2,
 	.cols-3 .column-3,
-	#right,
 	.box,
 	#header form {
 		float: none;
@@ -1155,10 +1172,10 @@ section figure img {
 		font-size: .7rem;
 	}
 
-	.related-properties dl.fields-container dd.bedrooms,
-	.related-properties dl.fields-container dd.bathrooms,
-	.related-properties dl.fields-container dd.cars {
-		flex-basis: 29%;
+	dl.fields-container dd.bedrooms, 
+	dl.fields-container dd.bathrooms, 
+	dl.fields-container dd.cars {
+		flex-basis: 15%;
 	}
 
 	dl.fields-container dd.rent-price {
@@ -1211,14 +1228,15 @@ section figure img {
 	.property-details .property-title { font-size: 1.5rem; }
 
 	#contentarea2 {
+		flex-direction: row;
 		width: 75%;
 		margin: 0 auto;
 	}
 
 	#right {
 		margin: 10px 10% 10px 2%;
-		padding: 0 2rem 0 0;
 		position: relative;
+		width: 100%;
 	}
 
 
@@ -1251,8 +1269,9 @@ section figure img {
 
 	section .block-wrapper .list-inline ul,
 	.property-list .mod-list li * {
-		font-size: inherit;
+		font-size: small;
 	}
+
 
 	#left-col {
 		flex-basis: 70% !important;
@@ -1286,6 +1305,14 @@ section figure img {
 
 	.blog-list ul.mod-list {
 		flex-direction: row;
+	}
+
+	#right dl.fields-container dd.property-type,
+	#right dl.fields-container dd.property-address,
+	#right dl.fields-container dd.bedrooms,
+	#right dl.fields-container dd.bathrooms,
+	#right dl.fields-container dd.cars {
+		font-size: x-small;
 	}
 }
 
@@ -1375,6 +1402,17 @@ section figure img {
 		margin: 0;
 	}
 
+	dd.bedrooms,
+	dd.rent-price { padding-left: 0; }
+
+	#right dl.fields-container dd.property-type,
+	#right dl.fields-container dd.property-address,
+	#right dl.fields-container dd.bedrooms,
+	#right dl.fields-container dd.bathrooms,
+	#right dl.fields-container dd.cars {
+		font-size: inherit;
+	}
+
 }
 
 
@@ -1415,17 +1453,17 @@ section figure img {
 		flex-basis: 25%;
 	}
 
-
-	dl.fields-container dd.bedrooms,
-	dl.fields-container dd.bathrooms,
-	dl.fields-container dd.cars {
-		flex-basis: 29%;
+	#right dl.fields-container dd.property-type,
+	#right dl.fields-container dd.property-address,
+	#right dl.fields-container dd.bedrooms,
+	#right dl.fields-container dd.bathrooms,
+	#right dl.fields-container dd.cars {
+		font-size: x-small;
 	}
+
 
 	dl.fields-container dd.rent-price {
 		flex-basis: 100%;
-		margin-top: 1rem;
-		margin-bottom: 1rem;
 	}
 
 	#main .row {
@@ -1464,12 +1502,7 @@ section figure img {
 		font-size: .7rem;
 	}
 
-	.property-details dd.property-address,
-	.property-details dd.property-type,
-	.related-properties dd.property-address,
-	.related-properties dd.property-type {
-		flex-basis: 50% !important;
-	}
+
 
 	#camera_wrap_95 .camera_caption>div div.camera_caption_title {
 		font-size: 1.2em !important;
