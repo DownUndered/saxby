@@ -33,9 +33,9 @@ $showEmailIcon = $params->get('show_email_icon');
 <?php if ($showPageHeading and $params->get('show_title')) :?>
 <hgroup>
 <?php endif; ?>
-<h1>
+<h2>
 	<?php echo $this->escape($this->params->get('page_heading')); ?>
-</h1>
+</h2>
 <?php endif; ?>
 <?php
 if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->paginationposition && $this->item->paginationrelative)
@@ -44,9 +44,9 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 }
 
 if ($params->get('show_title')) : ?>
-		<h2>
+		<h1 class="separator-left">
 			<?php echo $this->escape($this->item->title); ?>
-		</h2>
+		</h1>
 <?php endif; ?>
 <?php if ($showPageHeading and $params->get('show_title')) :?>
 </hgroup>

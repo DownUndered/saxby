@@ -25,8 +25,11 @@ li,
 	font-family: 'Muli', sans-serif !important;
 }
 
+h1 { font-size: 1.3rem; }
+h2 { font-size: 1.2rem; }
+h3 { font-size: 1.1rem; }
+
 body h1 {
-	font-size: 2.5rem;
 	margin-bottom: 1rem;
 }
 
@@ -39,12 +42,13 @@ h3 {
 	color: #2d2d2d;
 }
 
-h2 {
-	font-size: 2rem;
-}
-
 h2 a {
 	text-decoration: none
+}
+
+body .block-wrapper ul {
+	margin: 0;
+	padding: 0;
 }
 
 
@@ -178,7 +182,6 @@ table th,
 }
 
 #camera_wrap_95 .camera_caption>div div.camera_caption_title {
-	font-size: 1.8rem !important;
 	line-height: 1.3em;
 }
 
@@ -738,7 +741,7 @@ ul.menu ul a {
 	border-left: solid 1px #ccc
 }
 
-section .block-wrapper ul,
+section.block-wrapper ul,
 #bottom ul li a {
 	padding-left: 0
 }
@@ -748,7 +751,7 @@ section .block-wrapper ul,
 }
 
 
-section .block-wrapper ul {
+section.block-wrapper ul {
 	margin-left: 0;
 }
 
@@ -805,6 +808,17 @@ section figure img {
 	padding: .5rem 1rem;
 }
 
+#top {
+	position: relative;
+	top: 3rem;
+}
+
+#contentarea,
+#contentarea2 { top: 2rem; }
+
+.camera_fakehover { font-size: smaller; }
+
+
 #breadcrumbs,
 .related-properties {
 	width: 85%;
@@ -828,6 +842,8 @@ dd.rent-price,
 .property-list dd.property-address { padding-left: .5rem }
 
 @media only screen and (orientation: portrait) {
+
+	#right-col { margin: 0 auto; }
 
 	.property-details {
 		padding-top: 1rem;
@@ -918,12 +934,6 @@ dd.rent-price,
 		width: 30%;
 	}
 
-
-	body h1 {
-		font-size: 2rem;
-	}
-
-	body h2,
 	.property-title {
 		font-size: 1.5rem;
 	}	
@@ -945,9 +955,6 @@ dd.rent-price,
 		width: 100%;
 	}
 
-	#camera_wrap_95 .camera_caption>div div.camera_caption_title {
-		font-size: 1.1em !important;
-	}
 
 	#camera_wrap_95 .camera_caption>div div.camera_caption_desc {
 		font-size: .9em !important;
@@ -985,9 +992,6 @@ dd.rent-price,
 		width: 100%;
 	}
 
-	.camera_fakehover {
-		font-size: 1rem;
-	}
 
 	.blog-list ul.mod-list,
 	#team,
@@ -1005,18 +1009,15 @@ dd.rent-price,
 		padding: 1rem 1rem 0 1rem;
 	}
 
-	section .block-wrapper,
+	article,
+	section.block-wrapper,
 	dl.fields-container,
 	#team {
 		width: 85%;
 	}
 
-	#top {
-		position: relative;
-		top: 3em;
-	}
-
-	section .block-wrapper .list-inline {
+	article, 
+	section.block-wrapper .list-inline {
 		font-size: .7rem;
 	}
 
@@ -1078,11 +1079,6 @@ dd.rent-price,
 		width: 100%;
 	}
 
-	.camera_fakehover {
-		font-size: 1rem;
-	}
-
-
 
 	.blog-list ul.mod-list,
 	#footer {
@@ -1103,7 +1099,8 @@ dd.rent-price,
 	}
 
 	#team,
-	section .block-wrapper,
+	article,
+	section.block-wrapper,
 	dl.fields-container {
 		width: 85%;
 	}
@@ -1112,7 +1109,8 @@ dd.rent-price,
 		margin-bottom: 1rem;
 	}
 
-	section .block-wrapper .list-inline ul {
+	article,
+	section.block-wrapper .list-inline ul {
 		font-size: .7em;
 	}
 
@@ -1149,6 +1147,12 @@ dd.rent-price,
 
 @media only screen and (min-width: 768px) {
 
+	h1 { font-size: 2rem; }
+	h2 { font-size: 1.8rem; }
+	h3 { font-size: 1.5rem; }
+
+	body p { font-size: 1rem; }
+
 	#menu-wrapper {
 		align-items: center;
 		width: 80%;
@@ -1156,6 +1160,13 @@ dd.rent-price,
 
 	#logo img {
 		width: 35%;
+	}
+
+	#top,
+	#contentarea,
+	#contentarea2 {
+		position: unset;
+		top: unset;
 	}
 
 
@@ -1267,7 +1278,7 @@ dd.rent-price,
 		flex-basis: 20%;
 	}
 
-	section .block-wrapper .list-inline ul,
+	section.block-wrapper .list-inline ul,
 	.property-list .mod-list li * {
 		font-size: small;
 	}
@@ -1317,6 +1328,8 @@ dd.rent-price,
 }
 
 @media only screen and (min-width: 1382px) {
+
+	.camera_fakehover { font-size: inherit; }
 
 	#menu-wrapper {
 		justify-content: space-between;
@@ -1428,6 +1441,8 @@ dd.rent-price,
 		display: block !important;
 	}
 
+	.property-list .mod-list li * { font-size: .6rem;}
+
 }
 
 /* iPad Landscape */
@@ -1502,10 +1517,5 @@ dd.rent-price,
 		font-size: .7rem;
 	}
 
-
-
-	#camera_wrap_95 .camera_caption>div div.camera_caption_title {
-		font-size: 1.2em !important;
-	}
 
 }
