@@ -1455,11 +1455,10 @@ dd.rent-price,
 	}
 
 	#left-col {
-		flex-basis: 70% !important;
+		flex-basis: 60% !important;
 	}
 
 	#right-col {
-		flex-basis: 25% !important;
 		margin-top: 0 !important;
 		margin-left: 1em;
 	}
